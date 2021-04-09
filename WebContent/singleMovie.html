@@ -1,0 +1,77 @@
+<!--this is the front page -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <title>AF's Movie Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="/WebContent/style.css">-->
+    <!--    <link rel="stylesheet" href="../static/css/master.css" th:href="@{/css/master.css}" media="screen"/>-->
+    <!--need h1to figure out where to locate CSS..-->
+    <!--    https://crunchify.com/spring-mvc-4-2-2-best-way-to-integrate-js-and-css-file-in-jsp-file-using-mvcresources-mapping/-->
+    <!--    https://mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/-->
+    <style>
+        h1 {
+            font-family: arial, sans-serif;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Single Movie</h1>
+    <h2 id="movie-info">Title : </h2>
+    <!--        <p>Alice and Faustina's project checking</p>-->
+    <!--        <p>Project 1 Star Example Works</p>-->
+    <table>
+        <!--tr defines row in html-->
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Genre</th>
+            <th>Stars</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody id=movie_table_body>
+        <tr>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--<script>-->
+<!--    // console.log("hello");-->
+<!--</script>-->
+<!--load our own JS file-->
+<script src="singleMovie.js"></script>
+</body>
+
+</html>
+
+

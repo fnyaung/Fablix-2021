@@ -8,13 +8,24 @@
     <title>AF's Movie Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <!--    <link rel="stylesheet" href="/WebContent/style.css">-->
-    <!--    <link rel="stylesheet" href="../static/css/master.css" th:href="@{/css/master.css}" media="screen"/>-->
-    <!--need h1to figure out where to locate CSS..-->
-    <!--    https://crunchify.com/spring-mvc-4-2-2-best-way-to-integrate-js-and-css-file-in-jsp-file-using-mvcresources-mapping/-->
-    <!--    https://mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/-->
+
     <style>
-        h1 {
+        containter {
+            padding: 20px;
+        }
+
+        button {
+            background-color: lightgrey;
+            border: none;
+            color: black;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        h1, h2 {
             font-family: arial, sans-serif;
         }
 
@@ -38,8 +49,15 @@
 
 <body>
 <div class="container">
+    <div class="button-group">
+        <button onclick="goBack()">Go Back</button>
+<!--        <p id="button-info"></p>-->
+        <a href="index.html"><button>Movie List</button></a>
+    </div>
+
+
     <h1>Single Movie</h1>
-    <h2 id="movie-info">Title : </h2>
+    <h2 id="movie-info"></h2>
     <!--        <p>Alice and Faustina's project checking</p>-->
     <!--        <p>Project 1 Star Example Works</p>-->
     <table>
@@ -69,7 +87,11 @@
 <!--    // console.log("hello");-->
 <!--</script>-->
 <!--load our own JS file-->
-<script src="singleMovie.js"></script>
+<script src="singleMovie.js">
+    // function goBack() {
+    //     window.history.back();
+    // }
+</script>
 </body>
 
 </html>

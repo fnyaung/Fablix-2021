@@ -22,7 +22,7 @@ public class SingleMoviePage extends HttpServlet {
     private static final long serialVersionUID = 2L;
 
     // Create a dataSource which registered in web.xml
-    @Resource(name = "jdbc/moviedbexample")
+    @Resource(name = "jdbc/moviedb")
     private DataSource dataSource;
 
     /**
@@ -46,31 +46,57 @@ public class SingleMoviePage extends HttpServlet {
             Connection dbcon = dataSource.getConnection();
 
             // Construct a query with parameter represented by "?"
-            String query = "select" +
-                    "  m.id as Movie_ID," +
-                    "  m.title as Title," +
-                    "  m.year as Year," +
-                    "  m.director as Director," +
-                    "  r.rating as Rating," +
-                    "  GROUP_CONCAT(s.id) AS Stars_ID," +
-                    "  GROUP_CONCAT(DISTINCT g.name) AS Genres," +
-                    "  GROUP_CONCAT(s.name) AS Stars" +
-                    " from" +
-                    "  movies m," +
-                    "  ratings r," +
-                    "  stars s," +
-                    "  stars_in_movies sm," +
-                    "  genres_in_movies gm," +
-                    "  genres g" +
-                    " where" +
-                    "  m.id = \""+id+"\"" +
-                    "  AND m.id = r.movieID" +
-                    "  AND m.id = sm.movieID" +
-                    "  AND m.id = gm.movieID" +
-                    "  AND s.id = sm.starID" +
-                    "  AND g.id = gm.genreID" +
-                    " GROUP BY" +
-                    "  m.title";
+            String query =" select  " +
+                    "a.Movie_ID, " +
+                    "a.Title, " +
+                    "a.Year, " +
+                    "a.Director, " +
+                    "a.Rating, " +
+                    "a.Stars, " +
+                    "a.Stars_Id, " +
+                    "GROUP_CONCAT(genre.name) AS Genres " +
+                    "from " +
+                    "(select " +
+                    "m.id as Movie_ID, " +
+                    "m.title as Title, " +
+                    "m.year as Year, " +
+                    "m.director as Director, " +
+                    "r.rating as Rating, " +
+                    "GROUP_CONCAT(star.name) AS Stars, " +
+                    "GROUP_CONCAT(star.id) AS Stars_ID " +
+                    "from " +
+                    "movies m, " +
+                    "ratings r, " +
+                    "( select  " +
+                    "    s.name, " +
+                    "    s.id, " +
+                    "    sm.movieId " +
+                    "  from  " +
+                    "     stars s, " +
+                    "     stars_in_movies sm " +
+                    "   where  " +
+                    "     s.id=sm.starId) star      " +
+                    "where " +
+                    "r.movieId = m.id and " +
+                    "m.id = '"+ id + "' and " +
+//                    ??
+                    "m.id = star.movieId " +
+                    "group by  " +
+                    "m.id) a, " +
+                    "( select  " +
+                    "     g.name, " +
+                    "     gm.movieId " +
+                    "  from " +
+                    "     genres g, " +
+                    "     genres_in_movies gm " +
+                    "  where  " +
+                    "     g.id=gm.genreId ) genre " +
+                    "where " +
+                    "a.Movie_ID=genre.movieId and " +
+                    "a.Movie_ID = '"+ id + "'" +
+//                            ??
+                    "group by a.Movie_ID, genre.movieId";
+
 
 
             System.out.println("------- Movie's ID is " + id);
@@ -99,7 +125,7 @@ public class SingleMoviePage extends HttpServlet {
                 String movie_director = rs.getString("Director");
                 String movie_rating = rs.getString("Rating");
                 String stars = rs.getString("Stars");
-                String starids = rs.getString("Stars_ID");
+                String star_id = rs.getString("Stars_ID");
                 String genres = rs.getString("Genres");
 
                 JsonObject jsonObject = new JsonObject();
@@ -109,8 +135,10 @@ public class SingleMoviePage extends HttpServlet {
                 jsonObject.addProperty("movie_director", movie_director);
                 jsonObject.addProperty("movie_rating", movie_rating);
                 jsonObject.addProperty("stars", stars);
-                jsonObject.addProperty("starids", starids);
+                jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("genres", genres);
+
+//                System.out.println("SQLresult: "+jsonArray.toString());
 
                 jsonArray.add(jsonObject);
             }

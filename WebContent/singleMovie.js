@@ -32,7 +32,7 @@ function handleSingleMovieResult(resultData) {
     let movieInfo = jQuery("#movie-info");
     // console.log(resultData);
 
-    movieInfo.append("<p>"+resultData[0]["movie_title"]+"</p>");
+    movieInfo.append("<p>Title : "+resultData[0]["movie_title"]+"</p>");
 
     //
     // for (let i = 0; i < Math.min(20, resultData.length); i++){
@@ -43,8 +43,12 @@ function handleSingleMovieResult(resultData) {
     rowHTML += "<tr>";
 
     // movile title is hyperlink get the movie id
-    // console.log(resultData[i]);
-    rowHTML += "<th>" + resultData[0]["movie_title"] + "</th>";
+    console.log(resultData[0]);
+    // rowHTML += "<th>" +
+    //     '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+
+    //     resultData[i]['movie_title'] + "</th>";
+    // console.log("movieID: ",resultData[0]['movie_id'])
+    rowHTML += "<th>" + '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+ resultData[0]["movie_title"] +'</a>'+ "</th>";
     rowHTML += "<th>" + resultData[0]["movie_year"] + "</th>";
     rowHTML += "<th>" + resultData[0]["movie_director"] + "</th>";
     // generes
@@ -58,8 +62,14 @@ function handleSingleMovieResult(resultData) {
     //stars
     rowHTML += "<ul> <th>";
     var stars_list = resultData[0]["stars"].split(",");
+    var starID_list = resultData[0]["star_id"].split(",");
+
+    // rowHTML += "<th>" +
+    //     '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+
+    //     resultData[i]['movie_title'] + "</th>";
+
     for (let i = 0; i < Math.min(20, stars_list.length); i++){
-        rowHTML += "<li>" + stars_list[i] + "</li>";
+        rowHTML += "<li>" + '<a href="singleStar.html?id=' + starID_list[i] + '">' + stars_list[i] + "</li>";
     }
     rowHTML += "</ul> </th>";
     rowHTML += "<th>" + resultData[0]["movie_rating"] + "</th>";
@@ -67,6 +77,10 @@ function handleSingleMovieResult(resultData) {
     rowHTML += "<tr/>"; // close up tr
     movieTableBodyElement.append(rowHTML);
 // }
+}
+
+function goBack() {
+    window.history.back();
 }
 
 /**

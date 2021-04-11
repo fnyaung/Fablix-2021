@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
- function getParameterByName(target){
+function getParameterByName(target){
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -36,7 +36,7 @@ function handleSingleMovieResult(resultData) {
 
     //
     // for (let i = 0; i < Math.min(20, resultData.length); i++){
-        // html
+    // html
     let movieTableBodyElement = jQuery("#movie_table_body");
 
     let rowHTML = "";
@@ -78,10 +78,6 @@ function handleSingleMovieResult(resultData) {
     movieTableBodyElement.append(rowHTML);
 // }
 }
-
-// function goBack() {
-//     window.history.back();
-// }
 
 /**
  * Once this .js is loaded, following scripts will be executed by the browser

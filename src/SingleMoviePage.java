@@ -98,10 +98,10 @@ public class SingleMoviePage extends HttpServlet {
                     "group by a.Movie_ID, genre.movieId";
 
 
-
-            System.out.println("------- Movie's ID is " + id);
-
-            System.out.println("--- 1Query: >>" + query + "<<");
+//
+//            System.out.println("------- Movie's ID is " + id);
+//
+//            System.out.println("--- 1Query: >>" + query + "<<");
 
             // Declare our statement
             PreparedStatement statement = dbcon.prepareStatement(query);

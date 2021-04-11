@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
- function handleMovieResult(resultData) {
+function handleMovieResult(resultData) {
 
     console.log("handleMovieResult: populating movie table from resultData");
 

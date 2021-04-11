@@ -15,7 +15,7 @@
  * @param target String
  * @returns {*}
  */
- function getParameterByName(target){
+function getParameterByName(target){
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -86,9 +86,6 @@ function handleResult(resultData) {
     }
 }
 
-// function goBack() {
-//     window.history.back();
-// }
 
 /**
  * Once this .js is loaded, following scripts will be executed by the browser

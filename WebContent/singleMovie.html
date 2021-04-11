@@ -8,9 +8,12 @@
     <title>AF's Movie Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
     <style>
-        containter {
+        container {
             padding: 20px;
         }
 
@@ -25,17 +28,29 @@
             font-size: 16px;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-family: arial, sans-serif;
         }
 
         table {
-            font-family: arial, sans-serif;
+            border-spacing: 1;
             border-collapse: collapse;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
             width: 100%;
+            margin: 0 auto;
+            position: relative;
         }
 
-        td, th {
+        body {
+            background: rgb(27, 167, 181);
+            background: linear-gradient(90deg, rgba(27, 167, 181, 1) 13%, rgba(222, 181, 28, 1) 100%);
+        }
+
+        td,
+        th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
@@ -48,52 +63,48 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="button-group">
-        <button onclick="goBack()">Go Back</button>
-<!--        <p id="button-info"></p>-->
-        <a href="index.html"><button>Movie List</button></a>
+    <div class="container">
+        <div class="button-group">
+            <a class="btn btn-primary" href="index.html" role="button">Movie List</a>
+        </div>
+
+
+        <h1>Single Movie</h1>
+        <h2 id="movie-info"></h2>
+        <!--        <p>Alice and Faustina's project checking</p>-->
+        <!--        <p>Project 1 Star Example Works</p>-->
+        <table>
+            <!--tr defines row in html-->
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Director</th>
+                    <th>Genre</th>
+                    <th>Stars</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody id=movie_table_body>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-
-    <h1>Single Movie</h1>
-    <h2 id="movie-info"></h2>
-    <!--        <p>Alice and Faustina's project checking</p>-->
-    <!--        <p>Project 1 Star Example Works</p>-->
-    <table>
-        <!--tr defines row in html-->
-        <thead>
-        <tr>
-            <th>Title</th>
-            <th>Year</th>
-            <th>Director</th>
-            <th>Genre</th>
-            <th>Stars</th>
-            <th>Rating</th>
-        </tr>
-        </thead>
-        <tbody id=movie_table_body>
-        <tr>
-
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!--<script>-->
-<!--    // console.log("hello");-->
-<!--</script>-->
-<!--load our own JS file-->
-<script src="singleMovie.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!--<script>-->
+    <!--    // console.log("hello");-->
+    <!--</script>-->
+    <!--load our own JS file-->
+    <script src="singleMovie.js">
     // function goBack() {
     //     window.history.back();
     // }
-</script>
+    </script>
 </body>
 
 </html>
-
-

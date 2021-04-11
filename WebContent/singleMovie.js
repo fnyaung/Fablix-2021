@@ -79,9 +79,9 @@ function handleSingleMovieResult(resultData) {
 // }
 }
 
-function goBack() {
-    window.history.back();
-}
+// function goBack() {
+//     window.history.back();
+// }
 
 /**
  * Once this .js is loaded, following scripts will be executed by the browser

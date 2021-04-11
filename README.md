@@ -2,7 +2,7 @@
 This project displays a list of movies that contains information about a specific movie or star.
 
 ### Demo Video URL: 
-https://drive.google.com/file/d/1E410RY7yQj-zcseWA7kFWf5gbJ4pfVms/view?usp=sharing
+https://youtu.be/yhs0wE5D3kQ
 
 ### Contributions to this project:
 - Hyejin Kim and Faustina Nyaung both worked on `MovieListPage.java`, `index.html`, and `index.js`. We both thought of the sql queries together.

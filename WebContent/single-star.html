@@ -1,45 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
     <title>Single Star</title>
+
+    <style>
+        container {
+            padding: 20px;
+        }
+
+        button {
+            background-color: lightgrey;
+            border: none;
+            color: black;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        h1,
+        h2 {
+            font-family: arial, sans-serif;
+        }
+
+        table {
+            border-spacing: 1;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        body {
+            background: rgb(27, 167, 181);
+            background: linear-gradient(90deg, rgba(27, 167, 181, 1) 13%, rgba(222, 181, 28, 1) 100%);
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
+
+
 <body>
-<h1>Single Star Page</h1>
+    <div class="containter" style="padding: 10px;">
+        <div class="button-group">
+            <!--        <button onclick="goBack()">Go Back</button>-->
+            <a class="btn btn-primary" href="index.html" role="button">Movie List</a>
+        </div>
 
-<!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
-<!-- single-star.js will find this html element by it's id "star_info" -->
-<h3 id="star_info"></h3>
-<table id="movie_table" class="table table-striped">
-    <thead>
-    <tr>
-        <th>Movie Title</th>
-        <th>
-    </tr>
-    </thead>
+        <h1>Single Star Page</h1>
 
-    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
-    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
-    <tbody id=movie_table_body></tbody>
-</table>
+        <!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
+        <!-- single-star.js will find this html element by it's id "star_info" -->
+        <h3 id="star_info"></h3>
+        <table id="movie_table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Movie Title</th>
+                    <th>
+                </tr>
+            </thead>
 
-<!-- Load jQuery and Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+            <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+            <tbody id=movie_table_body></tbody>
+        </table>
+    </div>
 
-<!-- Load our own JS file -->
-<!-- The path is relative to single-star.html, since these two files are in the same directory -->
-<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+
+    <!-- Load jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Load our own JS file -->
+    <!-- The path is relative to single-star.html, since these two files are in the same directory -->
+    <!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
      otherwise the url is relative to the root path-->
-<script src="single-star.js"></script>
+    <script src="singleStar.js"></script>
 
 </body>
+
 </html>

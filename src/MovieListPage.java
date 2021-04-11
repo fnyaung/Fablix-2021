@@ -1,8 +1,9 @@
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import javax.annotation.Resource;
-import javax.servlet.ServletException;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.servlet.ServletConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,25 +23,32 @@ public class MovieListPage extends HttpServlet {
     // to a serialized object. If no match is found, then an InvalidClassException is thrown.
     private static final long serialVersionUID = 1L;
 
-    // create a db according to registered in web.xml
-    @Resource(name = "jdbc/moviedb")
+    // Create a dataSource which registered in web.
     private DataSource dataSource;
+
+    public void init(ServletConfig config) {
+        try {
+            dataSource = (DataSource) new InitialContext().lookup("java:comp/env/jdbc/moviedb");
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         response.setContentType("application/json"); // Response mime type
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
-        try {
-            // Get a connection from dataSource
-            Connection dbcon = dataSource.getConnection();
+        try (Connection conn = dataSource.getConnection()) {
 
-            Statement statement = dbcon.createStatement();
+
+            Statement statement = conn.createStatement();
 
             // query to get the 20
             String query = "select " +
@@ -176,9 +184,6 @@ public class MovieListPage extends HttpServlet {
             // set response status to 200 (OK)
             response.setStatus(200);
 
-            rs.close();
-            statement.close();
-            dbcon.close();
         } catch (Exception e) {
             // write error message JSON object to output
             JsonObject jsonObject = new JsonObject();

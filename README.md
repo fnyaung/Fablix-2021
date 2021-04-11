@@ -23,4 +23,4 @@ This project displays a list of movies that contains information about a specifi
    - A single star page, which contains star's info and movies played. (or)
    - A single movie page, which contains movie's info and all genres and stars associated with the movie.
    
-- Note: If using IntelliJ, the url has to be set correctly: In `Edit configuration` -> `Tomcat` -> `Deployment` tab -> `Application context`, change the url to `/cs122b_spring21_team_11_war`
+- Note: If using IntelliJ, the url has to be set correctly: In `Edit configuration` -> `Tomcat` -> `Deployment` tab -> `Application context`, change the url to `/cs122b-spring21-project1-api-example`

@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function getParameterByName(target){
+ function getParameterByName(target){
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -48,19 +48,19 @@ function handleSingleMovieResult(resultData) {
     //     '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+
     //     resultData[i]['movie_title'] + "</th>";
     // console.log("movieID: ",resultData[0]['movie_id'])
-    rowHTML += "<th>" + '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+ resultData[0]["movie_title"] +'</a>'+ "</th>";
-    rowHTML += "<th>" + resultData[0]["movie_year"] + "</th>";
-    rowHTML += "<th>" + resultData[0]["movie_director"] + "</th>";
+    rowHTML += "<td>" + '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+ resultData[0]["movie_title"] +'</a>'+ "</td>";
+    rowHTML += "<td>" + resultData[0]["movie_year"] + "</td>";
+    rowHTML += "<td>" + resultData[0]["movie_director"] + "</td>";
     // generes
-    rowHTML += "<ul> <th>";
+    rowHTML += "<ul> <td>";
     var genres_list = resultData[0]["genres"].split(",");
     for (let i = 0; i < Math.min(20, genres_list.length); i++){
         rowHTML += "<li>" + genres_list[i] + "</li>";
     }
-    rowHTML += "</ul> </th>";
+    rowHTML += "</ul> </td>";
 
     //stars
-    rowHTML += "<ul> <th>";
+    rowHTML += "<ul> <td>";
     var stars_list = resultData[0]["stars"].split(",");
     var starID_list = resultData[0]["star_id"].split(",");
 
@@ -71,10 +71,10 @@ function handleSingleMovieResult(resultData) {
     for (let i = 0; i < Math.min(20, stars_list.length); i++){
         rowHTML += "<li>" + '<a href="singleStar.html?id=' + starID_list[i] + '">' + stars_list[i] + "</li>";
     }
-    rowHTML += "</ul> </th>";
-    rowHTML += "<th>" + resultData[0]["movie_rating"] + "</th>";
+    rowHTML += "</ul> </td>";
+    rowHTML += "<td>" + resultData[0]["movie_rating"] + "</td>";
 
-    rowHTML += "<tr/>"; // close up tr
+    // rowHTML += "<tr/>"; // close up tr
     movieTableBodyElement.append(rowHTML);
 // }
 }

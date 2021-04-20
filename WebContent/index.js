@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function handleMovieResult(resultData) {
+ function handleMovieResult(resultData) {
 
     console.log("handleMovieResult: populating movie table from resultData");
 
@@ -22,11 +22,11 @@ function handleMovieResult(resultData) {
         // rowHTML += "<th>"; // opens the th to add each row
         // movie_title, movie_year, movie_director
         // rowHTML += "<th>" + resultData[i]["movie_title"] + "</th>";
-        rowHTML += "<th>" + '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+ resultData[i]["movie_title"] +'</a>'+ "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
+        rowHTML += "<td>" + '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+ resultData[i]["movie_title"] +'</a>'+ "</td>";
+        rowHTML += "<td>" + resultData[i]["movie_year"] + "</td>";
+        rowHTML += "<td>" + resultData[i]["movie_director"] + "</td>";
 
-        rowHTML += "<th>";
+        rowHTML += "<td>";
         rowHTML += "<ul>";
         if (resultData[i]["genre1"] != null){
             rowHTML += "<li>" + resultData[i]["genre1"] + "</li>";
@@ -39,9 +39,9 @@ function handleMovieResult(resultData) {
         }
 
         rowHTML += "</ul>";
-        rowHTML += "</th>";
+        rowHTML += "</td>";
 
-        rowHTML += "<th>";
+        rowHTML += "<td>";
         rowHTML += "<ul>";
         if (resultData[i]["star1"] != null){
             rowHTML += "<li>" + '<a href="singleStar.html?id=' + resultData[i]["starid1"] + '">' + resultData[i]["star1"] + "</li>";
@@ -60,12 +60,10 @@ function handleMovieResult(resultData) {
         }
 
         rowHTML += "</ul>";
-        rowHTML += "</th>";
+        rowHTML += "</td>";
 
-        rowHTML += "<th>" + resultData[i]["movie_rating"] + "</th>";
+        rowHTML += "<td>" + resultData[i]["movie_rating"] + "</td>";
 
-        rowHTML += "<tr/>"; // close up tr
-        // console.log(resultData[i]["movie_title"]);
         // Append the row created to the table body, which will refresh the page
         movieTableBodyElement.append(rowHTML);
     }

@@ -1,0 +1,58 @@
+<!--this is the front page -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <title>AF's Movie Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Movie List</h1>
+    <!--        <p>Alice and Faustina's project checking</p>-->
+    <!--        <p>Project 1 Star Example Works</p>-->
+    <table>
+        <!--tr defines row in html-->
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Genre</th>
+            <th>Stars</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody id=movie_table_body>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--<script>-->
+<!--    // console.log("hello");-->
+<!--</script>-->
+<!--load our own JS file-->
+<script src="movieList.js">
+</script>
+</body>
+
+</html>
+
+

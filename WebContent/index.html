@@ -1,58 +1,55 @@
-<!--this is the front page -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <title>AF's Movie Website</title>
+    <meta charset="UTF-8">
+    <title>Search form example</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
-
 </head>
+<body >
+<h1 ALIGN="CENTER">Form Example</h1>
 
-<body>
-<div class="container">
+<!--<select name="search-select" id="search-type" style="width:100px;">-->
+<!--    <option value="0">Title</option>-->
+<!--    <option value="1">Year</option>-->
+<!--    <option value="2">Director</option>-->
+<!--    <option value="3">Star Name</option>-->
+<!--</select>-->
 
-    <h1>Movie List</h1>
-    <!--        <p>Alice and Faustina's project checking</p>-->
-    <!--        <p>Project 1 Star Example Works</p>-->
-    <table>
-        <!--tr defines row in html-->
-        <thead>
-        <tr>
-            <th>Title</th>
-            <th>Year</th>
-            <th>Director</th>
-            <th>Genre</th>
-            <th>Stars</th>
-            <th>Rating</th>
-        </tr>
-        </thead>
-        <tbody id=movie_table_body>
-        </tbody>
-    </table>
-</div>
+<!--<form class="search" id="search-form" ACTION="form" METHOD="GET">-->
+<!--    <input type="text" placeholder="Search.." name="search">-->
+<!--    <button type="submit"><i class="fa fa-search"></i></button>-->
+<!--</form>-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!--<script>-->
-<!--    // console.log("hello");-->
-<!--</script>-->
-<!--load our own JS file-->
-<script src="index.js">
-</script>
+<form ACTION="form" METHOD="GET">
+    <select name="search-select" id="search-type" style="width:100px;">
+        <option value="0">Title</option>
+        <option value="1">Year</option>
+        <option value="2">Director</option>
+        <option value="3">Star Name</option>
+    </select>
+
+<!--    <input type="text" placeholder="Search.." name="search">-->
+<!--    <button type="submit"><i class="fa fa-search"></i></button>-->
+</form>
+
+<form ACTION="form" METHOD="GET">
+    Star name: <input TYPE="TEXT" name="name"> (Use % to replace any strings. e.g. Arnold%)<br>
+
+    <input TYPE="SUBMIT" VALUE="Search Star">
+
+</form>
+
 </body>
-
 </html>
-
-

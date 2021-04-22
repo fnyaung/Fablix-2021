@@ -18,38 +18,80 @@
 
 </head>
 <body >
-<h1 ALIGN="CENTER">Form Example</h1>
+    <h1 ALIGN="CENTER">Main Menu</h1>
 
-<!--<select name="search-select" id="search-type" style="width:100px;">-->
-<!--    <option value="0">Title</option>-->
-<!--    <option value="1">Year</option>-->
-<!--    <option value="2">Director</option>-->
-<!--    <option value="3">Star Name</option>-->
-<!--</select>-->
+    <div class="container">
+<!--        nav bar on top-->
+        <div class="nav-wrapper">
+
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href='index.html'>Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href='browse.html'>Browse</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="nav-link-wrapper">
+                    <a href='cart.html'>Cart</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href='account.html'>Account</a>
+                </div>
+            </div>
+
+        </div>
+
+<!--        search option on the body-->
+        <div class="search-wrapper">
+            <div class="search-link-wrapper">
+                <form class="search" id="search-title" ACTION="form" METHOD="GET">
+                    Title
+                    <input type="text" placeholder="Search.." name="title" size="25">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <div class="search-link-wrapper">
+                <form class="search" id="search-year" ACTION="form" METHOD="GET">
+                    Year
+                    <input type="text" placeholder="Search.." name="year" size="25">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <div class="search-link-wrapper">
+                <form class="search" id="search-director" ACTION="form" METHOD="GET">
+                    Director
+                    <input type="text" placeholder="Search.." name="director" size="25">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <div class="search-link-wrapper">
+                <form class="search" id="search-name" ACTION="form" METHOD="GET">
+                    Star Name
+                    <input type="text" placeholder="Search.." name="name" size="25">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
 
 <!--<form class="search" id="search-form" ACTION="form" METHOD="GET">-->
 <!--    <input type="text" placeholder="Search.." name="search">-->
 <!--    <button type="submit"><i class="fa fa-search"></i></button>-->
 <!--</form>-->
 
-<form ACTION="form" METHOD="GET">
-    <select name="search-select" id="search-type" style="width:100px;">
-        <option value="0">Title</option>
-        <option value="1">Year</option>
-        <option value="2">Director</option>
-        <option value="3">Star Name</option>
-    </select>
-
-<!--    <input type="text" placeholder="Search.." name="search">-->
-<!--    <button type="submit"><i class="fa fa-search"></i></button>-->
-</form>
-
-<form ACTION="form" METHOD="GET">
-    Star name: <input TYPE="TEXT" name="name"> (Use % to replace any strings. e.g. Arnold%)<br>
-
-    <input TYPE="SUBMIT" VALUE="Search Star">
-
-</form>
 
 </body>
 </html>

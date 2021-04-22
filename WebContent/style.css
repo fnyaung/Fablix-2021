@@ -1,3 +1,5 @@
+/*Master*/
+
 body{
     font-family: Helvetica, sans-serif ;
     margin: 0px;
@@ -11,16 +13,12 @@ body{
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
-form.login input[type=text], input[type=password] {
+.login > input[type=text], .login > input[type=password] {
     width: 120%;
     padding: 12px 15px;
     margin: 10px 0;
     display: inline-block;
     border: 1px solid #d8d8d885;
-}
-
-h1 {
-    font-family: arial, sans-serif;
 }
 
 /*table {*/
@@ -49,51 +47,69 @@ tr:nth-child(even) {
 }
 
 
+/*navigation style*/
+.nav-wrapper {
+    display:flex;
+    justify-content: space-between;
+    padding: 38px;
+}
 
-button {
-    background-color: lightgrey;
-    border: none;
-    color: black;
-    padding: 10px 30px;
-    text-align: center;
+.left-side , .right-side{
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.nav-wrapper > .right-side > div {
+    margin-left: 20px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+/*all the as in the nav-link wrapper */
+.nav-link-wrapper a {
+    color: bisque;
     text-decoration: none;
+    transition: coor 0.5s;
+}
+
+.nav-link-wrapper a:hover{
+    color: #212529;
+}
+
+/*index search-wrapper*/
+.search-wrapper {
+    flex-direction: column;
+    font-size: 1em;
+    margin: auto;
+    width: 40%;
+    text-align: end;
+}
+
+.search-link-wrapper form {
+    display: flex;
+    text-align: right;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+/*in the form tag look for serach class*/
+form.search {
+    padding: 10px 4px;
     display: inline-block;
-    font-size: 16px;
 }
 
-h1, h2 {
-    font-family: arial, sans-serif;
-}
-
-/*index.html*/
-form.search input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-}
-
-form.submit button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
-    cursor: pointer;
-}
-
-form.search button:hover {
-    background: #0b7dda;
-}
-
-/* Clear floats */
-form.search::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+/*button {*/
+/*    background-color: lightgrey;*/
+/*    border: none;*/
+/*    color: black;*/
+/*    padding: 10px 30px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*}*/

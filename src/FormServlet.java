@@ -52,49 +52,61 @@ public class FormServlet extends HttpServlet {
         try {
 
             // Create a new connection to database
-            Connection dbCon = dataSource.getConnection();
+//            Connection dbCon = dataSource.getConnection();
 
             // Declare a new statement
-            Statement statement = dbCon.createStatement();
+//            Statement statement = dbCon.createStatement();
 
             // Retrieve parameter "name" from the http request, which refers to the value of <input name="name"> in index.html
-            String name = request.getParameter("name");
+            String title = request.getParameter("title");
+            out.println("<p>name : "+title+"<p");
+            String year = request.getParameter("year");
+            out.println("<p>year : "+year+"<p");
+            String director = request.getParameter("director");
+            out.println("<p>director : "+director+"<p");
+            String star = request.getParameter("star");
+            out.println("<p>star : "+star+"<p");
+
+            request.setAttribute("serach_title",title);
+//            RequestDispatcher rd = request.getRequestDispatcher("yourServletPattern");
+//            rd.forward(request,response);
+
 //            String search = request.getParameter("search");
 
-            System.out.println("~~Hello\n");
-            System.out.println(request.getParameterNames());
-            System.out.println(name);
-
-            // Generate a SQL query
-            String query = String.format("SELECT * from stars where name like '%s'", name);
-
-            // Perform the query
-            ResultSet rs = statement.executeQuery(query);
-
-            // Create a html <table>
-            out.println("<table border>");
-
-            // Iterate through each row of rs and create a table row <tr>
-            out.println("<tr><td>ID</td><td>Name</td></tr>");
-            while (rs.next()) {
-                String m_ID = rs.getString("ID");
-                String m_Name = rs.getString("name");
-                out.println(String.format("<tr><td>%s</td><td>%s</td></tr>", m_ID, m_Name));
-            }
-            out.println("</table>");
-
-
-            // Close all structures
-            rs.close();
-            statement.close();
-            dbCon.close();
+//            System.out.println("~~Hello\n");
+//            System.out.println(request.getParameterNames());
+//            System.out.println(name);
+//
+//            // Generate a SQL query
+//            String query = String.format("SELECT * from stars where name like '%s'", name);
+//
+//            // Perform the query
+//            ResultSet rs = statement.executeQuery(query);
+//
+//            // Create a html <table>
+//            out.println("<table border>");
+//
+//            // Iterate through each row of rs and create a table row <tr>
+//            out.println("<tr><td>ID</td><td>Name</td></tr>");
+//            while (rs.next()) {
+//                String m_ID = rs.getString("ID");
+//                String m_Name = rs.getString("name");
+//                out.println(String.format("<tr><td>%s</td><td>%s</td></tr>", m_ID, m_Name));
+//            }
+//            out.println("</table>");
+//
+//
+//            // Close all structures
+//            rs.close();
+//            statement.close();
+//            dbCon.close();
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
 
             // Output Error Massage to html
             out.println(String.format("<html><head><title>MovieDBExample: Error</title></head>\n<body><p>SQL error in doGet: %s</p></body></html>", ex.getMessage()));
-            return;
+//            return;
         }
         out.close();
     }

@@ -23,15 +23,15 @@ function submitSearchForm(formSubmitEvent) {
     console.log("location=search&"+search_form.serialize());
 
     $.ajax(
-        "/api/movie-list", {
+        "api/movie-list", {
             method: "GET",
             // Serialize the search form to the data sent by GET request
-            data: "location=search&"+search_form.serialize(),
-            success: window.location.replace("movieList.html?location=search&"+search_serial)
+            data: "location=search&"+search_form.serialize(), // sending data work
+            //prob have to make success
+            // success:
         }
     );
 
-    // window.location.href = "movieList.html?location=search&"+search_serial;
 }
 
 search_form.submit(submitSearchForm);

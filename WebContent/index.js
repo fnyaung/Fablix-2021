@@ -7,29 +7,31 @@ let search_form = $("#movie_search");
 
 // title year director star
 function submitSearchForm(formSubmitEvent) {
-
-    formSubmitEvent.preventDefault(); // disable defaul behavior
-
-
-    console.log("submit search form");
-    let search_serial = $('form').serialize()
     /**
      * When users click the submit button, the browser will not direct
      * users to the url defined in HTML movie-List. Instead, it will call this
      * event handler when the event is triggered.
      */
-    
-    window.location.href = "movieList.html?location=search&"+search_serial;
-    //
-    // $.ajax(
-    //     "/api/movie-list", {
-    //         method: "GET",
-    //         // Serialize the login form to the data sent by POST request
-    //         data: search_form.serialize(),
-    //         success: handleLoginResult
-    //     }
-    // );
+    console.log("submit search form");
+
+    formSubmitEvent.preventDefault(); // disable default behavior
+
+    let search_serial = $('form').serialize()
+    console.log(search_serial);
+
+
+    console.log("location=search&"+search_form.serialize());
+
+    $.ajax(
+        "/api/movie-list", {
+            method: "GET",
+            // Serialize the search form to the data sent by GET request
+            data: "location=search&"+search_form.serialize(),
+            success: window.location.replace("movieList.html?location=search&"+search_serial)
+        }
+    );
+
+    // window.location.href = "movieList.html?location=search&"+search_serial;
 }
 
-// Bind the submit action of the form to a handler function
-search_form.submit(submitSearchForm); // click them this function called
+search_form.submit(submitSearchForm);

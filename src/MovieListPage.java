@@ -16,6 +16,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import java.io.*;
+
+
 @WebServlet(name = "MovieListPage", urlPatterns = "/api/movie-list")
 public class MovieListPage extends HttpServlet {
     // The serialVersionUID is a universal version identifier for a Serializable class.
@@ -39,6 +42,7 @@ public class MovieListPage extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // title year director star
 
         response.setContentType("application/json"); // Response mime type
 
@@ -47,10 +51,14 @@ public class MovieListPage extends HttpServlet {
 
         try (Connection conn = dataSource.getConnection()) {
 
+            System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             Statement statement = conn.createStatement();
-
+            // if == search
+            // if == browse
+            //
             // query to get the 20
+
             String query = "select " +
                     "m.id, " +
                     "m.title," +
@@ -79,6 +87,22 @@ public class MovieListPage extends HttpServlet {
             // perform the query
             // return the result relation as rs.
             ResultSet rs = statement.executeQuery(query);
+
+            String title = request.getParameter("title");
+            String year = request.getParameter("year");
+            String director = request.getParameter("director");
+            String star = request.getParameter("star");
+
+            System.out.println("2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            String location = request.getParameter("location");
+            out.println("<p>location : "+location+"<p");
+            System.out.println("location: "+ location);
+            out.println("<p>title : "+title+"<p");
+            System.out.println("title: "+ title);
+            System.out.println("year: "+year);
+            System.out.println("director: "+director);
+            System.out.println("star: "+star);
+            System.out.println("3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             JsonArray jsonArray = new JsonArray();
 

@@ -1,50 +1,107 @@
-<!-- This page will be redirected from any url if you are not logged in -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login to Fablix</title>
+    <title>Search form example</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="style.css">-->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
 </head>
-<body>
 
-    <!-- Set the method to POST to avoid showing the username/password in the URL
-         The default action is disabled to allow your own implementation. -->
+<body >
+<h1 ALIGN="CENTER">Main Menu</h1>
+
 <div class="container">
-    <h2>Login to Fablix</h2>
-    <form class="login" id="login_form" method="post" action="#">
-        <label><b>Username</b></label>
-        <label>
-            <input name="username" placeholder="Enter Username" type="text">
-        </label>
-        <br>
-        <label><b>Password</b></label>
-        <label>
-            <input name="password" placeholder="Enter Password" type="password">
-        </label>
-        <br>
-        <input type="submit" value="Login">
-    </form>
+<!--        nav bar on top-->
+    <div class="nav-wrapper">
 
-    <div id="login_error_message"></div>
+        <div class="left-side">
+            <div class="nav-link-wrapper">
+                <a href='index.html'>Home</a>
+            </div>
 
-    <!-- include jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- include our own JS file -->
-    <script src="./login.js"></script>
+            <div class="dropdown">
+<!--                need update-->
+                <button class="dropbtn">
+                   Genre<i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href='browse.html'>Action</a>
+                    <a href='browse.html'>Adult</a>
+                    <a href='browse.html'>Adventure</a>
+                    <a href='browse.html'>Animation</a>
+                    <a href='browse.html'>Biography</a>
+                    <a href='browse.html'>Biography</a>
+                    <a href='browse.html'>Biography</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="nav-link-wrapper">
+<!--                need update-->
+                <a href='index.html'>Cart</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+<!--                need update-->
+                <a href='indxe.html'>Account</a>
+            </div>
+        </div>
+
+    </div>
+
+<!--        search option on the body-->
+    <div class="search-wrapper">
+        <div class="search-link-wrapper">
+            <form class="search" id="movie_serach" ACTION="form" METHOD="GET">
+<!--            <form class="search" id="movie_serach" >-->
+
+                <label for="title">Title</label>
+                <input class="search-input" type="text" id="title" placeholder="eg) Title.." name="title" size="25"> <br>
+
+                <label for="year">Year</label>
+                <input class="search-input" type="text" id="year" placeholder="eg) 1998.." name="year" size="25"> <br>
+
+                <label for="director">Director</label>
+                <input class="search-input" type="text" id="director" placeholder="eg) Arnold .." name="director" size="25"> <br>
+
+                <label for="star">Star Name</label>
+                <input class="search-input" type="text" id="star" placeholder="eg) Arnold .." name="star" size="25"> <br>
+
+                <input TYPE="SUBMIT" VALUE="Search">
+            </form>
+        </div>
+
+    </div>
+
 
 </div>
 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--<script>-->
+<!--    // console.log("hello");-->
+<!--</script>-->
+<!--load our own JS file-->
+<script src="index.js">
+</script>
 </body>
+
 </html>
+
+

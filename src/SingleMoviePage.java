@@ -85,7 +85,6 @@ public class SingleMoviePage extends HttpServlet {
                     "where " +
                     "r.movieId = m.id and " +
                     "m.id = '"+ id + "' and " +
-//                    ??
                     "m.id = star.movieId " +
                     "group by  " +
                     "m.id) a, " +
@@ -100,7 +99,6 @@ public class SingleMoviePage extends HttpServlet {
                     "where " +
                     "a.Movie_ID=genre.movieId and " +
                     "a.Movie_ID = '"+ id + "'" +
-//                            ??
                     "group by a.Movie_ID, genre.movieId";
 
             // Declare our statement

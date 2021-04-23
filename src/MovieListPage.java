@@ -52,88 +52,30 @@ public class MovieListPage extends HttpServlet {
 
             // query to get the 20
             String query = "select " +
-                    " m.id," +
-                    " m.title, " +
-                    " m.year, " +
-                    " m.director," +
-                    " r.rating," +
-                    " (select" +
-                    "    istar.name" +
-                    "   from stars_in_movies isim, stars istar" +
-                    "   where" +
-                    "    isim.movieId=m.id and" +
-                    "    istar.id=isim.starId" +
-                    "    order by istar.id" +
-                    "    limit 0,1) as star1," +
-                    " (select" +
-                    "    istar.name" +
-                    "   from stars_in_movies isim, stars istar" +
-                    "   where" +
-                    "    isim.movieId=m.id and" +
-                    "    istar.id=isim.starId" +
-                    "    order by istar.id" +
-                    "    limit 1,1) as star2," +
-                    " (select" +
-                    "    istar.name" +
-                    "   from stars_in_movies isim, stars istar" +
-                    "   where" +
-                    "    isim.movieId=m.id and" +
-                    "    istar.id=isim.starId" +
-                    "    order by istar.id" +
-                    "    limit 2,1) as star3," +
-                    " (select" +
-                    "    istar.id" +
-                    "   from stars_in_movies isim, stars istar" +
-                    "   where" +
-                    "    isim.movieId=m.id and" +
-                    "    istar.id=isim.starId" +
-                    "    order by istar.id" +
-                    "    limit 0,1) as starid1," +
-                    " (select" +
-                    "    istar.id" +
-                    "   from stars_in_movies isim, stars istar" +
-                    "   where" +
-                    "    isim.movieId=m.id and" +
-                    "    istar.id=isim.starId" +
-                    "    order by istar.id" +
-                    "    limit 1,1) as starid2," +
-                    " (select" +
-                    "    istar.id" +
-                    "   from stars_in_movies isim, stars istar" +
-                    "   where" +
-                    "    isim.movieId=m.id and" +
-                    "    istar.id=isim.starId" +
-                    "    order by istar.id" +
-                    "    limit 2,1) as starid3," +
-                    "  (select " +
-                    "   ig.name " +
-                    "  from genres_in_movies igim, genres ig" +
-                    "  where" +
-                    "   igim.movieId=m.id and" +
-                    "   ig.id=igim.genreId" +
-                    "  order by ig.id" +
-                    "   limit 0,1) as genre1," +
-                    " (select " +
-                    "   ig.name " +
-                    "  from genres_in_movies igim, genres ig" +
-                    "  where" +
-                    "   igim.movieId=m.id and" +
-                    "   ig.id=igim.genreId" +
-                    "   order by ig.id" +
-                    "   limit 1,1) as genre2," +
-                    " (select " +
-                    "   ig.name " +
-                    "  from genres_in_movies igim, genres ig" +
-                    "  where" +
-                    "   igim.movieId=m.id and" +
-                    "   ig.id=igim.genreId" +
-                    "   order by ig.id" +
-                    "   limit 2,1) as genre3" +
-                    " from movies m, ratings r" +
-                    " where m.id=r.movieId" +
-                    " order by r.rating" +
-                    " desc limit 20";
-
+                    "m.id, " +
+                    "m.title," +
+                    "m.year," +
+                    "m.director," +
+                    "r.rating," +
+                    "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName," +
+                    "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName," +
+                    "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId" +
+                    " from " +
+                    "movies as m " +
+                    "left outer join " +
+                    "  stars_in_movies as sm on m.id = sm.movieId " +
+                    "left outer join " +
+                    "  stars as s on s.id = sm. starId" +
+                    " left outer join " +
+                    " ratings as r on m.id = r.movieId" +
+                    " left outer join " +
+                    "  genres_in_movies as gm on m.id = gm.movieId " +
+                    "left outer join " +
+                    "  genres as g on g.id = gm.genreId " +
+                    "group by id " +
+                    "order by " +
+                    "r.rating DESC "+
+                    "limit 20";
             // perform the query
             // return the result relation as rs.
             ResultSet rs = statement.executeQuery(query);
@@ -149,15 +91,9 @@ public class MovieListPage extends HttpServlet {
                 String movie_year = rs.getString("year");
                 String movie_director = rs.getString("director");
                 String movie_rating = rs.getString("rating");
-                String star1 = rs.getString("star1");
-                String star2 = rs.getString("star2");
-                String star3 = rs.getString("star3");
-                String starid1 = rs.getString("starid1");
-                String starid2 = rs.getString("starid2");
-                String starid3 = rs.getString("starid3");
-                String genre1 = rs.getString("genre1");
-                String genre2 = rs.getString("genre2");
-                String genre3 = rs.getString("genre3");
+                String genres = rs.getString("genresName");
+                String stars = rs.getString("starsName");
+                String star_id = rs.getString("starsId");
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("movie_id", movie_id);
@@ -165,16 +101,9 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("movie_year", movie_year);
                 jsonObject.addProperty("movie_director", movie_director);
                 jsonObject.addProperty("movie_rating", movie_rating);
-                jsonObject.addProperty("star1", star1);
-                jsonObject.addProperty("star2", star2);
-                jsonObject.addProperty("star3", star3);
-                jsonObject.addProperty("starid1", starid1);
-                jsonObject.addProperty("starid2", starid2);
-                jsonObject.addProperty("starid3", starid3);
-                jsonObject.addProperty("genre1", genre1);
-                jsonObject.addProperty("genre2", genre2);
-                jsonObject.addProperty("genre3", genre3);
-
+                jsonObject.addProperty("genres", genres);
+                jsonObject.addProperty("stars", stars);
+                jsonObject.addProperty("star_id", star_id);
 
                 jsonArray.add(jsonObject);
             }

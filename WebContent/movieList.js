@@ -18,60 +18,49 @@ function handleMovieResult(resultData) {
     for (let i = 0; i < Math.min(20, resultData.length); i++){
         // html
         let rowHTML = "";
-        rowHTML += "<tr>"; // opens up tr
-        // rowHTML += "<th>"; // opens the th to add each row
-        // movie_title, movie_year, movie_director
-        // rowHTML += "<th>" + resultData[i]["movie_title"] + "</th>";
-        rowHTML += "<td>" + '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+ resultData[i]["movie_title"] +'</a>'+ "</td>";
-        rowHTML += "<td>" + resultData[i]["movie_year"] + "</td>";
-        rowHTML += "<td>" + resultData[i]["movie_director"] + "</td>";
+        rowHTML += "<tr>";
 
-        rowHTML += "<td>";
-        rowHTML += "<ul>";
-        if (resultData[i]["genre1"] != null){
-            rowHTML += "<li>" + resultData[i]["genre1"] + "</li>";
+        // movile title is hyperlink get the movie id
+        // console.log(resultData[i]);
+        rowHTML += "<th>" +
+            '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+
+            resultData[i]['movie_title'] + "'</a>'</th>";
+        rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
+        rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
+        // generes
+        rowHTML += "<ul> <th>";
+        var genres_list = resultData[i]["genres"].split(",");
+        for (let i = 0; i < Math.min(20, genres_list.length); i++){
+            rowHTML += "<li>" + genres_list[i] + "</li>";
         }
-        if (resultData[i]["genre2"] != null){
-            rowHTML += "<li>" + resultData[i]["genre2"] + "</li>";
+        rowHTML += "</ul> </th>";
+
+        //stars
+        rowHTML += "<ul> <th>";
+        var stars_list = resultData[i]["stars"].split(",");
+        var starID_list = resultData[i]["star_id"].split(",");
+
+        // console.log(starID_list[0]);
+
+        for (let i = 0; i < Math.min(20, stars_list.length); i++){
+            rowHTML +=
+                "<li>" +
+                // Add a link to single-star.html with id passed with GET url parameter
+                '<a href="singleStar.html?id=' + starID_list[i] + '">'
+                + stars_list[i] +     // display star_name for the link text
+                '</a>' +
+                "</li>";
         }
-        if (resultData[i]["genre3"] != null){
-            rowHTML += "<li>" + resultData[i]["genre3"] + "</li>";
-        }
+        rowHTML += "</ul> </th>";
+        rowHTML += "<th>" + resultData[i]["movie_rating"] + "</th>";
 
-        rowHTML += "</ul>";
-        rowHTML += "</td>";
-
-        rowHTML += "<td>";
-        rowHTML += "<ul>";
-        if (resultData[i]["star1"] != null){
-            rowHTML += "<li>" + '<a href="singleStar.html?id=' + resultData[i]["starid1"] + '">' + resultData[i]["star1"] + "</li>";
-
-            // rowHTML += "<li>" + resultData[i]["star1"] + "</li>";
-        }
-        if (resultData[i]["star2"] != null){
-            rowHTML += "<li>" + '<a href="singleStar.html?id=' + resultData[i]["starid2"] + '">' + resultData[i]["star2"] + "</li>";
-
-            // rowHTML += "<li>" + resultData[i]["star2"] + "</li>";
-        }
-        if (resultData[i]["star3"] != null){
-            rowHTML += "<li>" + '<a href="singleStar.html?id=' + resultData[i]["starid3"] + '">' + resultData[i]["star3"] + "</li>";
-
-            // rowHTML += "<li>" + resultData[i]["star3"] + "</li>";
-        }
-
-        rowHTML += "</ul>";
-        rowHTML += "</td>";
-
-        rowHTML += "<td>" + resultData[i]["movie_rating"] + "</td>";
-
-        // Append the row created to the table body, which will refresh the page
+        // rowHTML += "<tr/>"; // close up tr
         movieTableBodyElement.append(rowHTML);
     }
 }
 
 /**
  * Once this .js is loaded, following scripts will be executed by the browser
-
  */
 // Makes the HTTP GET request and registers on success callback function handleMovieResult
 jQuery.ajax({

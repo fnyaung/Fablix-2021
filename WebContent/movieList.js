@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function getParameterByName(target) {
+ function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -59,7 +59,7 @@ function handleSingleMovieResult(resultData) {
 
         // console.log(starID_list[0]);
 
-        for (let i = 0; i < Math.min(20, stars_list.length); i++) {
+        for (let i = 0; i < Math.min(20, 3); i++) {
             rowHTML +=
                 "<li>" +
                 // Add a link to single-star.html with id passed with GET url parameter
@@ -88,6 +88,7 @@ let title = getParameterByName('title');
 let year = getParameterByName('year');
 let director = getParameterByName('director');
 let star = getParameterByName('star');
+// let genre = getParameterByName('genre');
 
 // Makes the HTTP GET request and registers on success callback function handleMovieResult
 jQuery.ajax({
@@ -96,4 +97,3 @@ jQuery.ajax({
     url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star, // Setting request url, which is mapped by StarsServlet in MovieListPage.java
     success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
-

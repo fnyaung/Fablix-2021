@@ -45,12 +45,8 @@ function handleSingleMovieResult(resultData) {
         // console.log(resultData[i]);
         rowHTML += "<td>" +
             '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">' +
-<<<<<<< HEAD
             resultData[i]['movie_title'] + "</a></td>";
 
-=======
-            resultData[i]['movie_title'] + "'</a>'</td>";
->>>>>>> 07bb3aabc245429200833de0a30032387e03a47b
         rowHTML += "<td>" + resultData[i]["movie_year"] + "</td>";
         rowHTML += "<td>" + resultData[i]["movie_director"] + "</td>";
         // generes
@@ -79,16 +75,12 @@ function handleSingleMovieResult(resultData) {
         }
         rowHTML += "</ul> </td>";
         rowHTML += "<td>" + resultData[i]["movie_rating"] + " </td>";
-<<<<<<< HEAD
 
         // this is button
         rowHTML += "<td> <button onClik =/itmes?newItem=" + resultData[i]['movie_title'] + ">Add</button> </td>";
         // rowHTML += '<td> </td><input type="button" onClick="setCart(\'' + resultData[i]["movie_id"] + '\',\'' + resultData[i]["movie_title"] + '\')" VALUE="Add"> </td>';
 
         // rowHTML += "<td><button type=\"button\">add</button> </td>";
-=======
-        rowHTML += "<td><button type=\"button\">add</button> </td>";
->>>>>>> 07bb3aabc245429200833de0a30032387e03a47b
 
 
         movieTableBodyElement.append(rowHTML);

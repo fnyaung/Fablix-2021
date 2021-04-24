@@ -23,9 +23,7 @@ function getParameterByName(target) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-
 function handleSingleMovieResult(resultData) {
-
     console.log("handleMovieResult: populating movie table from resultData");
     console.log("no_of_page: " + resultData[0]["no_of_page"]);
     console.log(window.location.href);
@@ -79,7 +77,6 @@ function handleSingleMovieResult(resultData) {
         // this is button
         rowHTML += "<td> <button onClik =/itmes?newItem=" + resultData[i]['movie_title'] + ">Add</button> </td>";
         // rowHTML += '<td> </td><input type="button" onClick="setCart(\'' + resultData[i]["movie_id"] + '\',\'' + resultData[i]["movie_title"] + '\')" VALUE="Add"> </td>';
-
         // rowHTML += "<td><button type=\"button\">add</button> </td>";
 
 
@@ -107,7 +104,6 @@ function handleSingleMovieResult(resultData) {
         pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
     }
     page_list_element.append(pageHTML);
-
 }
 
 
@@ -117,27 +113,19 @@ function handleSingleMovieResult(resultData) {
  * Once this .js is loaded, following scripts will be executed by the browser
 
  */
-// let location = getParameterByName('location');
 let title = getParameterByName('title');
 let year = getParameterByName('year');
 let director = getParameterByName('director');
 let star = getParameterByName('star');
 let genre = getParameterByName('genre');
-<<<<<<< HEAD
 let page = getParameterByName('page');
-=======
->>>>>>> 07bb3aabc245429200833de0a30032387e03a47b
 
 
 // Makes the HTTP GET request and registers on success callback function handleMovieResult
 jQuery.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-<<<<<<< HEAD
     url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star + "&genre=" + genre + "&page=" + page,
-=======
-    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star+ "&genre=" + genre,
->>>>>>> 07bb3aabc245429200833de0a30032387e03a47b
     success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 

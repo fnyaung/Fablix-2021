@@ -42,7 +42,7 @@ function handleSingleMovieResult(resultData) {
     let rowHTML = "";
     rowHTML += "<tr>";
 
-    // movile title is hyperlink get the movie id
+    // movie title is hyperlink get the movie id
     console.log(resultData[0]);
     // rowHTML += "<th>" +
     //     '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+

@@ -64,30 +64,44 @@
 
 <body>
 <div class="container">
-    <div class="button-group">
-        <!--        <button onclick="goBack()">Go Back</button>-->
-<!--        <a class="btn btn-primary" href="movieList.html" role="button">Movie List</a>-->
-        <a class="btn btn-primary" href="movieList.html" role="button">Movie List</a>
 
-    </div>
-
-    <h1>Single Star Page</h1>
+<!--    <h1>Single Star Page</h1>-->
 
     <!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
     <!-- single-star.js will find this html element by it's id "star_info" -->
-    <h3 id="star_info"></h3>
+    <h1 align="center" id="star_info"></h1>
+
+    <div class="nav-wrapper">
+
+        <div class="left-side">
+            <div class="nav-link-wrapper">
+                <a href='movieList.html?title=&year=&director=&star=&genre='>MovieList</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a href='browse.html'>Browse</a>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="nav-link-wrapper">
+                <!--                need update-->
+                <a href='checkOut.html'>CheckOut</a>
+            </div>
+
+        </div>
+
+    </div>
+
     <table id="movie_table" class="table table-striped">
         <thead>
         <tr>
             <th>Movie Title</th>
-            <th>
         </tr>
         </thead>
-
-        <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
-        <!-- single-star.js will find this html element by it's id "movie_table_body" -->
         <tbody id=movie_table_body></tbody>
     </table>
+
 </div>
 
 

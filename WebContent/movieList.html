@@ -20,11 +20,33 @@
 </head>
 
 <body>
-<div class="container">
+<h1 ALIGN="CENTER">Movie List</h1>
 
-    <h1>Movie List</h1>
+<div class="container">
     <!--        <p>Alice and Faustina's project checking</p>-->
     <!--        <p>Project 1 Star Example Works</p>-->
+    <div class="nav-wrapper">
+
+        <div class="left-side">
+            <div class="nav-link-wrapper">
+                <a href='movieList.html?title=&year=&director=&star=&genre='>MovieList</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a href='browse.html'>Browse</a>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="nav-link-wrapper">
+                <!--                need update-->
+                <a href='checkOut.html'>CheckOut</a>
+            </div>
+
+        </div>
+
+    </div>
+
     <table>
         <!--tr defines row in html-->
         <thead>
@@ -35,6 +57,7 @@
             <th>Genre</th>
             <th>Stars</th>
             <th>Rating</th>
+            <th></th>
         </tr>
         </thead>
         <tbody id=movie_table_body>

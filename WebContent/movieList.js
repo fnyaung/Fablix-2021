@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
- function getParameterByName(target) {
+function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -39,21 +39,21 @@ function handleSingleMovieResult(resultData) {
 
         // movile title is hyperlink get the movie id
         // console.log(resultData[i]);
-        rowHTML += "<th>" +
+        rowHTML += "<td>" +
             '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">' +
-            resultData[i]['movie_title'] + "'</a>'</th>";
-        rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
+            resultData[i]['movie_title'] + "'</a>'</td>";
+        rowHTML += "<td>" + resultData[i]["movie_year"] + "</td>";
+        rowHTML += "<td>" + resultData[i]["movie_director"] + "</td>";
         // generes
-        rowHTML += "<ul> <th>";
+        rowHTML += "<ul> <td>";
         var genres_list = resultData[i]["genres"].split(",");
         for (let i = 0; i < Math.min(20, genres_list.length); i++) {
             rowHTML += "<li>" + genres_list[i] + "</li>";
         }
-        rowHTML += "</ul> </th>";
+        rowHTML += "</ul> </td>";
 
         //stars
-        rowHTML += "<ul> <th>";
+        rowHTML += "<ul> <td>";
         var stars_list = resultData[i]["stars"].split(",");
         var starID_list = resultData[i]["star_id"].split(",");
 
@@ -68,8 +68,10 @@ function handleSingleMovieResult(resultData) {
                 '</a>' +
                 "</li>";
         }
-        rowHTML += "</ul> </th>";
-        rowHTML += "<th>" + resultData[i]["movie_rating"] + "</th>";
+        rowHTML += "</ul> </td>";
+        rowHTML += "<td>" + resultData[i]["movie_rating"] + " </td>";
+        rowHTML += "<td><button type=\"button\">add</button> </td>";
+
 
         // rowHTML += "<tr/>"; // close up tr
         movieTableBodyElement.append(rowHTML);
@@ -88,12 +90,13 @@ let title = getParameterByName('title');
 let year = getParameterByName('year');
 let director = getParameterByName('director');
 let star = getParameterByName('star');
-// let genre = getParameterByName('genre');
+let genre = getParameterByName('genre');
+
 
 // Makes the HTTP GET request and registers on success callback function handleMovieResult
 jQuery.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star, // Setting request url, which is mapped by StarsServlet in MovieListPage.java
+    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star+ "&genre=" + genre,
     success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });

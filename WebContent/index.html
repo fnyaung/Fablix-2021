@@ -27,7 +27,7 @@
 
         <div class="left-side">
             <div class="nav-link-wrapper">
-                <a href='index.html'>Home</a>
+                <a href='movieList.html?title=&year=&director=&star=&genre='>MovieList</a>
             </div>
 
             <div class="nav-link-wrapper">
@@ -38,12 +38,7 @@
         <div class="right-side">
             <div class="nav-link-wrapper">
 <!--                need update-->
-                <a href='index.html'>Cart</a>
-            </div>
-
-            <div class="nav-link-wrapper">
-<!--                need update-->
-                <a href='index.html'>Account</a>
+                <a href='checkOut.html'>CheckOut</a>
             </div>
         </div>
 
@@ -66,6 +61,8 @@
 
                 <label for="star">Star Name</label>
                 <input class="search-input" type="text" id="star" placeholder="eg) Arnold .." name="star" size="25"> <br>
+
+                <input class="search-input" type="hidden" id="genre" placeholder="eg) drama .." name="genre" size="25"> <br>
 
                 <input TYPE="SUBMIT" VALUE="Search">
             </form>

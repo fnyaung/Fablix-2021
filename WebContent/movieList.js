@@ -7,6 +7,23 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
+function getParameterByName(target){
+    // Get request URL
+    let url = window.location.href;
+    // Encode target parameter name to url encoding
+    target = target.replace(/[\[\]]/g, "\\$&");
+
+    // Use regular expression to find matched parameter value
+    let regex = new RegExp("[?&]" + target + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+
+    // Return the decoded parameter value
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
 function handleMovieResult(resultData) {
 
     console.log("handleMovieResult: populating movie table from resultData");
@@ -59,6 +76,7 @@ function handleMovieResult(resultData) {
     }
 }
 
+
 /**
  * Once this .js is loaded, following scripts will be executed by the browser
  */
@@ -69,3 +87,24 @@ jQuery.ajax({
     url: "api/movie-list", // Setting request url, which is mapped by StarsServlet in MovieListPage.java
     success: (resultData) => handleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
+
+
+
+/**
+ * Once this .js is loaded, following scripts will be executed by the browser
+
+ */
+// let location = getParameterByName('location');
+let title = getParameterByName('title');
+let year = getParameterByName('year');
+let director = getParameterByName('director');
+let star = getParameterByName('star');
+
+// Makes the HTTP GET request and registers on success callback function handleMovieResult
+jQuery.ajax({
+    dataType: "json", // Setting return data type
+    method: "GET", // Setting request method
+    url: "api/movie-list?title=" + title+ "&year=" + year+ "&director=" + director+ "&star=" + star, // Setting request url, which is mapped by StarsServlet in MovieListPage.java
+    success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+});
+

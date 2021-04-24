@@ -5,7 +5,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <title>Single Star</title>
+    <title>Fablix</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
@@ -19,13 +19,16 @@
 
 <body>
 <div class="container">
-
-    <h3 align="center" id="star_info"></h3>
+    <!--        nav bar on top-->
     <div class="nav-wrapper">
 
         <div class="left-side">
             <div class="nav-link-wrapper">
-                <a href='movieList.html?title=&year=&director=&star=&genre='>MovieList</a>
+                <a href='index.html'>Search</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a href='movieList.html?title=&year=&director=&star=&genre=&page=1'>MovieList</a>
             </div>
 
             <div class="nav-link-wrapper">
@@ -38,7 +41,6 @@
                 <!--                need update-->
                 <a href='checkOut.html'>CheckOut</a>
             </div>
-
         </div>
 
     </div>
@@ -51,8 +53,6 @@
         </tr>
         </thead>
         <tbody id=movie_table_body>
-        <tr>
-        </tr>
         </tbody>
     </table>
 </div>

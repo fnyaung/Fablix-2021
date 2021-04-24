@@ -70,10 +70,6 @@ function handleResult(resultData) {
     var movieid_list = resultData[0]["movies_id"].split(",");
     // Concatenate the html tags with resultData jsonObject to create table rows
     for (let i = 0; i < Math.min(10, movie_list.length); i++) {
-        // let rowHTML = "";
-        // rowHTML += "<tr>";
-        // rowHTML += "<th>" + movie_list[i] + "</th>";
-        // rowHTML += "</tr>";
         let rowHTML = "";
         rowHTML +=    "<li>" +
             // Add a link to single-star.html with id passed with GET url parameter

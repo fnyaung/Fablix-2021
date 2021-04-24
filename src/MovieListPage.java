@@ -51,8 +51,11 @@ public class MovieListPage extends HttpServlet {
         String director = request.getParameter("director");
         String star = request.getParameter("star");
         String genre = request.getParameter("genre");
+        String cur_page = request.getParameter("page");
 
-        System.out.println(title + " " + year + " " + director + " " +star);
+//        String page_limit_str = Integer.toString(page_limit);
+
+        System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
@@ -60,13 +63,6 @@ public class MovieListPage extends HttpServlet {
         try (Connection conn = dataSource.getConnection()) {
 
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
-//            Statement statement = conn.createStatement();
-
-            // if == search
-            // if == browse
-            //
-            // query to get the 20
 
             String query = "select   " +
                     "a.Movie_ID,  " +
@@ -77,6 +73,7 @@ public class MovieListPage extends HttpServlet {
                     "a.Stars,  " +
                     "a.Stars_Id,  " +
                     "GROUP_CONCAT(genre.name) AS Genres  " +
+                    ",count(*) OVER() AS Total " + // to count the total
                     "from  " +
                     "(select  " +
                     "m.id as Movie_ID,  " +
@@ -119,9 +116,11 @@ public class MovieListPage extends HttpServlet {
                     "and (Director like ?) " +
                     "and (Year like ?) " +
                     "group by a.Movie_ID, genre.movieId " +
-                    "having (Genres like ? or Stars like ?) " +
+                    "having (Genres like ? or Genres like ?) " +
                     "order by a.Rating DESC " +
-                    "limit 20";
+//                    "limit 20";
+                    "limit ?, ?";
+
 
             // Declare our statement
             PreparedStatement statement = conn.prepareStatement(query);
@@ -142,8 +141,16 @@ public class MovieListPage extends HttpServlet {
             if(genre == null){
                 genre = "";
             }
+            if(cur_page == null){
+                cur_page ="";
+            }
+            int page_limit_int = 0;
+            // set the next page to + 20
+            int cur_page_int =  Integer.parseInt(cur_page) - 1;
+            page_limit_int = cur_page_int+20;
 
-            System.out.println(title + " " + star + " " + year + " " + director + " " + genre);
+
+            System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
             statement.setString(1, "%," + star + "%");
             statement.setString(2, star + "%");
             statement.setString(3, "%" + title + "%");
@@ -152,6 +159,9 @@ public class MovieListPage extends HttpServlet {
             statement.setString(6, "%" + year + "%");
             statement.setString(7, "%," + genre + "%");
             statement.setString(8, genre + "%");
+            // page
+            statement.setInt(9, cur_page_int);
+            statement.setInt(10, page_limit_int);
 
             // perform the query
             // return the result relation as rs.
@@ -162,12 +172,11 @@ public class MovieListPage extends HttpServlet {
 
 
             System.out.println("2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            String location = request.getParameter("location");
-            System.out.println("location: "+ location);
             System.out.println("title: "+ title);
             System.out.println("year: "+year);
             System.out.println("director: "+director);
             System.out.println("star: "+star);
+            System.out.println("genre: "+genre);
             System.out.println("3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             JsonArray jsonArray = new JsonArray();
@@ -184,6 +193,11 @@ public class MovieListPage extends HttpServlet {
                 String stars = rs.getString("Stars");
                 String star_id = rs.getString("Stars_ID");
                 String genres = rs.getString("Genres");
+                int total = rs.getInt("Total");
+                int no_of_page = 0;
+//                System.out.println("~~total: "+ total);
+                no_of_page = total / 20;
+//                System.out.println("~~total: "+ no_of_page);
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("movie_id", movie_id);
@@ -194,6 +208,7 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("stars", stars);
                 jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("genres", genres);
+                jsonObject.addProperty("no_of_page", no_of_page);
 
                 jsonArray.add(jsonObject);
             }

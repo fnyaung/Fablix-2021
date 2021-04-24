@@ -77,16 +77,14 @@ tr:nth-child(even) {
     transition: coor 0.5s;
 }
 
-.nav-link-wrapper a:hover{
-    color: #212529;
-}
-
-/*index search-wrapper*/
-.search-wrapper {
-    flex-direction: column;
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 3px;
     font-size: 1em;
-    margin: auto;
-    width: 40%;
+    display: block;
+    text-align: left;
 }
 
 .search-link-wrapper form {
@@ -102,13 +100,13 @@ form.search {
     display: inline-block;
 }
 
-/*button {*/
-/*    background-color: lightgrey;*/
-/*    border: none;*/
-/*    color: black;*/
-/*    padding: 10px 30px;*/
-/*    text-align: center;*/
-/*    text-decoration: none;*/
-/*    display: inline-block;*/
-/*    font-size: 16px;*/
-/*}*/
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+
+

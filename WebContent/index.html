@@ -19,7 +19,7 @@
 </head>
 
 <body >
-<h1 ALIGN="CENTER">Main Menu</h1>
+<h1 ALIGN="CENTER">Fablix</h1>
 
 <div class="container">
 <!--        nav bar on top-->
@@ -27,7 +27,11 @@
 
         <div class="left-side">
             <div class="nav-link-wrapper">
-                <a href='index.html'>Home</a>
+                <a href='index.html'>Search</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a href='movieList.html?title=&year=&director=&star=&genre=&page=1'>MovieList</a>
             </div>
 
             <div class="nav-link-wrapper">
@@ -38,12 +42,7 @@
         <div class="right-side">
             <div class="nav-link-wrapper">
 <!--                need update-->
-                <a href='index.html'>Cart</a>
-            </div>
-
-            <div class="nav-link-wrapper">
-<!--                need update-->
-                <a href='index.html'>Account</a>
+                <a href='checkOut.html'>CheckOut</a>
             </div>
         </div>
 
@@ -66,6 +65,10 @@
 
                 <label for="star">Star Name</label>
                 <input class="search-input" type="text" id="star" placeholder="eg) Arnold .." name="star" size="25"> <br>
+
+                <input class="search-input" type="hidden" id="genre" name="genre"> <br>
+
+                <input type="hidden" name="page" id="page" value="1">
 
                 <input TYPE="SUBMIT" VALUE="Search">
             </form>

@@ -5,7 +5,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <title>AF's Movie Website</title>
+    <title>Fablix</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
@@ -20,11 +20,41 @@
 </head>
 
 <body>
-<div class="container">
+<h1 ALIGN="CENTER">Fablix Movie List</h1>
+<!--        nav bar on top-->
+<div class="nav-wrapper">
 
-    <h1>Movie List</h1>
-    <!--        <p>Alice and Faustina's project checking</p>-->
-    <!--        <p>Project 1 Star Example Works</p>-->
+    <div class="left-side">
+        <div class="nav-link-wrapper">
+            <a href='index.html'>Search</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+            <a href='movieList.html?title=&year=&director=&star=&genre=&page=1'>MovieList</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+            <a href='browse.html'>Browse</a>
+        </div>
+    </div>
+
+    <div class="right-side">
+        <div class="nav-link-wrapper">
+            <!--                need update-->
+            <a href='checkOut.html'>CheckOut</a>
+        </div>
+    </div>
+
+</div>
+
+<!--    <label for="records">Select items per page:</label>-->
+
+<!--    <select class="form-control" id="records" name="recordsPerPage">-->
+<!--        <option value="5">5</option>-->
+<!--        <option value="10" selected>10</option>-->
+<!--        <option value="15">15</option>-->
+<!--    </select>-->
+
     <table>
         <!--tr defines row in html-->
         <thead>
@@ -35,11 +65,17 @@
             <th>Genre</th>
             <th>Stars</th>
             <th>Rating</th>
+            <th></th>
         </tr>
         </thead>
         <tbody id=movie_table_body>
         </tbody>
     </table>
+
+    <div  ALIGN="CENTER" id="page_list" class="page-container">
+
+    </div>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

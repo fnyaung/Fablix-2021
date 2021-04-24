@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function getParameterByName(target){
+function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -24,7 +24,7 @@ function getParameterByName(target){
 }
 
 
-function handleMovieResult(resultData) {
+function handleSingleMovieResult(resultData) {
 
     console.log("handleMovieResult: populating movie table from resultData");
 
@@ -32,7 +32,7 @@ function handleMovieResult(resultData) {
     // get the movie_table_body from html file with jQuery
     let movieTableBodyElement = jQuery("#movie_table_body");
 
-    for (let i = 0; i < Math.min(20, resultData.length); i++){
+    for (let i = 0; i < Math.min(20, resultData.length); i++) {
         // html
         let rowHTML = "";
         rowHTML += "<tr>";
@@ -40,14 +40,14 @@ function handleMovieResult(resultData) {
         // movile title is hyperlink get the movie id
         // console.log(resultData[i]);
         rowHTML += "<th>" +
-            '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+
+            '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">' +
             resultData[i]['movie_title'] + "'</a>'</th>";
         rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
         rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
         // generes
         rowHTML += "<ul> <th>";
         var genres_list = resultData[i]["genres"].split(",");
-        for (let i = 0; i < Math.min(20, genres_list.length); i++){
+        for (let i = 0; i < Math.min(20, genres_list.length); i++) {
             rowHTML += "<li>" + genres_list[i] + "</li>";
         }
         rowHTML += "</ul> </th>";
@@ -59,7 +59,7 @@ function handleMovieResult(resultData) {
 
         // console.log(starID_list[0]);
 
-        for (let i = 0; i < Math.min(20, stars_list.length); i++){
+        for (let i = 0; i < Math.min(20, stars_list.length); i++) {
             rowHTML +=
                 "<li>" +
                 // Add a link to single-star.html with id passed with GET url parameter
@@ -77,17 +77,6 @@ function handleMovieResult(resultData) {
 }
 
 
-/**
- * Once this .js is loaded, following scripts will be executed by the browser
- */
-// Makes the HTTP GET request and registers on success callback function handleMovieResult
-jQuery.ajax({
-    dataType: "json", // Setting return data type
-    method: "GET", // Setting request method
-    url: "api/movie-list", // Setting request url, which is mapped by StarsServlet in MovieListPage.java
-    success: (resultData) => handleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
-});
-
 
 
 /**
@@ -104,7 +93,7 @@ let star = getParameterByName('star');
 jQuery.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/movie-list?title=" + title+ "&year=" + year+ "&director=" + director+ "&star=" + star, // Setting request url, which is mapped by StarsServlet in MovieListPage.java
+    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star, // Setting request url, which is mapped by StarsServlet in MovieListPage.java
     success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 

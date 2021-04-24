@@ -42,9 +42,17 @@ public class MovieListPage extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // title year director star
 
         response.setContentType("application/json"); // Response mime type
+
+        // retrieve title, year, director, and star from url request
+        String title = request.getParameter("title");
+        String year = request.getParameter("year");
+        String director = request.getParameter("director");
+        String star = request.getParameter("star");
+        String genre = request.getParameter("genre");
+
+        System.out.println(title + " " + year + " " + director + " " +star);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
@@ -53,51 +61,109 @@ public class MovieListPage extends HttpServlet {
 
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-            Statement statement = conn.createStatement();
+//            Statement statement = conn.createStatement();
+
             // if == search
             // if == browse
             //
             // query to get the 20
 
-            String query = "select " +
-                    "m.id, " +
-                    "m.title," +
-                    "m.year," +
-                    "m.director," +
-                    "r.rating," +
-                    "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName," +
-                    "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName," +
-                    "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId" +
-                    " from " +
-                    "movies as m " +
-                    "left outer join " +
-                    "  stars_in_movies as sm on m.id = sm.movieId " +
-                    "left outer join " +
-                    "  stars as s on s.id = sm. starId" +
-                    " left outer join " +
-                    " ratings as r on m.id = r.movieId" +
-                    " left outer join " +
-                    "  genres_in_movies as gm on m.id = gm.movieId " +
-                    "left outer join " +
-                    "  genres as g on g.id = gm.genreId " +
-                    "group by id " +
-                    "order by " +
-                    "r.rating DESC "+
+            String query = "select   " +
+                    "a.Movie_ID,  " +
+                    "a.Title,  " +
+                    "a.Year,  " +
+                    "a.Director,  " +
+                    "a.Rating,  " +
+                    "a.Stars,  " +
+                    "a.Stars_Id,  " +
+                    "GROUP_CONCAT(genre.name) AS Genres  " +
+                    "from  " +
+                    "(select  " +
+                    "m.id as Movie_ID,  " +
+                    "m.title as Title,  " +
+                    "m.year as Year,  " +
+                    "m.director as Director,  " +
+                    "r.rating as Rating,  " +
+                    "GROUP_CONCAT(star.name) AS Stars,  " +
+                    "GROUP_CONCAT(star.id) AS Stars_ID  " +
+                    "from  " +
+                    "movies m,  " +
+                    "ratings r,  " +
+                    "( select   " +
+                    "    s.name,  " +
+                    "    s.id,  " +
+                    "    sm.movieId  " +
+                    "  from   " +
+                    "     stars s,  " +
+                    "     stars_in_movies sm  " +
+                    "   where   " +
+                    "     s.id=sm.starId) star       " +
+                    "where  " +
+                    "r.movieId = m.id and  " +
+                    "m.id = star.movieId  " +
+                    "group by   " +
+                    "m.id) a,  " +
+                    "( select   " +
+                    "     g.name,  " +
+                    "     gm.movieId  " +
+                    "  from  " +
+                    "     genres g,  " +
+                    "     genres_in_movies gm  " +
+                    "  where   " +
+                    "     g.id=gm.genreId " +
+                    "     ) genre  " +
+                    "where " +
+                    "a.Movie_ID=genre.movieId  " +
+                    "and (Stars like ? or Stars like ?) " +
+                    "and (Title like ? or Title like ?) " +
+                    "and (Director like ?) " +
+                    "and (Year like ?) " +
+                    "group by a.Movie_ID, genre.movieId " +
+                    "having (Genres like ? or Stars like ?) " +
+                    "order by a.Rating DESC " +
                     "limit 20";
+
+            // Declare our statement
+            PreparedStatement statement = conn.prepareStatement(query);
+
+            // set parameter represented by "?" in the query
+            if(title == null){
+                title = "";
+            }
+            if(star == null){
+                star = "";
+            }
+            if(year == null){
+                year = "";
+            }
+            if(director == null){
+                director = "";
+            }
+            if(genre == null){
+                genre = "";
+            }
+
+            System.out.println(title + " " + star + " " + year + " " + director + " " + genre);
+            statement.setString(1, "%," + star + "%");
+            statement.setString(2, star + "%");
+            statement.setString(3, "%" + title + "%");
+            statement.setString(4, title + "%");
+            statement.setString(5, "%" + director + "%");
+            statement.setString(6, "%" + year + "%");
+            statement.setString(7, "%," + genre + "%");
+            statement.setString(8, genre + "%");
+
             // perform the query
             // return the result relation as rs.
-            ResultSet rs = statement.executeQuery(query);
 
-            String title = request.getParameter("title");
-            String year = request.getParameter("year");
-            String director = request.getParameter("director");
-            String star = request.getParameter("star");
+            System.out.println(statement);
+
+            ResultSet rs = statement.executeQuery();
+
 
             System.out.println("2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             String location = request.getParameter("location");
-            out.println("<p>location : "+location+"<p");
             System.out.println("location: "+ location);
-            out.println("<p>title : "+title+"<p");
             System.out.println("title: "+ title);
             System.out.println("year: "+year);
             System.out.println("director: "+director);
@@ -110,14 +176,14 @@ public class MovieListPage extends HttpServlet {
             // get it through until there is not next
             while (rs.next()) {
                 // id, title, year, director
-                String movie_id = rs.getString("id");
-                String movie_title = rs.getString("title");
-                String movie_year = rs.getString("year");
-                String movie_director = rs.getString("director");
-                String movie_rating = rs.getString("rating");
-                String genres = rs.getString("genresName");
-                String stars = rs.getString("starsName");
-                String star_id = rs.getString("starsId");
+                String movie_id = rs.getString("Movie_ID");
+                String movie_title = rs.getString("Title");
+                String movie_year = rs.getString("Year");
+                String movie_director = rs.getString("Director");
+                String movie_rating = rs.getString("Rating");
+                String stars = rs.getString("Stars");
+                String star_id = rs.getString("Stars_ID");
+                String genres = rs.getString("Genres");
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("movie_id", movie_id);
@@ -125,9 +191,9 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("movie_year", movie_year);
                 jsonObject.addProperty("movie_director", movie_director);
                 jsonObject.addProperty("movie_rating", movie_rating);
-                jsonObject.addProperty("genres", genres);
                 jsonObject.addProperty("stars", stars);
                 jsonObject.addProperty("star_id", star_id);
+                jsonObject.addProperty("genres", genres);
 
                 jsonArray.add(jsonObject);
             }

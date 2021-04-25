@@ -49,20 +49,34 @@
 
   </div>
 
-  <div class="col-25">
+  <div class="shoppping-cart-col">
     <div class="shopping cart">
+
       <h4>Cart
         <span class="price" style="color:black">
           <i class="fa fa-shopping-cart"></i>
-          <b>4</b>
+          <b id="total_item"></b>
         </span>
       </h4>
-      <p><a href="#">Product 1</a> <span class="price">$15  increase decrease delete here</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+
+      <table>
+        <!--tr defines row in html-->
+        <thead>
+        <tr>
+          <th>Items</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody id=item_table_body>
+          <tr>
+            <th>title</th>
+            <th>quantity</th>
+            <th>price</th>
+            <th>total</th>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
 
     <button onclick="document.location='payment.html'">Place Order</button>
@@ -74,11 +88,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!--<script>-->
-<!--    // console.log("hello");-->
-<!--</script>-->
-<!--load our own JS file-->
-<script src="movieList.js">
+<script src="checkOut.js">
 </script>
 </body>
 

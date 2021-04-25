@@ -23,6 +23,48 @@ function getParameterByName(target){
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
+//https://stackoverflow.com/questions/2144386/how-to-delete-a-cookie
+function setCookie(name,value) {
+    document.cookie = name + "=" + value + ";";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {
+    document.cookie = name+'=; Max-Age=-99999999;';
+}
+
+function putItems(movie_id, movie_title){
+    // we assume name is ids && titles
+    if (document.cookie.indexOf("cart")) {
+        //if it's first time
+        setCookie("cart",movie_id+"&&"+movie_title);
+
+    }
+    else { //it's the 2nd time
+        // we save the title
+        let temp_cart = getCookie("cart");
+
+        eraseCookie("cart");
+
+        let new_cart = temp_cart + "&.&" + movie_id+"&&"+movie_title;
+        setCookie("cart",new_cart);
+
+    }
+    console.log(document.cookie)
+    alert("added!");
+}
+
+
 function handleSingleMovieResult(resultData) {
 
     console.log("handleMovieSingle: populating single movie table from resultData");
@@ -34,15 +76,12 @@ function handleSingleMovieResult(resultData) {
 
     movieInfo.append("<p>Title : "+resultData[0]["movie_title"]+"</p>");
 
-    //
-    // for (let i = 0; i < Math.min(20, resultData.length); i++){
-    // html
     let movieTableBodyElement = jQuery("#movie_table_body");
 
     let rowHTML = "";
     rowHTML += "<tr>";
 
-    // movie title is hyperlink get the movie id
+    // movile title is hyperlink get the movie id
     console.log(resultData[0]);
     // rowHTML += "<th>" +
     //     '<a href="singleMovie.html?id=' + resultData[0]['movie_id'] + '">'+
@@ -53,7 +92,7 @@ function handleSingleMovieResult(resultData) {
     rowHTML += "<td>" + resultData[0]["movie_director"] + "</td>";
     // generes
     rowHTML += "<ul> <td>";
-    var genres_list = resultData[0]["genres"].split(",");
+    let genres_list = resultData[0]["genres"].split(",");
     for (let i = 0; i < Math.min(20, genres_list.length); i++){
         rowHTML += "<li>" + genres_list[i] + "</li>";
     }
@@ -61,8 +100,8 @@ function handleSingleMovieResult(resultData) {
 
     //stars
     rowHTML += "<ul> <td>";
-    var stars_list = resultData[0]["stars"].split(",");
-    var starID_list = resultData[0]["star_id"].split(",");
+    let stars_list = resultData[0]["stars"].split(",");
+    let starID_list = resultData[0]["star_id"].split(",");
 
     // rowHTML += "<th>" +
     //     '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">'+
@@ -73,6 +112,7 @@ function handleSingleMovieResult(resultData) {
     }
     rowHTML += "</ul> </td>";
     rowHTML += "<td>" + resultData[0]["movie_rating"] + "</td>";
+    rowHTML += '<td>$10<br><input type="button" onClick="putItems(\'' + resultData[0]["movie_id"] + '\',\'' + resultData[0]["movie_title"] + '\')" VALUE="Add"></td>';
 
     // rowHTML += "<tr/>"; // close up tr
     movieTableBodyElement.append(rowHTML);

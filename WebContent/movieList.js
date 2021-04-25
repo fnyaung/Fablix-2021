@@ -23,6 +23,65 @@ function getParameterByName(target) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+//https://stackoverflow.com/questions/2144386/how-to-delete-a-cookie
+function setCookie(name,value) {
+    document.cookie = name + "=" + value + ";";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    document.cookie = name+'=; Max-Age=-99999999;';
+}
+
+function updateCarts(){
+    let movie_array = [];
+
+    let tempids = getCookie("ids");
+    let temp_titles = getCookie("titles");
+
+    let ids_arr = tempids.split("&&");
+    console.log(ids_arr);
+    let titles_arr = temp_titles.split("&&");
+    console.log(titles_arr);
+
+    // var unique_tempids = a.filter(onlyUnique);
+
+
+}
+
+function putItems(movie_id, movie_title){
+    // we assume name is ids && titles
+    if (document.cookie.indexOf("cart")) {
+        //cookies ; name=value
+        //if it's first time
+        setCookie("cart",movie_id+"&&"+movie_title);
+
+    }
+    else { //it's the 2nd time
+        // we save the title
+        let temp_cart = getCookie("cart");
+
+        eraseCookie("cart");
+
+        let new_cart = temp_cart + "&.&" + movie_id+"&&"+movie_title;
+        setCookie("cart",new_cart);
+
+    }
+    console.log(document.cookie)
+    alert("added!");
+}
+
+
 function handleSingleMovieResult(resultData) {
     console.log("handleMovieResult: populating movie table from resultData");
     console.log("no_of_page: " + resultData[0]["no_of_page"]);
@@ -49,7 +108,7 @@ function handleSingleMovieResult(resultData) {
         rowHTML += "<td>" + resultData[i]["movie_director"] + "</td>";
         // generes
         rowHTML += "<ul> <td>";
-        var genres_list = resultData[i]["genres"].split(",");
+        let genres_list = resultData[i]["genres"].split(",");
         for (let i = 0; i < Math.min(20, genres_list.length); i++) {
             rowHTML += "<li>" + genres_list[i] + "</li>";
         }
@@ -73,23 +132,20 @@ function handleSingleMovieResult(resultData) {
         }
         rowHTML += "</ul> </td>";
         rowHTML += "<td>" + resultData[i]["movie_rating"] + " </td>";
-
+        let movieid = resultData[i]['movie_id'];
+        let movietitle = resultData[i]['movie_title'];
         // this is button
-        rowHTML += "<td> <button onClik =/itmes?newItem=" + resultData[i]['movie_title'] + ">Add</button> </td>";
-        // rowHTML += '<td> </td><input type="button" onClick="setCart(\'' + resultData[i]["movie_id"] + '\',\'' + resultData[i]["movie_title"] + '\')" VALUE="Add"> </td>';
-        // rowHTML += "<td><button type=\"button\">add</button> </td>";
-
-
+        rowHTML += '<td>$10<br><input type="button" onClick="putItems(\'' + resultData[i]["movie_id"] + '\',\'' + resultData[i]["movie_title"] + '\')" VALUE="Add"></td>';
         movieTableBodyElement.append(rowHTML);
     }
 
 
-    var curr_url = window.location.href;
-    var page_idx = (window.location.href).indexOf("page");
-    var page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&
-    var cur_page_no = curr_url.slice(page_idx+5);
+    let curr_url = window.location.href;
+    let page_idx = (window.location.href).indexOf("page");
+    let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&
+    let cur_page_no = curr_url.slice(page_idx+5);
     // console.log("curr page: "+ cur_page_no);
-    var page_end_idx = +cur_page_no + 20;
+    let page_end_idx = +cur_page_no + 20;
     // console.log("page_end_idx: "+ page_end_idx);
 
     if (page_end_idx > pageLimit){

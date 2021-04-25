@@ -78,7 +78,7 @@ public class LoginPage extends HttpServlet {
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("errorMessage", e.getMessage());
 
-            // set reponse status to 500 (Internal Server Error)
+            // set response status to 500 (Internal Server Error)
             response.setStatus(500);
         }
 

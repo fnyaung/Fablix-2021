@@ -23,10 +23,11 @@ function handlePaymentResult(resultDataString){
     }else{
         // If payment failed, it should return back to Payment Page with an
         // error message for customers to re-enter payment information.
+        window.location.replace("payment.html");
         console.log("show error message");
         console.log(resultDataJson["message"]);
-        // $("#payment_error_message").text(resultDataJson["message"]);
-        // window.location.replace("payment.html");
+        $("#payment_error_message").text(resultDataJson["message"]);
+
     }
 }
 

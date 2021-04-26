@@ -50,7 +50,7 @@ public class SingleStarPage extends HttpServlet {
             Connection dbcon = dataSource.getConnection();
 
             // query to get the 20
-            String query = "SELECT s.id as Star_ID, s.name as Star_Name, s.birthYear as Birth_Year, GROUP_CONCAT(DISTINCT m.id) AS Movies_ID, GROUP_CONCAT(DISTINCT m.title) AS Movies FROM movies m, stars s, stars_in_movies sm WHERE m.id = sm.movieID AND s.id = sm.starID AND s.id = '"+ id +"'GROUP BY s.id";
+            String query = "SELECT s.id as Star_ID, s.name as Star_Name, s.birthYear as Birth_Year, GROUP_CONCAT(DISTINCT m.id ORDER BY m.year DESC, m.title ASC) AS Movies_ID, GROUP_CONCAT(DISTINCT m.title ORDER BY m.year DESC, m.title ASC) AS Movies FROM movies m, stars s, stars_in_movies sm WHERE m.id = sm.movieID AND s.id = sm.starID AND s.id = '"+ id +"'GROUP BY s.id";
 
 
             // Declare our statement

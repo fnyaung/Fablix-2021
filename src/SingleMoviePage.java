@@ -60,7 +60,7 @@ public class SingleMoviePage extends HttpServlet {
                     "a.Rating, " +
                     "a.Stars, " +
                     "a.Stars_Id, " +
-                    "GROUP_CONCAT(genre.name) AS Genres " +
+                    "GROUP_CONCAT(genre.name ORDER BY genre.name ASC) AS Genres " +
                     "from " +
                     "(select " +
                     "m.id as Movie_ID, " +
@@ -81,7 +81,9 @@ public class SingleMoviePage extends HttpServlet {
                     "     stars s, " +
                     "     stars_in_movies sm " +
                     "   where  " +
-                    "     s.id=sm.starId) star      " +
+                    "     s.id=sm.starId" +
+                    " GROUP BY sm.starID" +
+                    " ORDER BY count(sm.movieID) DESC, s.name ASC) star      " +
                     "where " +
                     "r.movieId = m.id and " +
                     "m.id = '"+ id + "' and " +

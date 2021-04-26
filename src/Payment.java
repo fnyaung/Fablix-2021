@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Cookie;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -33,6 +34,29 @@ public class Payment extends HttpServlet{
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+
+        // Retrieve cookies
+        Cookie cookie = null;
+        Cookie[] cookies = null;
+
+        // Get an array of Cookies associated with this domain
+        cookies = request.getCookies();
+
+        if(cookies != null){
+            System.out.println("--Cookies found!--");
+
+            for(int i = 0; i< cookies.length; i++){
+                cookie = cookies[i];
+                System.out.println("Name:" + cookie.getName() + ",");
+                System.out.println("Value:" + cookie.getValue() + ",");
+                System.out.println("Domain:" + cookie.getDomain() + ",");
+                System.out.println("MaxAge:" + cookie.getMaxAge() + ",");
+                System.out.println("MaxPath:" + cookie.getPath() + ",");
+            }
+        }else{
+            System.out.println("--NO Cookies found!--");
+        }
+
         // Retrieve parameter fname, lname, cardnumber. and expDate from url request
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");

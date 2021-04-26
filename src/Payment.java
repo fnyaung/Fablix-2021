@@ -63,7 +63,7 @@ public class Payment extends HttpServlet{
             System.out.println("--NO Cookies found!--");
         }
 
-        System.out.println("Cart Value: " + cartValue);
+        System.out.println(">>>> Cart Value: " + cartValue);
 
         // Retrieve parameter fname, lname, cardnumber. and expDate from url request
         String fname = request.getParameter("fname");

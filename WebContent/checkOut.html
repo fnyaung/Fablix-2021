@@ -32,7 +32,7 @@
       </div>
 
       <div class="nav-link-wrapper">
-        <a href='movieList.html?title=&year=&director=&star=&genre=&sort=RD&page=1'>MovieList</a>
+        <a href='movieList.html?title=&year=&director=&star=&genre=&page=1'>MovieList</a>
       </div>
 
       <div class="nav-link-wrapper">
@@ -68,18 +68,28 @@
         </tr>
         </thead>
         <tbody id=item_table_body>
-          <tr>
-            <th>title</th>
-            <th>quantity</th>
-            <th>price</th>
-            <th>total</th>
-          </tr>
+        <tr>
+          <th>title</th>
+          <th>quantity</th>
+          <th>price</th>
+          <th>total</th>
+        </tr>
         </tbody>
       </table>
 
-    </div>
+      <div class="bottom-nav">
+        <div class="bottom-nav-elem">
 
-    <button onclick="document.location='payment.html'">Place Order</button>
+          <div id="totalprice" class="bottom-nav-elem">
+          </div>
+
+          <div id="updatecart" class="bottom-nav-elem">
+          </div>
+        </div>
+      </div>
+
+      <div id="payment" ></div>
+<!--    <button onclick="document.location='payment.html'">Place Order</button>-->
   </div>
 </div>
 

@@ -8,12 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.time.LocalDate;
 
 @WebServlet(name = "PaymentServlet", urlPatterns = "/api/payment")
 public class Payment extends HttpServlet{
@@ -41,21 +44,26 @@ public class Payment extends HttpServlet{
 
         // Get an array of Cookies associated with this domain
         cookies = request.getCookies();
-
+        String cartValue = "";
         if(cookies != null){
             System.out.println("--Cookies found!--");
 
             for(int i = 0; i< cookies.length; i++){
                 cookie = cookies[i];
-                System.out.println("Name:" + cookie.getName() + ",");
-                System.out.println("Value:" + cookie.getValue() + ",");
-                System.out.println("Domain:" + cookie.getDomain() + ",");
-                System.out.println("MaxAge:" + cookie.getMaxAge() + ",");
-                System.out.println("MaxPath:" + cookie.getPath() + ",");
+                if(cookie.getName().equals("movie_ids")){
+                    cartValue = cookie.getValue();
+                }
+//                System.out.println("Name:" + cookie.getName() + ",");
+//                System.out.println("Value:" + cookie.getValue() + ",");
+//                System.out.println("Domain:" + cookie.getDomain() + ",");
+//                System.out.println("MaxAge:" + cookie.getMaxAge() + ",");
+//                System.out.println("MaxPath:" + cookie.getPath() + ",");
             }
         }else{
             System.out.println("--NO Cookies found!--");
         }
+
+        System.out.println("Cart Value: " + cartValue);
 
         // Retrieve parameter fname, lname, cardnumber. and expDate from url request
         String fname = request.getParameter("fname");
@@ -82,10 +90,52 @@ public class Payment extends HttpServlet{
 
             if(rs.next()){ // there is a result
                 // successfully found user's payment info
+                System.out.println("~~~ Credit Card ACCEPTED ~~~");
                 responseJsonObject.addProperty("status", "success");
                 responseJsonObject.addProperty("message", "Payment Success: Enjoy your movies!");
+
+                // parsing and evaluating cart values + putting into database
+                String[] cart_movies = cartValue.split("&.&");
+                // -Key: Movie_id&&Movie Title -Value: Quantity
+                HashMap<String, Integer> cartValue_dict = new HashMap<>();
+                // store cart movie and its quantity in a dictionary
+                for(String movie : cart_movies){
+                    // if the movie already exist add +1 to quantity
+                    if(cartValue_dict.containsKey(movie)){
+                        cartValue_dict.put(movie, cartValue_dict.get(movie)+1);
+                    }else{
+                        // create a quantity of 1 for new movie
+                        cartValue_dict.put(movie, 1);
+                    }
+                }
+
+                // get current highest saleID
+                String getMaxSaleID_query = "SELECT MAX(s.id) AS maxID FROM sales as s";
+                rs = statement.executeQuery(getMaxSaleID_query);
+                rs.next();
+                int max_saleID = rs.getInt("maxID");
+
+                HttpSession session = request.getSession();
+                int customerId = ((User) session.getAttribute("user")).getUserID();
+                LocalDate saleDate = LocalDate.now();
+
+                // insert user's movie purchase into sales database
+                for(String movieID : cartValue_dict.keySet()){
+                    int quantity = cartValue_dict.get(movieID);
+
+                    for(int i=0; i<quantity; i++){
+                        max_saleID += 1;
+                        String queryInsert = "INSERT INTO sales(id, customerID, movieId, saleDate) "
+                                + "VALUES (" + max_saleID + "," + customerId + ", '" + movieID + "', '" + saleDate +"')";
+                        System.out.println("Inserted: " + max_saleID + " " + customerId + " " + movieID + " " + saleDate);
+                        int count = statement.executeUpdate(queryInsert);
+                        System.out.println("Execute Update Count = " + count);
+                    }
+                }
+
             }else{ // there is no result
                 // failed the find user's payment info
+                System.out.println("~~~ Credit Card FAILED ~~~");
                 responseJsonObject.addProperty("status", "fail");
                 responseJsonObject.addProperty("message", "Payment Failed: Re-enter payment info");
             }

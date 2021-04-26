@@ -55,8 +55,10 @@ public class LoginPage extends HttpServlet {
 
             if(rs.next()) { // there is a result
                 // set this user into the session
-                request.getSession().setAttribute("user", new User(username));
-
+                User user = new User(username);
+                request.getSession().setAttribute("user", user);
+                // set user with its corresponding ID
+                user.setUserID(rs.getInt("id"));
                 responseJsonObject.addProperty("status", "success");
                 responseJsonObject.addProperty("message", "success");
 

@@ -55,22 +55,23 @@
           <form action="#" id="payment_form" method=POST>
             <div class="payment-info">
               <label for="fname">First Name on Card</label>
-              <input type="text" id="fname" name="fname" placeholder="John"><br>
+              <input type="text" id="fname" name="fname" placeholder="John" required><br>
               <label for="lname">Last Name on Card</label>
-              <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+              <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
               <label for="ccnum">Credit card number</label>
-              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required><br>
               <label for="expDate">Expiration Date (year-month-day)</label>
-              <input type="date" id="expDate" name="expDate" placeholder="2021-09-30"><br>
-              <br><br>
+              <input type="date" id="expDate" name="expDate" placeholder="2021-09-30" required><br>
+              <br>
+              <br>
             </div>
             <input type="submit" value="CheckOut" class="btn">
-
             <!--      If the transaction succeeds, it should be recorded in the system (in the "sales" table) -->
             <!--      and a confirmation page should be displayed. You might need to alter the "sales" table -->
             <!--      in order to support multiple copies of movie.-->
           </form>
           <div id="payment_error_message"></div>
+
         </div>
       </div>
 

@@ -87,6 +87,33 @@ function handleSingleMovieResult(resultData) {
     console.log("no_of_page: " + resultData[0]["no_of_page"]);
     console.log(window.location.href);
 
+    var curr_URL = window.location.href;
+    if(curr_URL.includes("sort=")){
+        if(curr_URL.includes("sort=T")){
+            var curr_sort = "sort=T";
+            var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+            curr_URL = curr_URL.replace("sort=T","sort=R");
+            var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+        }else{
+            var curr_sort = "sort=R";
+            // has rating
+            var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+            curr_URL = curr_URL.replace("sort=R","sort=T");
+            var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+        }
+    }else{
+        // default sort is rating
+        var curr_sort = "sort=R";
+        var sortTitle_URL = '<a href="'+ curr_URL + "&sort=T" + '">Title</a>';
+        var sortRating_URL = '<a href="'+ curr_URL + "&sort=R" + '">Rating</a>';
+    }
+
+    let title_th_element = jQuery("#title_th");
+    title_th_element.append(sortTitle_URL);
+
+    let rating_th_element = jQuery("#rating_th");
+    rating_th_element.append(sortRating_URL);
+
     let pageLimit = resultData[0]["no_of_page"];
 
     // populate the movie data table from html with id
@@ -98,7 +125,7 @@ function handleSingleMovieResult(resultData) {
         let rowHTML = "";
         rowHTML += "<tr>";
 
-        // movile title is hyperlink get the movie id
+        // movie title is hyperlink get the movie id
         // console.log(resultData[i]);
         rowHTML += "<td>" +
             '<a href="singleMovie.html?id=' + resultData[i]['movie_id'] + '">' +
@@ -106,7 +133,7 @@ function handleSingleMovieResult(resultData) {
 
         rowHTML += "<td>" + resultData[i]["movie_year"] + "</td>";
         rowHTML += "<td>" + resultData[i]["movie_director"] + "</td>";
-        // generes
+        // genres
         rowHTML += "<ul> <td>";
         let genres_list = resultData[i]["genres"].split(",");
         for (let i = 0; i < Math.min(20, genres_list.length); i++) {
@@ -142,7 +169,7 @@ function handleSingleMovieResult(resultData) {
 
     let curr_url = window.location.href;
     let page_idx = (window.location.href).indexOf("page");
-    let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&
+    let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&sort=R
     let cur_page_no = curr_url.slice(page_idx+5);
     // console.log("curr page: "+ cur_page_no);
     let page_end_idx = +cur_page_no + 20;
@@ -157,7 +184,16 @@ function handleSingleMovieResult(resultData) {
     let pageHTML = "";
 
     for (let i = cur_page_no; i < page_end_idx; i++) {
-        pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
+        if(page_url.includes("sort=R")){
+            page_url = page_url.replace("sort=R", curr_sort);
+            pageHTML += "<a href='" + page_url +"page=" + i + "'>" + i + " </a>";
+
+        }else if(page_url.includes("sort=T")){
+            page_url = page_url.replace("sort=T", curr_sort);
+            pageHTML += "<a href='" + page_url +"page=" + i + "'>" + i + " </a>";
+        }else{
+            pageHTML += "<a href='" + page_url + curr_sort +"&page=" + i + "'>" + i + " </a>";
+        }
     }
     page_list_element.append(pageHTML);
 }
@@ -172,13 +208,13 @@ let director = getParameterByName('director');
 let star = getParameterByName('star');
 let genre = getParameterByName('genre');
 let page = getParameterByName('page');
-
+let sort = getParameterByName('sort');
 
 // Makes the HTTP GET request and registers on success callback function handleMovieResult
 jQuery.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star + "&genre=" + genre + "&page=" + page,
+    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star + "&genre=" + genre + "&sort=" + sort + "&page=" + page,
     success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 

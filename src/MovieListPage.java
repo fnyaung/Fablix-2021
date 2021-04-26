@@ -52,10 +52,11 @@ public class MovieListPage extends HttpServlet {
         String star = request.getParameter("star");
         String genre = request.getParameter("genre");
         String cur_page = request.getParameter("page");
+        String sort = request.getParameter("sort");
 
 //        String page_limit_str = Integer.toString(page_limit);
 
-        System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page);
+        System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
@@ -119,10 +120,17 @@ public class MovieListPage extends HttpServlet {
                     "and (Year like ?) " +
                     "group by a.Movie_ID, genre.movieId " +
                     "having (Genres like ? or Genres like ?) " +
-                    "order by a.Rating DESC " +
+                    "order by %s" +
 //                    "limit 20";
-                    "limit ?, ?";
+                    " limit ?, ?";
 
+            if(sort.equals("T")){
+                // sort by Title
+                query = String.format(query, "a.Title ASC, a.Rating DESC");
+            }else{
+                // default sort: Rating
+                query = String.format(query, "a.Rating DESC, a.Title ASC");
+            }
 
             // Declare our statement
             PreparedStatement statement = conn.prepareStatement(query);

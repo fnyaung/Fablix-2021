@@ -72,7 +72,7 @@ public class MovieListPage extends HttpServlet {
                     "a.Rating,  " +
                     "a.Stars,  " +
                     "a.Stars_Id,  " +
-                    "GROUP_CONCAT(genre.name) AS Genres  " +
+                    "GROUP_CONCAT(genre.name ORDER BY genre.name ASC) AS Genres  " +
                     ",count(*) OVER() AS Total " + // to count the total
                     "from  " +
                     "(select  " +
@@ -94,7 +94,9 @@ public class MovieListPage extends HttpServlet {
                     "     stars s,  " +
                     "     stars_in_movies sm  " +
                     "   where   " +
-                    "     s.id=sm.starId) star       " +
+                    "     s.id=sm.starId" +
+                    "   group by sm.starID" +
+                    "   order by count(sm.movieID) DESC, s.name ASC) star       " +
                     "where  " +
                     "r.movieId = m.id and  " +
                     "m.id = star.movieId  " +

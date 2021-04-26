@@ -124,11 +124,15 @@ public class MovieListPage extends HttpServlet {
 //                    "limit 20";
                     " limit ?, ?";
 
-            if(sort.equals("T")){
+            if(sort.equals("TD")){
                 // sort by Title
+                query = String.format(query, "a.Title DESC, a.Rating DESC");
+            }else if(sort.equals("TA")){
                 query = String.format(query, "a.Title ASC, a.Rating DESC");
+            }else if(sort.equals("RA")){
+                query = String.format(query, "a.Rating ASC, a.Title ASC");
             }else{
-                // default sort: Rating
+                // default sort: Rating (RD)
                 query = String.format(query, "a.Rating DESC, a.Title ASC");
             }
 

@@ -55,8 +55,6 @@ function updateCarts(){
     console.log(titles_arr);
 
     // var unique_tempids = a.filter(onlyUnique);
-
-
 }
 
 function putItems(movie_id, movie_title){
@@ -90,22 +88,46 @@ function handleSingleMovieResult(resultData) {
     var curr_URL = window.location.href;
     if(curr_URL.includes("sort=")){
         if(curr_URL.includes("sort=T")){
-            var curr_sort = "sort=T";
-            var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
-            curr_URL = curr_URL.replace("sort=T","sort=R");
-            var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+            // TA is the default Title sort
+            if(curr_URL.includes("sort=TA")){
+                var curr_sort = "sort=TA";
+                // sort = TA (switch to TD)
+                curr_URL = curr_URL.replace("sort=TA","sort=TD");
+                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+                curr_URL = curr_URL.replace("sort=TD","sort=RD");
+                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+            }else{
+                var curr_sort = "sort=TD";
+                // sort = TD (switch to TA)
+                curr_URL = curr_URL.replace("sort=TD","sort=TA");
+                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+                curr_URL = curr_URL.replace("sort=TA","sort=RD");
+                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+            }
         }else{
-            var curr_sort = "sort=R";
-            // has rating
-            var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
-            curr_URL = curr_URL.replace("sort=R","sort=T");
-            var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+            // RD is default R sort (default sort in general)
+            if(curr_URL.includes("sort=RA")){
+                var curr_sort = "sort=RA";
+                // sort by RA (switch)
+                curr_URL = curr_URL.replace("sort=RA","sort=RD");
+                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+                curr_URL = curr_URL.replace("sort=RD","sort=TA");
+                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+            }else{
+                var curr_sort = "sort=RD";
+                // sort by RD (switch)
+                // has rating
+                curr_URL = curr_URL.replace("sort=RD","sort=RA");
+                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+                curr_URL = curr_URL.replace("sort=RA","sort=TA");
+                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+            }
         }
     }else{
-        // default sort is rating
-        var curr_sort = "sort=R";
-        var sortTitle_URL = '<a href="'+ curr_URL + "&sort=T" + '">Title</a>';
-        var sortRating_URL = '<a href="'+ curr_URL + "&sort=R" + '">Rating</a>';
+        // sort is rating descending by default
+        var curr_sort = "sort=RD";
+        var sortTitle_URL = '<a href="'+ curr_URL + "&sort=TA" + '">Title</a>';
+        var sortRating_URL = '<a href="'+ curr_URL + "&sort=RD" + '">Rating</a>';
     }
 
     let title_th_element = jQuery("#title_th");
@@ -137,7 +159,7 @@ function handleSingleMovieResult(resultData) {
         rowHTML += "<ul> <td>";
         let genres_list = resultData[i]["genres"].split(",");
         for (let i = 0; i < Math.min(20, genres_list.length); i++) {
-            rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&sort=R&page=1>" + genres_list[i] + "</a></li>";
+            rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&sort=RD&page=1>" + genres_list[i] + "</a></li>";
         }
         rowHTML += "</ul> </td>";
 
@@ -184,13 +206,18 @@ function handleSingleMovieResult(resultData) {
     let pageHTML = "";
 
     for (let i = cur_page_no; i < page_end_idx; i++) {
-        if(page_url.includes("sort=R")){
-            page_url = page_url.replace("sort=R", curr_sort);
+        if(page_url.includes("sort=RA")) {
+            page_url = page_url.replace("sort=RA", curr_sort);
+            pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
+        }else if(page_url.includes("sort=RD")){
+            page_url = page_url.replace("sort=RD", curr_sort);
+            pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
+        }else if(page_url.includes("sort=TA")){
+            page_url = page_url.replace("sort=TA", curr_sort);
             pageHTML += "<a href='" + page_url +"page=" + i + "'>" + i + " </a>";
-
-        }else if(page_url.includes("sort=T")){
-            page_url = page_url.replace("sort=T", curr_sort);
-            pageHTML += "<a href='" + page_url +"page=" + i + "'>" + i + " </a>";
+        }else if(page_url.includes("sort=TD")){
+            page_url = page_url.replace("sort=TD", curr_sort);
+            pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
         }else{
             pageHTML += "<a href='" + page_url + curr_sort +"&page=" + i + "'>" + i + " </a>";
         }

@@ -94,7 +94,7 @@ function handleSingleMovieResult(resultData) {
     rowHTML += "<ul> <td>";
     let genres_list = resultData[0]["genres"].split(",");
     for (let i = 0; i < Math.min(20, genres_list.length); i++){
-        rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&sort=R&page=1>" + genres_list[i] + "</a></li>";
+        rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&sort=RD&page=1>" + genres_list[i] + "</a></li>";
     }
     rowHTML += "</ul> </td>";
 

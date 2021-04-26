@@ -162,9 +162,6 @@ function handleSingleMovieResult(resultData) {
     page_list_element.append(pageHTML);
 }
 
-
-
-
 /**
  * Once this .js is loaded, following scripts will be executed by the browser
 

@@ -64,60 +64,46 @@ var movie_quantities = title_id_quan[2];
 let confirm_listBodyElement = jQuery("#confirm_list");
 let rowHTML = "";
 
-
 // movieid&&slaeid&.&moveid&&saleid
 let m_s = getCookie("saleid");
 let movieid_saleid_tgt = m_s.split("&.&"); //movieid&&slaeid&.&movieid&&slaeid
+console.log("movieid_saleid_tgt");
+movieid_saleid_tgt.pop();
 
 var moviesale_dict = {};
-var movieSale;
-for (movieSale in movieid_saleid_tgt){
-    var curr_movie = movieSale.split("&&")[0];
-    var curr_sale = movieSale.split("&&")[1];
-    if(curr_movie in moviesale_dict.key()){
-        moviesale_dict[curr_movie] += curr_sale + " ";
+
+for (let i = 0; i < movieid_saleid_tgt.length; i++) {
+    let temp_movieSale = movieid_saleid_tgt[i];
+
+
+
+    var curr_movie = temp_movieSale.split("&&")[0];
+    var curr_sale = temp_movieSale.split("&&")[1];
+
+    if(curr_movie in moviesale_dict){
+        curr_sale = " " + curr_sale;
+        moviesale_dict[curr_movie] += curr_sale;
     }
     else{
         moviesale_dict[curr_movie] = curr_sale;
     }
 }
-console.log(moviesale_dict);
 
 
-let total_array = [];
+// moviesale_dict
+let mid = "";
+for(mid in moviesale_dict) {
+    for (let i = 0; i < movie_ids.length; i++) {
+        if (mid.localeCompare(movie_ids[i]) == 0){
 
-// [[movieid, slaeid , slaeid ],[movieid, slaeid , slaeid ]]
-for (let i=0; i< movieid_saleid_tgt.length; i++) {
-    let emp_array = movieid_saleid_tgt[i].split("&&"); //movieid&&slaeid
-    total_array.push(emp_array);
-}
-
-console.log("total array");
-console.log(total_array); // [movieid , saleid, saleid], [movieid , saleid, saleid]
-
-
-for (let i=0; i< total_array.length; i++) {
-    if(total_array[i][0].localeCompare(movie_ids[i]) == 0){
-        rowHTML += "<p>" + movie_titles[i] + " : ";
-        rowHTML += movie_quantities[i] + " ";
-        rowHTML += "$"+ movie_quantities[i]*10; //price
-        //print saleid
-        for (let j=1; j< total_array[i].length; j++) {
-            rowHTML += total_array[j] + "  ";
+            // matching id then we get titles
+            rowHTML += "<p> Title : " + movie_titles[i] + "</p>"; //titles
+            rowHTML += "<p> Price : $ " + movie_quantities[i] * 10 + "</p> "; //price
+            total_price += Number( movie_quantities[i] * 10);
+            rowHTML += "<p> Sale Id : "+ moviesale_dict[mid] + " </p>";//sales id
+            rowHTML += "<br>";
         }
-        total_price += movie_quantities[i]*10;
-        rowHTML += "</p>";
     }
 }
-
-// // make the rows according to the number of unique items
-// for (let i=0; i< unique_item.length; i++){
-//     // writing confirmation
-//     rowHTML += "<p>" + movie_titles[i] + " : ";
-//     rowHTML += movie_quantities[i] + " ";
-//     rowHTML += "$"+ movie_quantities[i]*10 + "</p>" //price
-//     total_price += movie_quantities[i]*10;
-// }
 rowHTML += '<p>total price: $' + total_price + '</p>'
-
 confirm_listBodyElement.append(rowHTML);

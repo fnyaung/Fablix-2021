@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function getParameterByName(target) {
+ function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -86,48 +86,48 @@ function handleSingleMovieResult(resultData) {
     console.log(window.location.href);
 
     var curr_URL = window.location.href;
-    if(curr_URL.includes("sort=")){
-        if(curr_URL.includes("sort=T")){
+    if (curr_URL.includes("sort=")) {
+        if (curr_URL.includes("sort=T")) {
             // TA is the default Title sort
-            if(curr_URL.includes("sort=TA")){
+            if (curr_URL.includes("sort=TA")) {
                 var curr_sort = "sort=TA";
                 // sort = TA (switch to TD)
-                curr_URL = curr_URL.replace("sort=TA","sort=TD");
-                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
-                curr_URL = curr_URL.replace("sort=TD","sort=RD");
-                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
-            }else{
+                curr_URL = curr_URL.replace("sort=TA", "sort=TD");
+                var sortTitle_URL = '<a href="' + curr_URL + '">Title</a>';
+                curr_URL = curr_URL.replace("sort=TD", "sort=RD");
+                var sortRating_URL = '<a href="' + curr_URL + '">Rating</a>';
+            } else {
                 var curr_sort = "sort=TD";
                 // sort = TD (switch to TA)
-                curr_URL = curr_URL.replace("sort=TD","sort=TA");
-                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
-                curr_URL = curr_URL.replace("sort=TA","sort=RD");
-                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
+                curr_URL = curr_URL.replace("sort=TD", "sort=TA");
+                var sortTitle_URL = '<a href="' + curr_URL + '">Title</a>';
+                curr_URL = curr_URL.replace("sort=TA", "sort=RD");
+                var sortRating_URL = '<a href="' + curr_URL + '">Rating</a>';
             }
-        }else{
+        } else {
             // RD is default R sort (default sort in general)
-            if(curr_URL.includes("sort=RA")){
+            if (curr_URL.includes("sort=RA")) {
                 var curr_sort = "sort=RA";
                 // sort by RA (switch)
-                curr_URL = curr_URL.replace("sort=RA","sort=RD");
-                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
-                curr_URL = curr_URL.replace("sort=RD","sort=TA");
-                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
-            }else{
+                curr_URL = curr_URL.replace("sort=RA", "sort=RD");
+                var sortRating_URL = '<a href="' + curr_URL + '">Rating</a>';
+                curr_URL = curr_URL.replace("sort=RD", "sort=TA");
+                var sortTitle_URL = '<a href="' + curr_URL + '">Title</a>';
+            } else {
                 var curr_sort = "sort=RD";
                 // sort by RD (switch)
                 // has rating
-                curr_URL = curr_URL.replace("sort=RD","sort=RA");
-                var sortRating_URL = '<a href="'+ curr_URL + '">Rating</a>';
-                curr_URL = curr_URL.replace("sort=RA","sort=TA");
-                var sortTitle_URL = '<a href="'+ curr_URL + '">Title</a>';
+                curr_URL = curr_URL.replace("sort=RD", "sort=RA");
+                var sortRating_URL = '<a href="' + curr_URL + '">Rating</a>';
+                curr_URL = curr_URL.replace("sort=RA", "sort=TA");
+                var sortTitle_URL = '<a href="' + curr_URL + '">Title</a>';
             }
         }
-    }else{
+    } else {
         // sort is rating descending by default
         var curr_sort = "sort=RD";
-        var sortTitle_URL = '<a href="'+ curr_URL + "&sort=TA" + '">Title</a>';
-        var sortRating_URL = '<a href="'+ curr_URL + "&sort=RD" + '">Rating</a>';
+        var sortTitle_URL = '<a href="' + curr_URL + "&sort=TA" + '">Title</a>';
+        var sortRating_URL = '<a href="' + curr_URL + "&sort=RD" + '">Rating</a>';
     }
 
     let title_th_element = jQuery("#title_th");
@@ -192,11 +192,16 @@ function handleSingleMovieResult(resultData) {
     let curr_url = window.location.href;
     let page_idx = (window.location.href).indexOf("page");
     let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&sort=RD
-    let cur_page_no = curr_url.slice(page_idx+5);
+    let cur_page_no = curr_url.slice(page_idx + 5);
     let page_end_idx;
 
-    if ((Number(cur_page_no)+1) != pageLimit){
-        page_end_idx = Number(cur_page_no)+2;
+    // page limit is the number of page
+    if (pageLimit < Number(cur_page_no)){
+        page_end_idx = 2;
+        console.log("page_end_idx set to 2");
+    }
+    else if ((Number(cur_page_no) + 1) <= pageLimit) {
+        page_end_idx = Number(cur_page_no) + 2;
     }
     else{
         page_end_idx = pageLimit;
@@ -204,12 +209,11 @@ function handleSingleMovieResult(resultData) {
 
     let page_list_element = jQuery("#page_list");
     let pageHTML = "";
-
     let tem_curr_page_no = Number(cur_page_no);
-
     if (cur_page_no > 1){
         cur_page_no = Number(cur_page_no)- 1;
     }
+    
 
     for (let i = cur_page_no; i < page_end_idx; i++) {
         if (i < tem_curr_page_no){

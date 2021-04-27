@@ -1,3 +1,8 @@
+function setCookie(name,value) {
+    document.cookie = name + "=" + value + ";";
+}
+
+
 let payment_form = $("#payment_form");
 
 /**
@@ -20,7 +25,11 @@ function handlePaymentResult(resultDataString){
         // record payment info in "sales" table
         console.log("Show success message");
         console.log(resultDataJson["message"]);
+
+        // get the sale id into cookies
         var movieSaleID = resultDataJson["movieSaleID"];
+        setCookie("saleid", movieSaleID);
+
         console.log("printing movieSaleID:");
         console.log(movieSaleID)
         window.location.replace("confirmation.html");

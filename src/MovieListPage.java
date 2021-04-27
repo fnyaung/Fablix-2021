@@ -54,15 +54,19 @@ public class MovieListPage extends HttpServlet {
         String cur_page = request.getParameter("page");
         String sort = request.getParameter("sort");
 
+//        String page_limit_str = Integer.toString(page_limit);
+
         System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
         try (Connection conn = dataSource.getConnection()) {
+
             String query = "";
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.println(title);
+
             System.out.println(title.equals("*"));
 
             if (!title.equals("*")){
@@ -117,7 +121,11 @@ public class MovieListPage extends HttpServlet {
                         "limit ?, ? ";
             }
 
+
+
+
 //            title starsname director year genresName
+
             if(sort.equals("TD")){
                 // sort by Title
                 query = String.format(query, "m.title DESC, r.rating DESC");
@@ -158,7 +166,10 @@ public class MovieListPage extends HttpServlet {
             int cur_page_int =  Integer.parseInt(cur_page) - 1;
             page_limit_int = cur_page_int+20;
 
+
+
             //            star title director year
+
             // star title year genre director genre
             System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
             if (!title.equals("*")){
@@ -176,6 +187,7 @@ public class MovieListPage extends HttpServlet {
             }else{
                 statement.setInt(1, cur_page_int);
                 statement.setInt(2, page_limit_int);
+
             }
 
             // perform the query
@@ -222,6 +234,7 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("genres", genres);
                 jsonObject.addProperty("no_of_page", no_of_page);
+
                 jsonArray.add(jsonObject);
             }
 

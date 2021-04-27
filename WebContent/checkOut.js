@@ -121,14 +121,14 @@ var movie_quantities = title_id_quan[2];
 
 
 function plus(i){
-    console.log("In Plus")
-    console.log("before cookie: "+document.cookie);
+    // console.log("In Plus")
+    // console.log("before cookie: "+document.cookie);
     movie_quantities[i] = (parseInt(movie_quantities[i]) + 1).toString();
     let one_item = movie_ids[i] + "&&" + movie_titles[i];
 
     putItems(movie_ids[i],movie_titles[i]);
-    console.log("final cookie: "+document.cookie);
-    console.log("After array "+movie_quantities[i]);
+    // console.log("final cookie: "+document.cookie);
+    // console.log("After array "+movie_quantities[i]);
 }
 
 
@@ -219,7 +219,7 @@ function payment(){
     temp_id_arry.pop();
     temp_id_cookies = temp_id_arry.join("&.&");
     setCookie("movie_ids",temp_id_cookies);
-    alert(document.cookie);
+    // alert(document.cookie);
     window.location.replace("payment.html");
 }
 
@@ -252,7 +252,7 @@ itemTableBodyElement.append(rowHTML);
 
 let totalpriceElement = jQuery("#totalprice");
 rowHTML ="";
-rowHTML += "<p> Cart Total : " +total_price+"</p>"
+rowHTML += "<p> Cart Total : $" +total_price+"</p>"
 totalpriceElement.append(rowHTML);
 
 let updatecartElement = jQuery("#updatecart");

@@ -29,7 +29,6 @@ function onlyUnique(value, index, self) {
 }
 
 function initialize_arrays(item_array, unique_ids) {
-
     let m_ids = [];
     let m_titles = [];
     let m_quans = [];
@@ -59,8 +58,6 @@ let title_id_quan = initialize_arrays(item_array, unique_item);
 var movie_ids = title_id_quan[0];
 var movie_titles = title_id_quan[1];
 var movie_quantities = title_id_quan[2];
-
-
 let confirm_listBodyElement = jQuery("#confirm_list");
 let rowHTML = "";
 
@@ -74,8 +71,6 @@ var moviesale_dict = {};
 
 for (let i = 0; i < movieid_saleid_tgt.length; i++) {
     let temp_movieSale = movieid_saleid_tgt[i];
-
-
 
     var curr_movie = temp_movieSale.split("&&")[0];
     var curr_sale = temp_movieSale.split("&&")[1];
@@ -97,10 +92,10 @@ for(mid in moviesale_dict) {
         if (mid.localeCompare(movie_ids[i]) == 0){
 
             // matching id then we get titles
-            rowHTML += "<p> Title : " + movie_titles[i] + "</p>"; //titles
+            rowHTML += '<div class="each-item"><p> Title : ' + movie_titles[i] + '</p>'; //titles
             rowHTML += "<p> Price : $ " + movie_quantities[i] * 10 + "</p> "; //price
             total_price += Number( movie_quantities[i] * 10);
-            rowHTML += "<p> Sale Id : "+ moviesale_dict[mid] + " </p>";//sales id
+            rowHTML += "<p> Sale Id : "+ moviesale_dict[mid] + " </p></div>";//sales id
             rowHTML += "<br>";
         }
     }

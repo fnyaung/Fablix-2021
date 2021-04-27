@@ -54,49 +54,70 @@ public class MovieListPage extends HttpServlet {
         String cur_page = request.getParameter("page");
         String sort = request.getParameter("sort");
 
-//        String page_limit_str = Integer.toString(page_limit);
-
         System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
         try (Connection conn = dataSource.getConnection()) {
-
+            String query = "";
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            String query = "select  " +
-                    "m.id,  " +
-                    "m.title, " +
-                    "m.year, " +
-                    "m.director, " +
-                    "r.rating, " +
-                    "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName, " +
-                    "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName, " +
-                    "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId " +
-                    ",count(*) OVER() AS Total "+
-                    "from  " +
-                    "movies as m  " +
-                    "left outer join  " +
-                    "  stars_in_movies as sm on m.id = sm.movieId  " +
-                    "left outer join  " +
-                    "  stars as s on s.id = sm. starId " +
-                    "left outer join  " +
-                    " ratings as r on m.id = r.movieId " +
-                    " left outer join  " +
-                    "  genres_in_movies as gm on m.id = gm.movieId  " +
-                    "left outer join  " +
-                    "  genres as g on g.id = gm.genreId  " +
-                    "group by id  " +
-                    "having  (starsName like ? or starsName like ?) " +
-                    "and (title like ? or title like ?)  " +
-                    "and (director like ?) " +
-                    "and (year like ?) " +
-                    "and (genresName like ? or ?) " +
-                    "order by %s " +
-                    "limit ?, ? ";
+            System.out.println(title);
+            System.out.println(title.equals("*"));
+
+            if (!title.equals("*")){
+                System.out.println("!! not * normal query");
+                query = "select  " +
+                        "m.id,  " +
+                        "m.title, " +
+                        "m.year, " +
+                        "m.director, " +
+                        "r.rating, " +
+                        "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName, " +
+                        "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName, " +
+                        "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId " +
+                        ",count(*) OVER() AS Total "+
+                        "from  " +
+                        "movies as m  " +
+                        "left outer join  " +
+                        "  stars_in_movies as sm on m.id = sm.movieId  " +
+                        "left outer join  " +
+                        "  stars as s on s.id = sm. starId " +
+                        "left outer join  " +
+                        " ratings as r on m.id = r.movieId " +
+                        " left outer join  " +
+                        "  genres_in_movies as gm on m.id = gm.movieId  " +
+                        "left outer join  " +
+                        "  genres as g on g.id = gm.genreId  " +
+                        "group by id  " +
+                        "having  (starsName like ? or starsName like ?) " +
+                        "and (title like ? or title like ?)  " +
+                        "and (director like ?) " +
+                        "and (year like ?) " +
+                        "and (genresName like ? or ?) " +
+                        "order by %s " +
+                        "limit ?, ? ";
+            }
+            else{
+                System.out.println("!! * * version query query");
+                query = "select  m.id,  m.title, m.year, m.director, r.rating,  " +
+                        "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName,  " +
+                        "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName,  " +
+                        "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId  " +
+                        ",count(*) OVER() AS Total "+
+                        "from  movies as m   " +
+                        "left outer join stars_in_movies as sm on m.id = sm.movieId   " +
+                        "left outer join    stars as s on s.id = sm. starId  " +
+                        "left outer join   ratings as r on m.id = r.movieId   " +
+                        "left outer join    genres_in_movies as gm on m.id = gm.movieId   " +
+                        "left outer join    genres as g on g.id = gm.genreId    " +
+                        "group by id   " +
+                        "having  title regexp '^[^a-zA-Z0-9]' " +
+                        "order by %s " +
+                        "limit ?, ? ";
+            }
 
 //            title starsname director year genresName
-
             if(sort.equals("TD")){
                 // sort by Title
                 query = String.format(query, "m.title DESC, r.rating DESC");
@@ -138,21 +159,24 @@ public class MovieListPage extends HttpServlet {
             page_limit_int = cur_page_int+20;
 
             //            star title director year
-
             // star title year genre director genre
             System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
-            statement.setString(1, "%," + star + "%");
-            statement.setString(2, star + "%");
-            statement.setString(3, "%" + title + "%");
-            statement.setString(4, title + "%");
-            statement.setString(5, "%" + director + "%");
-            statement.setString(6, "%" + year + "%");
-            statement.setString(7, "%," + genre + "%");
-            statement.setString(8, genre + "%");
-            // page
-            statement.setInt(9, cur_page_int);
-            statement.setInt(10, page_limit_int);
-
+            if (!title.equals("*")){
+                statement.setString(1, "%," + star + "%");
+                statement.setString(2, star + "%");
+                statement.setString(3, "%" + title + "%");
+                statement.setString(4, title + "%");
+                statement.setString(5, "%" + director + "%");
+                statement.setString(6, "%" + year + "%");
+                statement.setString(7, "%," + genre + "%");
+                statement.setString(8, genre + "%");
+                // page
+                statement.setInt(9, cur_page_int);
+                statement.setInt(10, page_limit_int);
+            }else{
+                statement.setInt(1, cur_page_int);
+                statement.setInt(2, page_limit_int);
+            }
 
             // perform the query
             // return the result relation as rs.
@@ -198,7 +222,6 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("genres", genres);
                 jsonObject.addProperty("no_of_page", no_of_page);
-
                 jsonArray.add(jsonObject);
             }
 

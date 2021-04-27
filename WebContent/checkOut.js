@@ -220,7 +220,7 @@ function payment(){
     temp_id_cookies = temp_id_arry.join("&.&");
     setCookie("movie_ids",temp_id_cookies);
     alert(document.cookie);
-    window.location.replace(payment.html);
+    window.location.replace("payment.html");
 }
 
 //update cart

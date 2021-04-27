@@ -191,37 +191,78 @@ function handleSingleMovieResult(resultData) {
 
     let curr_url = window.location.href;
     let page_idx = (window.location.href).indexOf("page");
-    let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&sort=R
+    let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&sort=RD
     let cur_page_no = curr_url.slice(page_idx+5);
-    // console.log("curr page: "+ cur_page_no);
-    let page_end_idx = +cur_page_no + 20;
-    // console.log("page_end_idx: "+ page_end_idx);
+    let page_end_idx;
 
-    if (page_end_idx > pageLimit){
-        // console.log("the page end idx is : "+ page_end_idx);
-        page_end_idx = +pageLimit+1;
+    if ((Number(cur_page_no)+1) != pageLimit){
+        page_end_idx = Number(cur_page_no)+2;
+    }
+    else{
+        page_end_idx = pageLimit;
     }
 
     let page_list_element = jQuery("#page_list");
     let pageHTML = "";
 
+    let tem_curr_page_no = Number(cur_page_no);
+
+    if (cur_page_no > 1){
+        cur_page_no = Number(cur_page_no)- 1;
+    }
+
     for (let i = cur_page_no; i < page_end_idx; i++) {
-        if(page_url.includes("sort=RA")) {
-            page_url = page_url.replace("sort=RA", curr_sort);
-            pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
-        }else if(page_url.includes("sort=RD")){
-            page_url = page_url.replace("sort=RD", curr_sort);
-            pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
-        }else if(page_url.includes("sort=TA")){
-            page_url = page_url.replace("sort=TA", curr_sort);
-            pageHTML += "<a href='" + page_url +"page=" + i + "'>" + i + " </a>";
-        }else if(page_url.includes("sort=TD")){
-            page_url = page_url.replace("sort=TD", curr_sort);
-            pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
-        }else{
-            pageHTML += "<a href='" + page_url + curr_sort +"&page=" + i + "'>" + i + " </a>";
+        if (i < tem_curr_page_no){
+            if(page_url.includes("sort=RA")) {
+                page_url = page_url.replace("sort=RA", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + "<<" + " </a>";
+            }else if(page_url.includes("sort=RD")){
+                page_url = page_url.replace("sort=RD", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + "<<" + " </a>";
+            }else if(page_url.includes("sort=TA")){
+                page_url = page_url.replace("sort=TA", curr_sort);
+                pageHTML += "<a href='" + page_url +"page=" + i + "'>" + "<<" + " </a>";
+            }else if(page_url.includes("sort=TD")){
+                page_url = page_url.replace("sort=TD", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + "<<" + " </a>";
+            }else{
+                pageHTML += "<a href='" + page_url + curr_sort +"&page=" + i + "'>" + "<<" + " </a>";
+            }
+        }else if (i == tem_curr_page_no){
+            if(page_url.includes("sort=RA")) {
+                page_url = page_url.replace("sort=RA", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
+            }else if(page_url.includes("sort=RD")){
+                page_url = page_url.replace("sort=RD", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
+            }else if(page_url.includes("sort=TA")){
+                page_url = page_url.replace("sort=TA", curr_sort);
+                pageHTML += "<a href='" + page_url +"page=" + i + "'>" + i + " </a>";
+            }else if(page_url.includes("sort=TD")){
+                page_url = page_url.replace("sort=TD", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + i + " </a>";
+            }else{
+                pageHTML += "<a href='" + page_url + curr_sort +"&page=" + i + "'>" + i + " </a>";
+            }
+        }else if (i > tem_curr_page_no){
+            if(page_url.includes("sort=RA")) {
+                page_url = page_url.replace("sort=RA", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + ">>" + " </a>";
+            }else if(page_url.includes("sort=RD")){
+                page_url = page_url.replace("sort=RD", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + ">>" + " </a>";
+            }else if(page_url.includes("sort=TA")){
+                page_url = page_url.replace("sort=TA", curr_sort);
+                pageHTML += "<a href='" + page_url +"page=" + i + "'>" + ">>" + " </a>";
+            }else if(page_url.includes("sort=TD")){
+                page_url = page_url.replace("sort=TD", curr_sort);
+                pageHTML += "<a href='" + page_url + "page=" + i + "'>" + ">>" + " </a>";
+            }else{
+                pageHTML += "<a href='" + page_url + curr_sort +"&page=" + i + "'>" + ">>" + " </a>";
+            }
         }
     }
+
     page_list_element.append(pageHTML);
 }
 

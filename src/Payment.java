@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.time.LocalDate;
+import java.util.*;
 
 @WebServlet(name = "PaymentServlet", urlPatterns = "/api/payment")
 public class Payment extends HttpServlet{
@@ -119,6 +120,8 @@ public class Payment extends HttpServlet{
                 int customerId = ((User) session.getAttribute("user")).getUserID();
                 LocalDate saleDate = LocalDate.now();
 
+                String movieSaleID = "";
+
                 // insert user's movie purchase into sales database
                 for(String movieID : cartValue_dict.keySet()){
                     int quantity = cartValue_dict.get(movieID);
@@ -128,11 +131,18 @@ public class Payment extends HttpServlet{
                         String queryInsert = "INSERT INTO sales(id, customerID, movieId, saleDate) "
                                 + "VALUES (" + max_saleID + "," + customerId + ", '" + movieID + "', '" + saleDate +"')";
                         System.out.println("Inserted: " + max_saleID + " " + customerId + " " + movieID + " " + saleDate);
+
+                        movieSaleID += movieID + "&&" + max_saleID + "&.&";
+
+                        System.out.println(">>> movieSaleID = " + movieSaleID);
+
                         int count = statement.executeUpdate(queryInsert);
                         System.out.println("Execute Update Count = " + count);
                     }
                 }
 
+                System.out.println("~~~~  Final MovieSaleID = " + movieSaleID);
+                responseJsonObject.addProperty("movieSaleID", movieSaleID);
             }else{ // there is no result
                 // failed the find user's payment info
                 System.out.println("~~~ Credit Card FAILED ~~~");

@@ -20,6 +20,9 @@ function handlePaymentResult(resultDataString){
         // record payment info in "sales" table
         console.log("Show success message");
         console.log(resultDataJson["message"]);
+        var movieSaleID = resultDataJson["movieSaleID"];
+        console.log("printing movieSaleID:");
+        console.log(movieSaleID)
         window.location.replace("confirmation.html");
     }else{
         // If payment failed, it should return back to Payment Page with an

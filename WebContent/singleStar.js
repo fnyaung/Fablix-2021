@@ -15,7 +15,7 @@
  * @param target String
  * @returns {*}
  */
-function getParameterByName(target){
+ function getParameterByName(target){
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding

@@ -31,7 +31,7 @@
             </div>
 
             <div class="nav-link-wrapper">
-                <a href='movieList.html?title=&year=&director=&star=&genre=&sort=RD&page=1'>MovieList</a>
+                <a href='movieList.html?title=&year=&director=&star=&genre=&limit=25&sort=RD&page=1'>MovieList</a>
             </div>
 
             <div class="nav-link-wrapper">
@@ -67,6 +67,14 @@
                 <input class="search-input" type="text" id="star" placeholder="eg) Arnold .." name="star" size="25"> <br>
 
                 <input class="search-input" type="hidden" id="genre" name="genre"> <br>
+
+                <!--                // put in limits-->
+                <select class="search-input" name="limit" placeholder="limit per page" id="limit">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
 
                 <input type="hidden" name="sort" id="sort" value="RD">
 

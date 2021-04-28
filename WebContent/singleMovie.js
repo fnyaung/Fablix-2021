@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function getParameterByName(target){
+ function getParameterByName(target){
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -81,6 +81,10 @@ function handleSingleMovieResult(resultData) {
     let rowHTML = "";
     rowHTML += "<tr>";
 
+    let cur_url = window.location.href;
+    let limt_idx = window.location.href.indexOf("limit");
+    let limit_end = cur_url.slice(limt_idx-1,cur_url.length);
+
     // movile title is hyperlink get the movie id
     console.log(resultData[0]);
     // rowHTML += "<th>" +
@@ -94,8 +98,12 @@ function handleSingleMovieResult(resultData) {
     rowHTML += "<ul> <td>";
     let genres_list = resultData[0]["genres"].split(",");
     for (let i = 0; i < Math.min(20, genres_list.length); i++){
-        rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&sort=RD&page=1>" + genres_list[i] + "</a></li>";
+        rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&limit=25&sort=RD&page=1>" + genres_list[i] + "</a></li>";
     }
+
+
+
+
     rowHTML += "</ul> </td>";
 
     //stars

@@ -145,12 +145,18 @@ function handleSingleMovieResult(resultData) {
 
     let cur_url = window.location.href;
     let limt_idx = window.location.href.indexOf("limit");
-    let limit_end = cur_url.slice(limt_idx-1,cur_url.length);
-    console.log("~~~~~~!");
-    console.log(pageLimit);
-    console.log(resultData.length);
+    let sort_idx = window.location.href.indexOf("sort");
 
-    for (let i = 0; i < Math.min(pageLimit, resultData.length); i++) {
+    let limit_end = cur_url.slice(limt_idx-1,cur_url.length);
+    let curr_page_num = cur_url.slice(limt_idx+6, sort_idx-1);
+    // console.log("~~~~~~!");
+    // console.log(limt_idx);
+    // console.log("Slice");
+    // console.log(cur_url.slice(limt_idx+6, sort_idx-1));
+    // console.log(resultData.length);
+
+
+    for (let i = 0; i < Math.max(curr_page_num, resultData.length); i++) {
         // html
         let rowHTML = "";
         rowHTML += "<tr>";

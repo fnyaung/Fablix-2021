@@ -150,7 +150,7 @@ function handleSingleMovieResult(resultData) {
     console.log(pageLimit);
     console.log(resultData.length);
 
-    for (let i = 0; i < Math.max(pageLimit, resultData.length); i++) {
+    for (let i = 0; i < Math.min(pageLimit, resultData.length); i++) {
         // html
         let rowHTML = "";
         rowHTML += "<tr>";

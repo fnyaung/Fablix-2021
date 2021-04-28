@@ -54,20 +54,20 @@ public class MovieListPage extends HttpServlet {
         String cur_page = request.getParameter("page");
         String sort = request.getParameter("sort");
 
-//        String page_limit_str = Integer.toString(page_limit);
+        //~~~~~~ New
+        String limit = request.getParameter("limit");
 
-        System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort);
+
+        System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort + " " + limit);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
         try (Connection conn = dataSource.getConnection()) {
-
             String query = "";
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            System.out.println(title);
-
-            System.out.println(title.equals("*"));
+//            System.out.println(title);
+//            System.out.println(title.equals("*"));
 
             if (!title.equals("*")){
                 System.out.println("!! not * normal query");
@@ -121,18 +121,14 @@ public class MovieListPage extends HttpServlet {
                         "limit ?, ? ";
             }
 
-
-
-
 //            title starsname director year genresName
-
             if(sort.equals("TD")){
                 // sort by Title
                 query = String.format(query, "m.title DESC, r.rating DESC");
             }else if(sort.equals("TA")){
                 query = String.format(query, "m.title ASC, r.rating DESC");
             }else if(sort.equals("RA")){
-                query = String.format(query, "r.rating ASC, m.title ASC");
+                query = String.format(query, "r.rating ASC, m.title DESC");
             }else{
                 // default sort: Rating (RD)
                 query = String.format(query, "r.rating DESC, m.title ASC");
@@ -161,33 +157,45 @@ public class MovieListPage extends HttpServlet {
             if(cur_page == null){
                 cur_page ="";
             }
+
+            //~~~~~~ New
+            if(limit == null){
+                limit = "";
+            }
+
+            //~~~~~~ New
             int page_limit_int = 0;
-            // set the next page to + 20
+            // set the next page to + limit
             int cur_page_int =  Integer.parseInt(cur_page) - 1;
-            page_limit_int = cur_page_int+20;
+            page_limit_int = cur_page_int + Integer.parseInt(limit);
+            System.out.println("~~~~~~~~~~~~~");
+            System.out.println(cur_page_int);
+            System.out.println(page_limit_int);
 
-
+//            int page_limit_int = 0;
+//            // set the next page to + 20
+//            int cur_page_int =  Integer.parseInt(cur_page) - 1;
+//            page_limit_int = cur_page_int+20;
 
             //            star title director year
-
             // star title year genre director genre
             System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
             if (!title.equals("*")){
-                statement.setString(1, "%," + star + "%");
-                statement.setString(2, star + "%");
+                statement.setString(1, "%" + star + "%");
+                statement.setString(2, "%," + star + "%");
                 statement.setString(3, "%" + title + "%");
                 statement.setString(4, title + "%");
                 statement.setString(5, "%" + director + "%");
                 statement.setString(6, "%" + year + "%");
-                statement.setString(7, "%," + genre + "%");
-                statement.setString(8, genre + "%");
+                statement.setString(7, "%" + genre + "%");
+                statement.setString(8, "%," + genre + "%");
+
                 // page
                 statement.setInt(9, cur_page_int);
                 statement.setInt(10, page_limit_int);
             }else{
                 statement.setInt(1, cur_page_int);
                 statement.setInt(2, page_limit_int);
-
             }
 
             // perform the query
@@ -234,7 +242,6 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("genres", genres);
                 jsonObject.addProperty("no_of_page", no_of_page);
-
                 jsonArray.add(jsonObject);
             }
 

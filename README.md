@@ -2,7 +2,7 @@
 This project displays a list of movies that contains information about a specific movie or star.
 
 ### Proj2 Demo Video URL: 
-https://youtu.be/of9fj1BnBaA
+https://youtu.be/l1MuWtVrGTc
 
 ### Substring matching Design:
 User searches for:

@@ -142,6 +142,10 @@ function handleSingleMovieResult(resultData) {
     // get the movie_table_body from html file with jQuery
     let movieTableBodyElement = jQuery("#movie_table_body");
 
+    let cur_url = window.location.href;
+    let limt_idx = window.location.href.indexOf("limit");
+    let limit_end = cur_url.slice(limt_idx-1,cur_url.length);
+
     for (let i = 0; i < Math.min(20, resultData.length); i++) {
         // html
         let rowHTML = "";
@@ -159,7 +163,7 @@ function handleSingleMovieResult(resultData) {
         rowHTML += "<ul> <td>";
         let genres_list = resultData[i]["genres"].split(",");
         for (let i = 0; i < Math.min(20, genres_list.length); i++) {
-            rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + "&sort=RD&page=1>" + genres_list[i] + "</a></li>";
+            rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + limit_end+ ">" + genres_list[i] + "</a></li>";
         }
         rowHTML += "</ul> </td>";
 
@@ -213,7 +217,12 @@ function handleSingleMovieResult(resultData) {
     if (cur_page_no > 1){
         cur_page_no = Number(cur_page_no)- 1;
     }
-    
+
+    // let limit = cur_url.slice(0,limt_idx+6);
+    // console.log("~~~");
+    //
+    // console.log(limit);
+
 
     for (let i = cur_page_no; i < page_end_idx; i++) {
         if (i < tem_curr_page_no){
@@ -281,12 +290,14 @@ let star = getParameterByName('star');
 let genre = getParameterByName('genre');
 let page = getParameterByName('page');
 let sort = getParameterByName('sort');
+let limit = getParameterByName('limit');
+
 
 // Makes the HTTP GET request and registers on success callback function handleMovieResult
 jQuery.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star + "&genre=" + genre + "&sort=" + sort + "&page=" + page,
+    url: "api/movie-list?title=" + title + "&year=" + year + "&director=" + director + "&star=" + star + "&genre=" + genre + "&limit=" + limit + "&sort=" + sort + "&page=" + page,
     success: (resultData) => handleSingleMovieResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 

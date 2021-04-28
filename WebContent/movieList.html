@@ -30,7 +30,7 @@
         </div>
 
         <div class="nav-link-wrapper">
-            <a href='movieList.html?title=&year=&director=&star=&genre=&sort=RD&page=1'>MovieList</a>
+            <a href='movieList.html?title=&year=&director=&star=&genre=&limit=25&sort=RD&page=1'>MovieList</a>
         </div>
 
         <div class="nav-link-wrapper">
@@ -47,40 +47,77 @@
 
 </div>
 
-<!--    <label for="records">Select items per page:</label>-->
+<table>
+    <!--tr defines row in html-->
+    <thead>
+    <tr>
+        <th id="title_th"></th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Genre</th>
+        <th>Stars</th>
+        <th id="rating_th"></th>
+<!--        <th></th>-->
+<!--        where i fix it-->
+        <th>
+<!--            <select id="selectbox" name="" onchange="javascript:location.href = this.value;">-->
 
-<!--    <select class="form-control" id="records" name="recordsPerPage">-->
-<!--        <option value="5">5</option>-->
-<!--        <option value="10" selected>10</option>-->
-<!--        <option value="15">15</option>-->
-<!--    </select>-->
+            <select class="search-input" name="limit" onchange="leaveChange()" id="limitsearch">
+                <option> </option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </th>
 
-    <table>
-        <!--tr defines row in html-->
-        <thead>
-        <tr>
-            <th id="title_th"></th>
-            <th>Year</th>
-            <th>Director</th>
-            <th>Genre</th>
-            <th>Stars</th>
-            <th id="rating_th"></th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody id=movie_table_body>
-        </tbody>
-    </table>
+    </tr>
+    </thead>
+    <tbody id=movie_table_body>
+    </tbody>
+</table>
 
-    <div ALIGN="CENTER" id="page_list" class="page-container">
+<div ALIGN="CENTER" id="page_list" class="page-container">
 
-    </div>
+</div>
 
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    console.log("!!!In javascript");
+    let cur_url = window.location.href;
+    let limt_idx = window.location.href.indexOf("limit");
+    let sort_idx = window.location.href.indexOf("sort");
+    // console.log(limt_idx);
+    // console.log(sort_idx);
+    // console.log(cur_url.slice(limt_idx,sort_idx));
+    // console.log("0,limit");
+    let limit_url = cur_url.slice(0, limt_idx+6);
+    let sort_end_url = cur_url.slice(sort_idx-1, cur_url.length);
+    // console.log("~~~~!~~~`~~!~!");
+    // console.log("limit_url");
+    // console.log(limit_url);
+    // console.log("sort_end_url");
+    // console.log(sort_end_url);
+
+    console.log("~~~~~~~~");
+    console.log(cur_url.slice(limt_idx-1,cur_url.length));
+    // console.log(cur_url.slice(sort_idx,cur_url.length));
+
+    let page_url = cur_url.slice(136);
+
+    function leaveChange() {
+        //
+        // let limit_url = cur_url.slice(limt_idx,sort_idx);
+        // let sort_end_url = cur_url.slice(0,limt_idx+6);
+        console.log(".... redirect to url :  ... ");
+        window.location.replace( limit_url + document.getElementById("limitsearch").value + sort_end_url);
+    }
+
+</script>
 <!--<script>-->
 <!--    // console.log("hello");-->
 <!--</script>-->

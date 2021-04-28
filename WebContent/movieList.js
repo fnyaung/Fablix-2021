@@ -137,6 +137,7 @@ function handleSingleMovieResult(resultData) {
     rating_th_element.append(sortRating_URL);
 
     let pageLimit = resultData[0]["no_of_page"];
+    // console.log(pageLimit);
 
     // populate the movie data table from html with id
     // get the movie_table_body from html file with jQuery
@@ -145,8 +146,11 @@ function handleSingleMovieResult(resultData) {
     let cur_url = window.location.href;
     let limt_idx = window.location.href.indexOf("limit");
     let limit_end = cur_url.slice(limt_idx-1,cur_url.length);
+    console.log("~~~~~~!");
+    console.log(pageLimit);
+    console.log(resultData.length);
 
-    for (let i = 0; i < Math.min(20, resultData.length); i++) {
+    for (let i = 0; i < Math.max(pageLimit, resultData.length); i++) {
         // html
         let rowHTML = "";
         rowHTML += "<tr>";
@@ -162,8 +166,8 @@ function handleSingleMovieResult(resultData) {
         // genres
         rowHTML += "<ul> <td>";
         let genres_list = resultData[i]["genres"].split(",");
-        for (let i = 0; i < Math.min(20, genres_list.length); i++) {
-            rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + limit_end+ ">" + genres_list[i] + "</a></li>";
+        for (let i = 0; i < Math.min(3, genres_list.length); i++) {
+            rowHTML += "<li> <a href=movieList.html?title=&year=&director=&star=&genre=" + genres_list[i] + limit_end+">" + genres_list[i] + "</a></li>";
         }
         rowHTML += "</ul> </td>";
 

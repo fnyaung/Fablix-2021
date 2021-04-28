@@ -230,7 +230,7 @@ public class MovieListPage extends HttpServlet {
                 String genres = rs.getString("genresName");
                 int total = rs.getInt("total");
                 int no_of_page = 0;
-                no_of_page = total / 20;
+                no_of_page = (int) Math.ceil(total / Double.parseDouble(limit));
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("movie_id", movie_id);

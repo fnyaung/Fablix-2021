@@ -1,8 +1,8 @@
 ## CS 122B Project 2 Group 11
 This project displays a list of movies that contains information about a specific movie or star.
 
-### Demo Video URL: 
-https://youtu.be/Z9mC77PrBac
+### Proj2 Demo Video URL: 
+https://youtu.be/of9fj1BnBaA
 
 ### Substring matching Design:
 User searches for:

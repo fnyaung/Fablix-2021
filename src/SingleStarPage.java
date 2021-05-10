@@ -45,16 +45,16 @@ public class SingleStarPage extends HttpServlet {
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
-        try {
-            // Get a connection from dataSource
-            Connection dbcon = dataSource.getConnection();
+        try (Connection conn = dataSource.getConnection()) {
+            // // Get a connection from dataSource
+            // Connection dbcon = dataSource.getConnection();
 
             // query to get the 20
             String query = "SELECT s.id as Star_ID, s.name as Star_Name, s.birthYear as Birth_Year, GROUP_CONCAT(DISTINCT m.id ORDER BY m.year DESC, m.title ASC) AS Movies_ID, GROUP_CONCAT(DISTINCT m.title ORDER BY m.year DESC, m.title ASC) AS Movies FROM movies m, stars s, stars_in_movies sm WHERE m.id = sm.movieID AND s.id = sm.starID AND s.id = '"+ id +"'GROUP BY s.id";
 
 
             // Declare our statement
-            PreparedStatement statement = dbcon.prepareStatement(query);
+            PreparedStatement statement = conn.prepareStatement(query);
 
             // Set the parameter represented by "?" in the query to the id we get from url,
             // num 1 indicates the first "?" in the query
@@ -87,15 +87,15 @@ public class SingleStarPage extends HttpServlet {
 
                 jsonArray.add(jsonObject);
             }
-            System.out.println(jsonArray.toString());
+            rs.close();
+            statement.close();
+
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)
             response.setStatus(200);
 
-            rs.close();
-            statement.close();
-            dbcon.close();
+            // dbcon.close();
         } catch (Exception e) {
             // write error message JSON object to output
             JsonObject jsonObject = new JsonObject();
@@ -105,8 +105,10 @@ public class SingleStarPage extends HttpServlet {
             // set respond status to 500 (Internal Server Error)
             response.setStatus(500);
 
+        } finally {
+            out.close();
         }
-        out.close();
+
 
     }
 }

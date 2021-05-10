@@ -47,9 +47,9 @@ public class SingleMoviePage extends HttpServlet {
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
-        try {
+        try (Connection conn = dataSource.getConnection()) {
             // Get a connection from dataSource
-            Connection dbcon = dataSource.getConnection();
+            // Connection dbcon = dataSource.getConnection();
 
             // Construct a query with parameter represented by "?"
             String query = "select  m.id,  m.title, m.year, m.director, r.rating,  " +
@@ -65,7 +65,7 @@ public class SingleMoviePage extends HttpServlet {
                     "where m.id = ? ";
 
             // Declare our statement
-            PreparedStatement statement = dbcon.prepareStatement(query);
+            PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1,  id );
 
             // Set the parameter represented by "?" in the query to the id we get from url,
@@ -108,15 +108,14 @@ public class SingleMoviePage extends HttpServlet {
             }
 
             System.out.println("SQLresult: "+jsonArray.toString());
+            rs.close();
+            statement.close();
 
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)
             response.setStatus(200);
-
-            rs.close();
-            statement.close();
-            dbcon.close();
+            
         } catch (Exception e) {
             // write error message JSON object to output
             JsonObject jsonObject = new JsonObject();
@@ -125,8 +124,10 @@ public class SingleMoviePage extends HttpServlet {
 
             // set reponse status to 500 (Internal Server Error)
             response.setStatus(500);
+        } finally {
+            out.close();
         }
-        out.close();
+
 
     }
 

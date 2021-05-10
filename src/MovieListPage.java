@@ -244,6 +244,8 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("no_of_page", no_of_page);
                 jsonArray.add(jsonObject);
             }
+            rs.close();
+            statement.close();
 
             // write JSON string to output
             out.write(jsonArray.toString());
@@ -259,8 +261,9 @@ public class MovieListPage extends HttpServlet {
             // set respond status to 500 (Internal Server Error)
             response.setStatus(500);
 
+        } finally {
+            out.close();
         }
-        out.close();
 
     }
 }

@@ -1,0 +1,98 @@
+<!--this is the front page -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <title>Fablix</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<!--<body onbeforeunload="return myFunction()">-->
+<body>
+<h1 ALIGN="CENTER">Employees Add DB</h1>
+
+<div class="container">
+
+    <div class="nav-wrapper">
+        <div class="left-side">
+            <div class="nav-link-wrapper">
+                <a href='_dashboard.html'>Dashboard</a>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="nav-link-wrapper">
+                <a href='metadata.html'>Metadata</a>
+            </div>
+        </div>
+    </div>
+
+<!--    adding star-->
+    <h3>Add new star</h3>
+    <div class="search-wrapper">
+        <div class="search-link-wrapper">
+            <!--            <form class="search" id="movie_search" method="get" action="#">-->
+            <form ACTION = "addStar.html" METHOD="GET" class="search" id="star_add">
+
+                <label for="starname">Star Name</label>
+                <input class="search-input" type="text" id="starname" placeholder="eg) Arnold .." name="starname" size="25"> <br>
+
+                <label for="birthyear">Birth Year</label>
+                <input class="search-input" type="text" id="birthyear" placeholder="optional" name="birthyear" size="25"> <br>
+
+                <input TYPE="SUBMIT" VALUE="Add Star">
+            </form>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+<!--    adding movie-->
+    <h3>Add new movie</h3>
+    <div class="search-wrapper">
+        <div class="search-link-wrapper">
+            <!--            <form class="search" id="movie_search" method="get" action="#">-->
+            <form ACTION = "addMovie.html" METHOD="GET" class="search" id="moive_add">
+                <label for="title">Movie Title</label>
+                <input class="search-input" type="text" id="title" placeholder="eg) Title.." name="title" size="25"> <br>
+
+                <label for="year">Movie Year</label>
+                <input class="search-input" type="text" id="year" placeholder="eg) 1998.." name="year" size="25"> <br>
+
+                <label for="director">Director</label>
+                <input class="search-input" type="text" id="director" placeholder="eg) Arnold .." name="director" size="25"> <br>
+
+                <label for="starname">Star Name</label>
+                <input class="search-input" type="text" id="starname" placeholder="eg) Arnold .." name="starname" size="25"> <br>
+
+                <label for="genre">Genre</label>
+                <input class="search-input" type="text" id="genre" placeholder="eg) genre .." name="genre" size="25"> <br>
+
+                <input TYPE="SUBMIT" VALUE="Add Movie">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="_dashboard.js">
+</script>
+</body>
+</html>
+

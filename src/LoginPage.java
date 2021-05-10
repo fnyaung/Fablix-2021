@@ -44,11 +44,12 @@ public class LoginPage extends HttpServlet {
         // get recaptcha
         String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
 
+        JsonObject responseJsonObject = new JsonObject();
+
         // Verify reCAPTCHA
         try {
             System.out.println("!!!");
             RecaptchaVerifyUtils.verify(gRecaptchaResponse);
-            System.out.println("!!!");
 
 
             System.out.println("username: " + username);
@@ -56,7 +57,7 @@ public class LoginPage extends HttpServlet {
             System.out.println("location: " + location);
 
 
-            JsonObject responseJsonObject = new JsonObject();
+//            JsonObject responseJsonObject = new JsonObject();
 
             try {
                 String query;
@@ -143,6 +144,7 @@ public class LoginPage extends HttpServlet {
                 dbcon.close();
 
             } catch (Exception e) {
+                System.out.println("Error 1");
                 // write error message JSON object to output
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("errorMessage", e.getMessage());
@@ -152,15 +154,18 @@ public class LoginPage extends HttpServlet {
             }
 
         } catch (Exception e) {
-            System.out.println("Error");
-            // write error message JSON object to output
-            JsonObject jsonObject = new JsonObject();
-            jsonObject.addProperty("errorMessage", e.getMessage());
+            System.out.println("Error 2");
+
+            responseJsonObject.addProperty("status", "fail");
+            responseJsonObject.addProperty("message", "reCAPTCHA fail");
+
+            response.getWriter().write(responseJsonObject.toString());
+            response.setStatus(200);
+
 
             // set reponse status to 500 (Internal Server Error)
-            response.setStatus(500);
+//            response.setStatus(500);
         }
-        // Verify reCAPTCHA
 
     }
 }

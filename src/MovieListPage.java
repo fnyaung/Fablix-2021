@@ -71,55 +71,54 @@ public class MovieListPage extends HttpServlet {
 //            System.out.println(title.equals("*"));
 
             if (!title.equals("*")){
-                System.out.println("!! not * normal query");
-                query = "select  " +
-                        "m.id,  " +
-                        "m.title, " +
+                System.out.println("!! normal query");
+                query = "select " +
+                        "m.id, " +
                         "m.year, " +
+                        "m.title, " +
                         "m.director, " +
-                        "r.rating, " +
-                        "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName, " +
-                        "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName, " +
-                        "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId " +
+                        "rim.rating as rating, " +
+                        "substring_index(group_concat(distinct g.name ORDER BY g.name ASC), ',', 3 ) as genresName, " +
+                        "substring_index(group_concat(distinct star.name order by star.name), ',', 3) as starsName, " +
+                        "substring_index(group_concat(distinct star.id order by star.name), ',', 3) as starsId " +
                         ",count(*) OVER() AS Total "+
-                        "from  " +
-                        "movies as m  " +
-                        "left outer join  " +
-                        "  stars_in_movies as sm on m.id = sm.movieId  " +
-                        "left outer join  " +
-                        "  stars as s on s.id = sm. starId " +
-                        "left outer join  " +
-                        " ratings as r on m.id = r.movieId " +
-                        " left outer join  " +
-                        "  genres_in_movies as gm on m.id = gm.movieId  " +
-                        "left outer join  " +
-                        "  genres as g on g.id = gm.genreId  " +
-                        "group by id  " +
-                        "having  (starsName like ? or starsName like ?) " +
+                        "from " +
+                        "(select m.id as movieId, r.rating as rating from movies as m left join ratings as r on r.movieId = m.id) as rim, " +
+                        "(select s.name, s.id, sm.movieId as movieId from stars s, stars_in_movies sm where s.id=sm.starId GROUP BY sm.starID ORDER BY count(sm.movieID) DESC, s.name ASC) as star,  " +
+                        "movies as m, genres_in_movies as gm, genres as g " +
+                        "where " +
+                        "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id " +
+                        "group by m.id " +
+                        "having  (starsName like ? or starsName like ?)  " +
                         "and (title like ? or title like ?)  " +
                         "and (director like ?) " +
-                        "and (year like ?) " +
-                        "and (genresName like ? or ?) " +
+                        "and (year like ?)  " +
+                        "and (genresName like ? or ?)  " +
                         "order by %s " +
                         "limit ?, ? ";
             }
             else{
-                System.out.println("!! * * version query query");
-                query = "select  m.id,  m.title, m.year, m.director, r.rating,  " +
-                        "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName,  " +
-                        "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName,  " +
-                        "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId  " +
+                System.out.println("!! * * query ");
+                query = "select " +
+                        "m.id, m.year, " +
+                        "m.title, " +
+                        "m.director, " +
+                        "rim.rating as rating, " +
+                        "substring_index(group_concat(distinct g.name ORDER BY g.name ASC), ',', 3 ) as genresName, " +
+                        "substring_index(group_concat(distinct star.name order by star.name), ',', 3) as starsName, " +
+                        "substring_index(group_concat(distinct star.id order by star.name), ',', 3) as starsId " +
                         ",count(*) OVER() AS Total "+
-                        "from  movies as m   " +
-                        "left outer join stars_in_movies as sm on m.id = sm.movieId   " +
-                        "left outer join    stars as s on s.id = sm. starId  " +
-                        "left outer join   ratings as r on m.id = r.movieId   " +
-                        "left outer join    genres_in_movies as gm on m.id = gm.movieId   " +
-                        "left outer join    genres as g on g.id = gm.genreId    " +
-                        "group by id   " +
+                        "from " +
+                        "(select m.id as movieId, r.rating as rating from movies as m left join ratings as r on r.movieId = m.id) as rim, " +
+                        "(select s.name, s.id, sm.movieId as movieId from stars s, stars_in_movies sm where s.id=sm.starId GROUP BY sm.starID ORDER BY count(sm.movieID) DESC, s.name ASC) as star,  " +
+                        "movies as m, genres_in_movies as gm, genres as g " +
+                        "where " +
+                        "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id " +
+                        "group by m.id " +
                         "having  title regexp '^[^a-zA-Z0-9]' " +
                         "order by %s " +
                         "limit ?, ? ";
+
             }
 
 //            title starsname director year genresName

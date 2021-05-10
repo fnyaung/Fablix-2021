@@ -45,28 +45,33 @@ public class SingleStarPage extends HttpServlet {
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
-        try (Connection conn = dataSource.getConnection()) {
+        try  {
             // // Get a connection from dataSource
-            // Connection dbcon = dataSource.getConnection();
+            Connection conn = dataSource.getConnection();
+
 
             // query to get the 20
-            String query = "SELECT s.id as Star_ID, s.name as Star_Name, s.birthYear as Birth_Year, GROUP_CONCAT(DISTINCT m.id ORDER BY m.year DESC, m.title ASC) AS Movies_ID, GROUP_CONCAT(DISTINCT m.title ORDER BY m.year DESC, m.title ASC) AS Movies FROM movies m, stars s, stars_in_movies sm WHERE m.id = sm.movieID AND s.id = sm.starID AND s.id = '"+ id +"'GROUP BY s.id";
-
+//            String query = "SELECT s.id as Star_ID, s.name as Star_Name, s.birthYear as Birth_Year, GROUP_CONCAT(DISTINCT m.id ORDER BY m.year DESC, m.title ASC) AS Movies_ID, GROUP_CONCAT(DISTINCT m.title ORDER BY m.year DESC, m.title ASC) AS Movies FROM movies m, stars s, stars_in_movies sm WHERE m.id = sm.movieID AND s.id = sm.starID AND s.id = '"+ id +"'GROUP BY s.id";
+            String query =
+                    "SELECT " +
+                    "s.id as Star_ID, s.name as Star_Name, s.birthYear as Birth_Year, m.id as Movies_ID, m.title as Movies_Title " +
+                    "FROM " +
+                    "stars as s " +
+                    "join stars_in_movies as sm on s.id = sm.starId " +
+                    "join movies as m on sm.movieId = m.id " +
+                    "WHERE s.id = ?" +
+                    "ORDER by Movies_Title ASC; ";
 
             // Declare our statement
             PreparedStatement statement = conn.prepareStatement(query);
+            statement.setString(1,  id );
 
-            // Set the parameter represented by "?" in the query to the id we get from url,
-            // num 1 indicates the first "?" in the query
-            System.out.println("------- Star's ID is " + id);
-//            statement.setString(1, id);
-
-            System.out.println("--- Query: >>" + query + "<<");
-            // perform the query
-            // return the result relation as rs.
-            ResultSet rs = statement.executeQuery(query);
+            // Perform the query
+            ResultSet rs = statement.executeQuery();
 
             JsonArray jsonArray = new JsonArray();
+
+            System.out.println(statement);;
 
             // Loop through the rows of rs
             // get it through until there is no more next
@@ -76,26 +81,29 @@ public class SingleStarPage extends HttpServlet {
                 String star_name = rs.getString("Star_Name");
                 String birth_year = rs.getString("Birth_Year");
                 String movies_id = rs.getString("Movies_ID");
-                String movies_list = rs.getString("Movies");
+                String movies_title = rs.getString("Movies_Title");
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("star_name", star_name);
                 jsonObject.addProperty("birth_year", birth_year);
-                jsonObject.addProperty("movies_id", movies_id);
-                jsonObject.addProperty("movies_list", movies_list);
+                jsonObject.addProperty("movie_id", movies_id);
+                jsonObject.addProperty("movie_title", movies_title);
 
                 jsonArray.add(jsonObject);
             }
-            rs.close();
-            statement.close();
 
+            System.out.println(jsonArray.toString());
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)
             response.setStatus(200);
 
-            // dbcon.close();
+            rs.close();
+            statement.close();
+            conn.close();
+
+
         } catch (Exception e) {
             // write error message JSON object to output
             JsonObject jsonObject = new JsonObject();

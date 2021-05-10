@@ -63,7 +63,8 @@ public class MovieListPage extends HttpServlet {
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
-        try (Connection conn = dataSource.getConnection()) {
+        try {
+            Connection conn = dataSource.getConnection();
             String query = "";
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 //            System.out.println(title);
@@ -246,6 +247,7 @@ public class MovieListPage extends HttpServlet {
             }
             rs.close();
             statement.close();
+            conn.close();
 
             // write JSON string to output
             out.write(jsonArray.toString());

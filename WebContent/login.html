@@ -15,6 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 <body>
@@ -22,22 +23,44 @@
 <!-- Set the method to POST to avoid showing the username/password in the URL
      The default action is disabled to allow your own implementation. -->
 <div class="container">
-    <h2>Login to Fablix</h2>
-    <form class="login" id="login_form" method="post" action="#">
-        <label><b>Username</b></label>
-        <label>
-            <input name="username" placeholder="Enter Username" type="text">
-        </label>
-        <br>
-        <label><b>Password</b></label>
-        <label>
-            <input name="password" placeholder="Enter Password" type="password">
-        </label>
-        <br>
-        <input type="submit" value="Login">
-    </form>
+    <h1 ALIGN="CENTER">Login to Fablix</h1>
+    <div class="nav-wrapper">
+        <div class="left-side">
+            <div class="nav-link-wrapper">
+                <a href='staffLogin.html'>Employee</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login-form-wrapper">
+        <form class="login" id="login_form" method="post" action="#">
+            <label><b>Username</b></label>
+            <label>
+                <input name="username" placeholder="Enter Username" type="text">
+            </label>
+            <br>
+            <label><b>Password</b></label>
+            <label>
+                <input name="password" placeholder="Enter Password" type="password">
+            </label>
+
+            <!--    where is it getting?-->
+            <input type="hidden" name="location" id="location" value="customer">
+            <!--    where is it getting?-->
+
+            <br>
+            <div class="g-recaptcha" data-sitekey="6Lc7mcUaAAAAADTbuNlhkzeClLF0j1JbXoXSe6UW"></div>
+            <br>
+
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
 
     <div id="login_error_message"></div>
+
 
     <!-- include jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

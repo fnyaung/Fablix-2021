@@ -10,12 +10,20 @@ function handleLoginResult(resultDataString) {
     console.log("handle login response");
     console.log(resultDataJson);
     console.log(resultDataJson["status"]);
+    console.log(resultDataJson["usertype"]);
 
     // If login succeeds, it will redirect the user to index.html
     // redirects to index.html here!!
     if (resultDataJson["status"] === "success") {
         // window.stop();
-        window.location.replace("index.html");
+        if (resultDataJson["usertype"] === "customer") {
+            console.log("Login redirect for customer");
+            window.location.replace("index.html");
+        }else
+        {
+            console.log("Login redirect for employee");
+            window.location.replace("_dashboard.html");
+        }
     } else {
         // If login fails, the web page will display
         // error messages on <div> with id "login_error_message"

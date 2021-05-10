@@ -47,13 +47,13 @@ public class SingleMoviePage extends HttpServlet {
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
-        try (Connection conn = dataSource.getConnection()) {
+        try {
             // Get a connection from dataSource
-            // Connection dbcon = dataSource.getConnection();
+            Connection conn = dataSource.getConnection();
 
             // Construct a query with parameter represented by "?"
             String query = "select  m.id,  m.title, m.year, m.director, r.rating,  " +
-                    "substring_index(group_concat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName,  " +
+                    "substring_index(group_yconcat(DISTINCT g.name ORDER BY g.id separator ','), ',', 3) as genresName,  " +
                     "substring_index(group_concat(DISTINCT s.name ORDER BY s.id separator ','), ',', 3) as starsName,  " +
                     "substring_index(group_concat(DISTINCT s.id separator ','), ',', 3) as starsId  " +
                     "from  movies as m   " +
@@ -67,10 +67,6 @@ public class SingleMoviePage extends HttpServlet {
             // Declare our statement
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1,  id );
-
-            // Set the parameter represented by "?" in the query to the id we get from url,
-            // num 1 indicates the first "?" in the query
-//            statement.setString(1, id);
 
             // Perform the query
             ResultSet rs = statement.executeQuery();
@@ -102,20 +98,20 @@ public class SingleMoviePage extends HttpServlet {
                 jsonObject.addProperty("star_id", star_id);
                 jsonObject.addProperty("genres", genres);
 
-//                System.out.println("SQLresult: "+jsonArray.toString());
-
                 jsonArray.add(jsonObject);
             }
 
             System.out.println("SQLresult: "+jsonArray.toString());
-            rs.close();
-            statement.close();
 
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)
             response.setStatus(200);
-            
+
+            rs.close();
+            statement.close();
+            conn.close();
+
         } catch (Exception e) {
             // write error message JSON object to output
             JsonObject jsonObject = new JsonObject();

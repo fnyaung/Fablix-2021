@@ -82,7 +82,6 @@ public class MainsSaxParser extends DefaultHandler{
             while (df.hasNext()) {
                 Map.Entry mapElement = (Map.Entry) df.next();
                 myWriter.write("--- Director ID: " + mapElement.getKey() + "\n");
-
                 List<DirectorFilms> curr_df= (List<DirectorFilms>) mapElement.getValue();
                 Iterator<DirectorFilms> cdf = curr_df.iterator();
                 while(cdf.hasNext()){

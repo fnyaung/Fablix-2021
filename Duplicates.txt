@@ -1,0 +1,2677 @@
+Duplicates in Cast124.xml: 
+fid: AAd10, MoveName: Shrek, actorName: sa
+
+fid: AAd10, MoveName: Shrek, actorName: sa
+
+fid: AbH1, MoveName: Menace II Society, actorName: s a
+
+fid: AbH1, MoveName: Menace II Society, actorName: s a
+
+fid: AbK15, MoveName: Taste of Cherry, actorName: s a
+
+fid: AbK15, MoveName: Taste of Cherry, actorName: s a
+
+fid: ACa50, MoveName: Dead of Night, actorName: Frederick Valk
+
+fid: ACa60, MoveName: Nicholas Nickleby, actorName: s a
+
+fid: ACu27, MoveName: Y tu Mama Tambien, actorName: sa
+
+fid: AdI15, MoveName: Perdita Durango, actorName: s a
+
+fid: ADw17, MoveName: Robin Hood, actorName: s a
+
+fid: ADw72, MoveName: Passion, actorName: Yvonne deCarlo
+
+fid: ADx1, MoveName: De Man Die Zijn Haar Kort Liet Knippen, actorName: s a
+
+fid: ADx1, MoveName: De Man Die Zijn Haar Kort Liet Knippen, actorName: s a
+
+fid: ADx11, MoveName: De Man Die Zijn Haar Kort Liet Knippen, actorName: s a
+
+fid: ADx14, MoveName: Belle, actorName: s a
+
+fid: AfA10, MoveName: Like Water for Chocolate, actorName: s a
+
+fid: AfA10, MoveName: Like Water for Chocolate, actorName: s a
+
+fid: AfA10, MoveName: Like Water for Chocolate, actorName: s a
+
+fid: AgH10, MoveName: Europa, Europa, actorName: s a
+
+fid: AgH10, MoveName: Europa, Europa, actorName: s a
+
+fid: AGs10, MoveName: Visions of Light: The Art of Cinematography, actorName: Allen Daviau
+
+fid: AJy10, MoveName: Magic Mountain, actorName: s a
+
+fid: AJy10, MoveName: Magic Mountain, actorName: s a
+
+fid: AJy10, MoveName: Magic Mountain, actorName: s a
+
+fid: AJy10, MoveName: Magic Mountain, actorName: s a
+
+fid: AJy10, MoveName: Magic Mountain, actorName: s a
+
+fid: AJy10, MoveName: Magic Mountain, actorName: s a
+
+fid: AkK22, MoveName: High and Low, actorName: s a
+
+fid: AkK26, MoveName: Derzu Uzala, actorName: s a
+
+fid: AkK27, MoveName: Kagemusha, actorName: Tatsya Nakadai
+
+fid: AKo15, MoveName: The Inner Circle, actorName: s a
+
+fid: AKo15, MoveName: The Inner Circle, actorName: s a
+
+fid: AL27, MoveName: The Journey, actorName: s a
+
+fid: AlA10, MoveName: Dracula vs. Frankenstein, actorName: Regina Carrol
+
+fid: AlC10, MoveName: S\'erie Noir, actorName: s a
+
+fid: AlG11, MoveName: Dracula A.D. 1972, actorName: Peter Cushing
+
+fid: AlR1, MoveName: Saint Louis Blues, actorName: s a
+
+fid: ALv100, MoveName: Decoy, actorName: s a
+
+fid: AmH13, MoveName: National Lampoon's European Vacation, actorName: John Astin
+
+fid: AMy18, MoveName: Police Academy 5, actorName: James Hampton
+
+fid: AnB26, MoveName: Striptease, actorName: s a
+
+fid: AnL15, MoveName: Crouching Tiger, Hidden Dragon, actorName: s a
+
+fid: AnL15, MoveName: Crouching Tiger, Hidden Dragon, actorName: s a
+
+fid: AnS3, MoveName: Stormy Weather, actorName: Fats Waller
+
+fid: APa12, MoveName: Shoot the Moon, actorName: Diane Keaton
+
+fid: APa20, MoveName: Mississippi Burning, actorName: s a
+
+fid: APv10, MoveName: Dante's Inferno, actorName: Guiseppe diLiguoro
+
+fid: ARb1, MoveName: Batteries Not Included, actorName: s a
+
+fid: ARb1, MoveName: Batteries Not Included, actorName: s a
+
+fid: ARb1, MoveName: Batteries Not Included, actorName: s a
+
+fid: ArH205, MoveName: The Klansmen, actorName: s a
+
+fid: ArH215, MoveName: Silver Streak, actorName: s a
+
+fid: ArH215, MoveName: Silver Streak, actorName: s a
+
+fid: ArH215, MoveName: Silver Streak, actorName: s a
+
+fid: ARk12, MoveName: The Dark Backward, actorName: s a
+
+fid: ASa39, MoveName: People Will Talk, actorName: s a
+
+fid: ASa39, MoveName: People Will Talk, actorName: s a
+
+fid: ASa39, MoveName: People Will Talk, actorName: s a
+
+fid: ASa39, MoveName: People Will Talk, actorName: s a
+
+fid: ASa39, MoveName: People Will Talk, actorName: s a
+
+fid: ASa39, MoveName: People Will Talk, actorName: s a
+
+fid: ASv10, MoveName: Moloch, actorName: s a
+
+fid: ATk12, MoveName: Map of Love, actorName: Emily Watson
+
+fid: ATu1, MoveName: Celia, actorName: s a
+
+fid: ATn12, MoveName: Anna and the King, actorName: s a
+
+fid: AvW12, MoveName: The Northerners, actorName: s a
+
+fid: AWj15, MoveName: The Siberian Lady Macbeth, actorName: s a
+
+fid: AWj15, MoveName: The Siberian Lady Macbeth, actorName: s a
+
+fid: AWw3, MoveName: Bound, actorName: s a
+
+fid: AWw3, MoveName: Bound, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: AxP10, MoveName: Election, actorName: s a
+
+fid: BaD29, MoveName: Victim, actorName: Hilton Edwards
+
+fid: BaD39, MoveName: The Man who Haunted Himself, actorName: Roger Moore
+
+fid: BaS10, MoveName: Sing, Bing, Sing, actorName: s a
+
+fid: BB5, MoveName: The Spider's Stratagem, actorName: Giulio Brogi
+
+fid: BbB3, MoveName: Murder, Incorporated, actorName: Stuart Whitman
+
+fid: BCl1, MoveName: Deathdream, actorName: s a
+
+fid: BCl1, MoveName: Deathdream, actorName: s a
+
+fid: BCr10, MoveName: Mr.~Saturday Night, actorName: Julie Warner
+
+fid: BdP8, MoveName: Sisters, actorName: Margot Kidder
+
+fid: BdP11, MoveName: Obsession, actorName: Genevieve Bujold
+
+fid: BdP25, MoveName: Raising Cain, actorName: John Lithgow
+
+fid: BdP25, MoveName: Raising Cain, actorName: John Lithgow
+
+fid: BdP25, MoveName: Raising Cain, actorName: John Lithgow
+
+fid: BdP25, MoveName: Raising Cain, actorName: s a
+
+fid: BeR12, MoveName: Immortal Beloved, actorName: s a
+
+fid: BeR12, MoveName: Immortal Beloved, actorName: s a
+
+fid: BeR12, MoveName: Immortal Beloved, actorName: s a
+
+fid: BeW12, MoveName: The Saboteur, Code Name Morituri, actorName: Trevor Howard
+
+fid: BF5, MoveName: Sweet Charity, actorName: Stubby Kaye
+
+fid: BF5, MoveName: Sweet Charity, actorName: John McMartin
+
+fid: BFo12, MoveName: The Stepford Wives, actorName: Katharine Ross
+
+fid: BiF20, MoveName: Being Human, actorName: Robin Williams
+
+fid: BiF20, MoveName: Being Human, actorName: Robin Williams
+
+fid: BiF20, MoveName: Being Human, actorName: Robin Williams
+
+fid: BJq5, MoveName: The Disenchanted, actorName: s a
+
+fid: BJq5, MoveName: The Disenchanted, actorName: s a
+
+fid: BLe21, MoveName: Wag the Dog, actorName: s a
+
+fid: BLv15, MoveName: The Flintstones, actorName: Harvey Korman
+
+fid: BrD10, MoveName: La vie de Jesus, actorName: s a
+
+fid: BrG28, MoveName: The Juror, actorName: s a
+
+fid: BrG28, MoveName: The Juror, actorName: s a
+
+fid: BrG28, MoveName: The Juror, actorName: s a
+
+fid: BrR1, MoveName: Outremer, actorName: s a
+
+fid: BrR5, MoveName: Post Coitum, actorName: s a
+
+fid: BrS10, MoveName: The Karate Killers, actorName: Robert Vaughn
+
+fid: BrS10, MoveName: The Karate Killers, actorName: David McCallum
+
+fid: BrS10, MoveName: The Karate Killers, actorName: Leo G. McCarroll
+
+fid: BrW100, MoveName: The Avon Emeralds, actorName: Richard Lupino
+
+fid: BS6, MoveName: For Love or Money, actorName: s a
+
+fid: BS6, MoveName: For Love or Money, actorName: s a
+
+fid: BS6, MoveName: For Love or Money, actorName: s a
+
+fid: BS8, MoveName: Get Shorty, actorName: s a
+
+fid: BS8, MoveName: Get Shorty, actorName: s a
+
+fid: BS15, MoveName: Wild Wild West, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSe20, MoveName: Night Gallery, actorName: s a
+
+fid: BSi10, MoveName: Caspar, actorName: s a
+
+fid: BSi10, MoveName: Caspar, actorName: s a
+
+fid: BSi10, MoveName: Caspar, actorName: s a
+
+fid: BsK6, MoveName: The Haunted House, actorName: s a
+
+fid: BsK6, MoveName: The Haunted House, actorName: s a
+
+fid: BsK30, MoveName: Streamlined Swing, actorName: Buster Keaton
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BSp12, MoveName: Spice World, actorName: s a
+
+fid: BtS10, MoveName: For Richer or Poorer, actorName: s a
+
+fid: BtS10, MoveName: For Richer or Poorer, actorName: s a
+
+fid: BtS10, MoveName: For Richer or Poorer, actorName: s a
+
+fid: BtS10, MoveName: For Richer or Poorer, actorName: s a
+
+fid: BtS10, MoveName: For Richer or Poorer, actorName: s a
+
+fid: BtS10, MoveName: For Richer or Poorer, actorName: s a
+
+fid: BW8, MoveName: Sunset Boulevard, actorName: Erich vonStroheim
+
+fid: BW9, MoveName: Ace in the Hole, actorName: Richard Benedict
+
+fid: BW21, MoveName: Kiss Me Stupid, actorName: s a
+
+fid: ByP10, MoveName: Mistress, actorName: s a
+
+fid: ByP10, MoveName: Mistress, actorName: s a
+
+fid: ByP10, MoveName: Mistress, actorName: s a
+
+fid: ByP10, MoveName: Mistress, actorName: s a
+
+fid: ByP10, MoveName: Mistress, actorName: Eli Wallach
+
+fid: ByP10, MoveName: Mistress, actorName: s a
+
+fid: C118, MoveName: The Private Lives of Elizabeth and Essex, actorName: Errol Flynn
+
+fid: C118, MoveName: The Private Lives of Elizabeth and Essex, actorName: Leo G. Carroll
+
+fid: C118, MoveName: The Private Lives of Elizabeth and Essex, actorName: Vincent Price
+
+fid: CaF10, MoveName: One False Move, actorName: s a
+
+fid: CAL36, MoveName: Le Rouge et Le Noir, actorName: s a
+
+fid: CaR30, MoveName: Show-Biz Nose, actorName: s a
+
+fid: CaR30, MoveName: Show-Biz Nose, actorName: s a
+
+fid: CC60, MoveName: Easy Street, actorName: Charlie Chaplin
+
+fid: CC80, MoveName: Limelight, actorName: Charlie Chaplin
+
+fid: CC83, MoveName: A Countess from HongKong, actorName: Charlie Chaplin
+
+fid: CCa10, MoveName: Flight of the Innocent, actorName: s a
+
+fid: CCa10, MoveName: Flight of the Innocent, actorName: s a
+
+fid: CCa10, MoveName: Flight of the Innocent, actorName: s a
+
+fid: CCa10, MoveName: Flight of the Innocent, actorName: s a
+
+fid: CCa13, MoveName: Fluke, actorName: sa
+
+fid: CCo3, MoveName: Home Alone, actorName: s a
+
+fid: CCo14, MoveName: Harry Potter and the Sorcerer's Stone, actorName: John Cleese
+
+fid: CCo14, MoveName: Harry Potter and the Sorcerer's Stone, actorName: sa
+
+fid: CDM64, MoveName: The Plainsman, actorName: s a
+
+fid: CDM78, MoveName: Samson and Delilah, actorName: s a
+
+fid: CDM78, MoveName: Samson and Delilah, actorName: s a
+
+fid: CDr10, MoveName: Vampyr, actorName: s a
+
+fid: CEa5, MoveName: Bronco Billy, actorName: Scatman Crothers
+
+fid: CEa5, MoveName: Bronco Billy, actorName: sa
+
+fid: CEa18, MoveName: Bridges of Madison County, actorName: s a
+
+fid: CEa20, MoveName: Midnight in the Garden of Good And Evil, actorName: s a
+
+fid: ChS13, MoveName: Baby Boom, actorName: sa
+
+fid: ChW2, MoveName: Good News, actorName: Patricia Marshall
+
+fid: ClL25, MoveName: Les Miserables, actorName: s a
+
+fid: CoW4, MoveName: The Naked Prey, actorName: Cornel Wilde
+
+fid: CSr5, MoveName: Cria!, actorName: Geraldine Chaplin
+
+fid: CSr5, MoveName: Cria!, actorName: s a
+
+fid: DaA1, MoveName: The Bird with the Crystal Plumage, actorName: s a
+
+fid: DaA1, MoveName: The Bird with the Crystal Plumage, actorName: s a
+
+fid: DaA1, MoveName: The Bird with the Crystal Plumage, actorName: s a
+
+fid: DaB32, MoveName: Where's Charley?, actorName: Ray Bolger
+
+fid: DaV1, MoveName: Le Retour de Martin Guerre, actorName: s a
+
+fid: DBy10, MoveName: They Saved Hitler's Brain, actorName: s a
+
+fid: DBy10, MoveName: They Saved Hitler's Brain, actorName: s a
+
+fid: DCr22, MoveName: Dead Ringers, actorName: Jeremy Irons
+
+fid: DCr25, MoveName: Naked Lunch, actorName: Judy Davis
+
+fid: DeD75, MoveName: Parrish, actorName: s a
+
+fid: DeD75, MoveName: Parrish, actorName: s a
+
+fid: DeD75, MoveName: Parrish, actorName: s a
+
+fid: DeD75, MoveName: Parrish, actorName: s a
+
+fid: DHa2, MoveName: Every Girl Should Be Married, actorName: s a
+
+fid: DkP4, MoveName: The Enemy Below, actorName: s a
+
+fid: DkP4, MoveName: The Hunters, actorName: Robert Mitchum
+
+fid: DL5, MoveName: Great Expectations, actorName: Francis L. Sullivan
+
+fid: DL10, MoveName: Hobson's Choice, actorName: Charles Laughton
+
+fid: DLo19, MoveName: Mr. Murder, actorName: s a
+
+fid: DLo19, MoveName: Mr. Murder, actorName: s a
+
+fid: DME10, MoveName: The Sandlot, actorName: s a
+
+fid: DME13, MoveName: First Kid, actorName: sa
+
+fid: DMl10, MoveName: With a Friend Like Harry, actorName: sa
+
+fid: DMl10, MoveName: With a Friend Like Harry, actorName: sa
+
+fid: DoW50, MoveName: Santa Claus and the 10th Avenue Kid, actorName: s a
+
+fid: DoW51, MoveName: The Big Switch, actorName: Joseph Downing
+
+fid: DoW120, MoveName: The Munster's Revenge, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPo15, MoveName: The Green Man, actorName: s a
+
+fid: DPs13, MoveName: Galaxy Quest, actorName: s a
+
+fid: DPs13, MoveName: Galaxy Quest, actorName: s a
+
+fid: DPs13, MoveName: Galaxy Quest, actorName: s a
+
+fid: DPt2, MoveName: Raisin in the Sun, actorName: Ruby Dee
+
+fid: DSa10, MoveName: Grand Avenue, actorName: s a
+
+fid: DSa10, MoveName: Grand Avenue, actorName: s a
+
+fid: DSa10, MoveName: Grand Avenue, actorName: s a
+
+fid: DSa10, MoveName: Grand Avenue, actorName: s a
+
+fid: DSa10, MoveName: Grand Avenue, actorName: s a
+
+fid: DSa10, MoveName: Grand Avenue, actorName: s a
+
+fid: DSk32, MoveName: Strange Illusion, actorName: s a
+
+fid: DSk67, MoveName: The Tarnished Angels, actorName: s a
+
+fid: DTa103, MoveName: Listen! Listen!, actorName: s a
+
+fid: DTa104, MoveName: The Crocodile Case, actorName: s a
+
+fid: DTa104, MoveName: The Crocodile Case, actorName: s a
+
+fid: DTa104, MoveName: The Crocodile Case, actorName: s a
+
+fid: DTa210, MoveName: Great Scout and Cathouse Thursday, actorName: Lee Marvin
+
+fid: DTw10, MoveName: The Arrival, actorName: s a
+
+fid: DvF10, MoveName: Miami Rhapsody, actorName: s a
+
+fid: DvS3, MoveName: The Parent Trap, actorName: Hayley Mills
+
+fid: DvS10, MoveName: How To Succed in Business Without Really Trying, actorName: Maureen Arthur
+
+fid: DZu12, MoveName: The Naked Gun 2 1/2: The Smell of Fear, actorName: Richard Griffiths
+
+fid: ECn167, MoveName: The Bank Dick, actorName: s a
+
+fid: ECn167, MoveName: The Bank Dick, actorName: s a
+
+fid: EDm46, MoveName: The Carpetbaggers, actorName: s a
+
+fid: EDm46, MoveName: The Carpetbaggers, actorName: s a
+
+fid: EDm46, MoveName: The Carpetbaggers, actorName: s a
+
+fid: EDm46, MoveName: The Carpetbaggers, actorName: s a
+
+fid: EDm46, MoveName: The Carpetbaggers, actorName: s a
+
+fid: EdS60, MoveName: Parlor, Bedroom, and Bath, actorName: Buster Keaton
+
+fid: EG24, MoveName: Claudia, actorName: s a
+
+fid: EL13, MoveName: Wenn Vier Dasselbe Tun, actorName: Ernst Lubitsch
+
+fid: EL13, MoveName: Wenn Vier Dasselbe Tun, actorName: Ossi Oswalda
+
+fid: EL15, MoveName: Ein Fideles Gef\"angnis, actorName: Ossi Oswalda
+
+fid: EL15, MoveName: Ein Fideles Gef\"angnis, actorName: Emil Jannings
+
+fid: EL34, MoveName: Kohliesel's T\"ochter, actorName: Henny Porten
+
+fid: EL57, MoveName: Trouble in Paradise, actorName: Edward Everett Horton
+
+fid: ElB10, MoveName: Dirty Dancing, actorName: s a
+
+fid: ElB10, MoveName: Dirty Dancing, actorName: s a
+
+fid: ELM35, MoveName: Colt 45, actorName: s a
+
+fid: EMo5, MoveName: Le Dos Au Mur, actorName: s a
+
+fid: EMo5, MoveName: Le Dos Au Mur, actorName: s a
+
+fid: EMr10, MoveName: Sissi - Eine Prinzessin, actorName: s a
+
+fid: EMr15, MoveName: Sissi - Schicksalsjahre einer Kaiserin, actorName: s a
+
+fid: EMv10, MoveName: Speed, actorName: s a
+
+fid: EMv10, MoveName: Speed, actorName: s a
+
+fid: ErM20, MoveName: Fast, Cheap, and Out of Control, actorName: s a
+
+fid: ERr50, MoveName: A Tale of Springtime, actorName: s a
+
+fid: ERr50, MoveName: A Tale of Springtime, actorName: s a
+
+fid: EtC20, MoveName: Das Leben ist ein langer, ruhiger Fluss, actorName: s a
+
+fid: EtC20, MoveName: Das Leben ist ein langer, ruhiger Fluss, actorName: s a
+
+fid: EtC20, MoveName: Das Leben ist ein langer, ruhiger Fluss, actorName: s a
+
+fid: Eti20, MoveName: Murder at my Door, actorName: s a
+
+fid: Eti20, MoveName: Murder at my Door, actorName: s a
+
+fid: Eti20, MoveName: Murder at my Door, actorName: s a
+
+fid: Eti20, MoveName: Murder at my Door, actorName: s a
+
+fid: EuF50, MoveName: Charlie Chan's Murder Cruise, actorName: s a
+
+fid: EuF50, MoveName: Charlie Chan's Murder Cruise, actorName: s a
+
+fid: EuF50, MoveName: Charlie Chan's Murder Cruise, actorName: Sidney Toler
+
+fid: EwD10, MoveName: Antz, actorName: s a
+
+fid: FBr50, MoveName: King of the Rocketmen, actorName: s a
+
+fid: FC24, MoveName: Lady For a Day, actorName: Walter Connolly
+
+fid: FC26, MoveName: Mr.Deeds Goes to Town, actorName: Gary Cooper
+
+fid: FC26, MoveName: Mr.Deeds Goes to Town, actorName: Jean Arthur
+
+fid: FcA10, MoveName: Disoriented, actorName: s a
+
+fid: FcA10, MoveName: Disoriented, actorName: s a
+
+fid: FDa15, MoveName: The Green Mile, actorName: s a
+
+fid: FDa15, MoveName: The Green Mile, actorName: s a
+
+fid: FDa17, MoveName: The Majestic, actorName: sa
+
+fid: FDa17, MoveName: The Majestic, actorName: sa
+
+fid: FDa17, MoveName: The Majestic, actorName: sa
+
+fid: FDa17, MoveName: The Majestic, actorName: sa
+
+fid: FDa17, MoveName: The Majestic, actorName: sa
+
+fid: FDF10, MoveName: Scissors, actorName: Steve Railsback
+
+fid: FF50, MoveName: Intervista, actorName: s a
+
+fid: FFC26, MoveName: Bram Stoker's Dracula, actorName: Winona Ryder
+
+fid: FJS13, MoveName: Patton, actorName: Michael Bates
+
+fid: FL13, MoveName: Metropolis, actorName: MarieBrigitte Helm
+
+fid: FLg10, MoveName: Fear No Evil, actorName: s a
+
+fid: FLg10, MoveName: Fear No Evil, actorName: s a
+
+fid: FLg10, MoveName: Fear No Evil, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: Frank Puglia
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FLl99, MoveName: Blood on the Sun, actorName: s a
+
+fid: FM3, MoveName: Nosferatu, actorName: s a
+
+fid: FM3, MoveName: Nosferatu, actorName: s a
+
+fid: FM3, MoveName: Nosferatu, actorName: s a
+
+fid: FM3, MoveName: Nosferatu, actorName: s a
+
+fid: FOz29, MoveName: The Score, actorName: Edward Norton
+
+fid: FrM10, MoveName: The Sixth Sense, actorName: s a
+
+fid: FrR20, MoveName: Carmen, actorName: s a
+
+fid: FrT13, MoveName: The Girl Can't Help It, actorName: Henry Jones
+
+fid: FrT13, MoveName: The Girl Can't Help It, actorName: s a
+
+fid: FSc20, MoveName: A Cry in the Dark, actorName: s a
+
+fid: FSc31, MoveName: I.Q., actorName: sa
+
+fid: FT7, MoveName: Fahrenheit 415, actorName: Julie Christie
+
+fid: FT14, MoveName: Une belle fille comme moi, actorName: s a
+
+fid: FTr10, MoveName: La Belle Epoque, actorName: s a
+
+fid: FTr10, MoveName: La Belle Epoque, actorName: s a
+
+fid: FTr10, MoveName: La Belle Epoque, actorName: s a
+
+fid: FTu25, MoveName: The Glass Key, actorName: Edward Arnold
+
+fid: FZ8, MoveName: The Men, actorName: Jack Webb
+
+fid: FZ12, MoveName: From Here to Eternity, actorName: s a
+
+fid: FZ12, MoveName: From Here to Eternity, actorName: s a
+
+fid: FZ12, MoveName: From Here to Eternity, actorName: s a
+
+fid: FZe21, MoveName: Jane Eyre, actorName: s a
+
+fid: FZe21, MoveName: Jane Eyre, actorName: s a
+
+fid: GC23, MoveName: Two-Faced Woman, actorName: Greta Garbo
+
+fid: GC52, MoveName: The Blue Bird, actorName: Elizabeth Taylor
+
+fid: GC52, MoveName: The Blue Bird, actorName: Elizabeth Taylor
+
+fid: GC52, MoveName: The Blue Bird, actorName: Elizabeth Taylor
+
+fid: GCl20, MoveName: The Forbidden Dance, actorName: s a
+
+fid: GCo1, MoveName: The Music Teacher, actorName: s a
+
+fid: GeM24, MoveName: Lorenzo's Oil, actorName: Susan Sarandon
+
+fid: GeM30, MoveName: Babe: Pig in the City, actorName: s a
+
+fid: GeP15, MoveName: Murder Most Foul, actorName: Margaret Rutherford
+
+fid: GfD11, MoveName: Practical Magic, actorName: s a
+
+fid: GfD11, MoveName: Practical Magic, actorName: s a
+
+fid: GfD11, MoveName: Practical Magic, actorName: s a
+
+fid: GFj20, MoveName: The Rebel Set, actorName: s a
+
+fid: GFj20, MoveName: The Rebel Set, actorName: s a
+
+fid: GgL2, MoveName: American Graffiti, actorName: Cindy Williams
+
+fid: GH16, MoveName: Live and Let Die, actorName: sa
+
+fid: GH16, MoveName: Live and Let Die, actorName: sa
+
+fid: GH16, MoveName: Live and Let Die, actorName: sa
+
+fid: GKc4, MoveName: Chanel Solitaire, actorName: Marie-France Pisier
+
+fid: GlJ60, MoveName: The Long Way Home, actorName: s a
+
+fid: GlJ60, MoveName: The Long Way Home, actorName: s a
+
+fid: GlJ60, MoveName: The Long Way Home, actorName: s a
+
+fid: GlJ60, MoveName: The Long Way Home, actorName: s a
+
+fid: GlJ60, MoveName: The Long Way Home, actorName: s a
+
+fid: GlJ60, MoveName: The Long Way Home, actorName: s a
+
+fid: GLw10, MoveName: Sex, The Annabel Chong Story, actorName: s a
+
+fid: GLw10, MoveName: Sex, The Annabel Chong Story, actorName: s a
+
+fid: GMf50, MoveName: The Sheik, actorName: Agnes Ayres
+
+fid: GnN14, MoveName: Kissin' Cousins, actorName: Elvis Presley
+
+fid: GoM10, MoveName: Tito and Me, actorName: s a
+
+fid: GoM10, MoveName: Tito and Me, actorName: s a
+
+fid: GP9, MoveName: Diary of a Lost Girl, actorName: s a
+
+fid: GPC29, MoveName: Tombstone, actorName: s a
+
+fid: GPC29, MoveName: Tombstone, actorName: s a
+
+fid: GRo35, MoveName: The Dark Half, actorName: Timothy Hutton
+
+fid: GRv10, MoveName: Figaro, actorName: s a
+
+fid: GRv10, MoveName: Figaro, actorName: s a
+
+fid: GRv10, MoveName: Figaro, actorName: s a
+
+fid: GS9, MoveName: The Country Girl, actorName: Grace Kelly
+
+fid: GS14, MoveName: Teacher's Pet, actorName: s a
+
+fid: GS14, MoveName: Teacher's Pet, actorName: s a
+
+fid: GS14, MoveName: Teacher's Pet, actorName: s a
+
+fid: GS14, MoveName: Teacher's Pet, actorName: s a
+
+fid: GSn10, MoveName: The Bachelor, actorName: s a
+
+fid: GSn10, MoveName: The Bachelor, actorName: s a
+
+fid: GSn10, MoveName: The Bachelor, actorName: s a
+
+fid: GSn10, MoveName: The Bachelor, actorName: s a
+
+fid: GSn10, MoveName: The Bachelor, actorName: s a
+
+fid: GSn10, MoveName: The Bachelor, actorName: s a
+
+fid: GTh29, MoveName: The Big Job, actorName: Sid James
+
+fid: GTh29, MoveName: The Big Job, actorName: Jim Dale
+
+fid: GTh30, MoveName: Carry On Cowboy, actorName: Jim Dale
+
+fid: GTz3, MoveName: Counterfeit Coin, actorName: s a
+
+fid: GTz3, MoveName: Counterfeit Coin, actorName: s a
+
+fid: GTz3, MoveName: Counterfeit Coin, actorName: s a
+
+fid: GuB10, MoveName: Maciste in Hell, actorName: Franz Saal
+
+fid: GyM24, MoveName: NKT, actorName: s a
+
+fid: GyM24, MoveName: NKT, actorName: s a
+
+fid: GyM33, MoveName: Runaway Bride, actorName: s a
+
+fid: GyM33, MoveName: Runaway Bride, actorName: s a
+
+fid: GyM33, MoveName: Runaway Bride, actorName: s a
+
+fid: GyM33, MoveName: Runaway Bride, actorName: s a
+
+fid: GyM33, MoveName: Runaway Bride, actorName: s a
+
+fid: GyM35, MoveName: The Princess Diaries, actorName: Julie Andrews
+
+fid: H10, MoveName: Downhill, actorName: Robin Irvine
+
+fid: H10, MoveName: Downhill, actorName: Hannah Jones
+
+fid: H27, MoveName: The 39 Steps, actorName: Wylie Watson
+
+fid: H30, MoveName: Young and Innocent, actorName: no\_actor
+
+fid: H31, MoveName: The Lady Vanishes, actorName: Josephine Wilson
+
+fid: H32, MoveName: Jamaica Inn, actorName: Marie Ney
+
+fid: H35, MoveName: Mr.~and Mrs.~Smith, actorName: Carole Lombard
+
+fid: H65, MoveName: Vertigo, actorName: Kim Novak
+
+fid: H56, MoveName: The Case of Mr.~Pelham, actorName: Tom Ewell
+
+fid: H56, MoveName: The Case of Mr.~Pelham, actorName: s a
+
+fid: H64, MoveName: The Perfect Crime, actorName: Therese Lyon
+
+fid: HaR25, MoveName: Multiplicity, actorName: Michael Keaton
+
+fid: HaR25, MoveName: Multiplicity, actorName: Michael Keaton
+
+fid: HaR25, MoveName: Multiplicity, actorName: Michael Keaton
+
+fid: HaR28, MoveName: Analyze This, actorName: Joe Viterelli
+
+fid: HaR28, MoveName: Analyze This, actorName: Joe Viterelli
+
+fid: HaR28, MoveName: Analyze This, actorName: s a
+
+fid: HeD118, MoveName: The Blessington Method, actorName: s a
+
+fid: HeD118, MoveName: The Blessington Method, actorName: s a
+
+fid: HGL6, MoveName: Two Thousand Maniacs, actorName: s a
+
+fid: HGL6, MoveName: Two Thousand Maniacs, actorName: s a
+
+fid: HGL6, MoveName: Two Thousand Maniacs, actorName: s a
+
+fid: HH21, MoveName: Bringing Up Baby, actorName: Barry Fitzgerald
+
+fid: HHa28, MoveName: The House on 92nd Street, actorName: Lloyd Nolan
+
+fid: HHa28, MoveName: The House on 92nd Street, actorName: Signe Hasso
+
+fid: HHa65, MoveName: True Grit, actorName: Dennis Hopper
+
+fid: HJS10, MoveName: Parsifal, actorName: s a
+
+fid: HK58, MoveName: Lloyd's of London, actorName: s a
+
+fid: HKo41, MoveName: Flower Drum Song, actorName: s a
+
+fid: HKo41, MoveName: Flower Drum Song, actorName: s a
+
+fid: HKo43, MoveName: Mr. Hobbs Takes a Vacation, actorName: s a
+
+fid: HKo43, MoveName: Mr. Hobbs Takes a Vacation, actorName: s a
+
+fid: HKu10, MoveName: Daughters of Darkness, actorName: s a
+
+fid: HLa60, MoveName: Dead Men Tell, actorName: Sidney Toler
+
+fid: HLa65, MoveName: Charlie Chan in Rio, actorName: Sidney Toler
+
+fid: HLa75, MoveName: Castle in the Desert, actorName: Sidney Toler
+
+fid: HoB25, MoveName: Ladies they Talk About, actorName: s a
+
+fid: HoD24, MoveName: The Odd Couple II, actorName: s a
+
+fid: HoD24, MoveName: The Odd Couple II, actorName: s a
+
+fid: HPa10, MoveName: The Devil in Miss Jones II, actorName: s a
+
+fid: HPr20, MoveName: A Little Night Music, actorName: Hermione Gingold
+
+fid: HRi10, MoveName: Dreams That Money Can't Buy, actorName: s a
+
+fid: HrR12, MoveName: Im Stahlnetz des Dr.~Mabuse, actorName: Lex Barker
+
+fid: HuW25, MoveName: First Wives Club, actorName: s a
+
+fid: HuW25, MoveName: First Wives Club, actorName: s a
+
+fid: HuW25, MoveName: First Wives Club, actorName: s a
+
+fid: HuW25, MoveName: First Wives Club, actorName: s a
+
+fid: IB110, MoveName: Death and the Joyful Woman, actorName: s a
+
+fid: IBa22, MoveName: Another Stakeout, actorName: s a
+
+fid: IBa22, MoveName: Another Stakeout, actorName: s a
+
+fid: IBl10, MoveName: The Search for Signs of Intelligent Life in the Universe, actorName: Lily Tomlin
+
+fid: IBo30, MoveName: Hope and Glory, actorName: s a
+
+fid: IBo30, MoveName: Hope and Glory, actorName: s a
+
+fid: ICo10, MoveName: Crocodile Dundee II, actorName: sr
+
+fid: ICo10, MoveName: Crocodile Dundee II, actorName: sr
+
+fid: ICo10, MoveName: Crocodile Dundee II, actorName: sr
+
+fid: ICr27, MoveName: The Prisoner of Zenda, actorName: Ronald Colman
+
+fid: IDk30, MoveName: Tarzan in Manhattan, actorName: s a
+
+fid: IDk30, MoveName: Tarzan in Manhattan, actorName: s a
+
+fid: IdL11, MoveName: A Crime For Mothers, actorName: s a
+
+fid: IDu22, MoveName: Wide Saragossa Sea, actorName: Karina Lombard
+
+fid: IDu28, MoveName: Lawn Dogs, actorName: s a
+
+fid: IEy10, MoveName: Project Shadowchaser, actorName: s a
+
+fid: IEy10, MoveName: Project Shadowchaser, actorName: s a
+
+fid: IEy10, MoveName: Project Shadowchaser, actorName: s a
+
+fid: IEy10, MoveName: Project Shadowchaser, actorName: s a
+
+fid: IEy10, MoveName: Project Shadowchaser, actorName: Brian Jackson
+
+fid: IF76, MoveName: The Whole Town's Talking, actorName: Edward G. Robinson
+
+fid: IF92, MoveName: How Green Was my Valley, actorName: Roddy McDowall
+
+fid: IF112, MoveName: The Searchers, actorName: Mae Marsh
+
+fid: IF125, MoveName: Donovan's Reef, actorName: Elizabeth Allen
+
+fid: IFr10, MoveName: The Train, actorName: s a
+
+fid: IG6, MoveName: License To Kill, actorName: Anthony Zerbe
+
+fid: IGs10, MoveName: Urinal, actorName: s a
+
+fid: IGs10, MoveName: Urinal, actorName: s a
+
+fid: IGs10, MoveName: Urinal, actorName: s a
+
+fid: IGs10, MoveName: Urinal, actorName: s a
+
+fid: IGs10, MoveName: Urinal, actorName: s a
+
+fid: IH11, MoveName: The Treasure of the Sierra Madre, actorName: Walter Huston
+
+fid: ILa55, MoveName: Coming to America, actorName: Arsenio Hall
+
+fid: ILa55, MoveName: Coming to America, actorName: Arsenio Hall
+
+fid: ILa55, MoveName: Coming to America, actorName: Arsenio Hall
+
+fid: ILa55, MoveName: Coming to America, actorName: Eddie Murphy
+
+fid: ILa55, MoveName: Coming to America, actorName: Eddie Murphy
+
+fid: IlE10, MoveName: My Twentieth Century, actorName: Dorotha Segda
+
+fid: IML102, MoveName: Malice Domestic, actorName: s a
+
+fid: IMN15, MoveName: Mad Dog and Glory, actorName: Uma Thurman
+
+fid: IMu10, MoveName: Aladdin, actorName: Robin Williams
+
+fid: InB18, MoveName: Wild Strawberries, actorName: Bibi Anderson
+
+fid: InH18, MoveName: Ghidrah, The Three-Headed Monster, actorName: s a
+
+fid: InH18, MoveName: Ghidrah, The Three-Headed Monster, actorName: s a
+
+fid: InH18, MoveName: Ghidrah, The Three-Headed Monster, actorName: s a
+
+fid: InH18, MoveName: Ghidrah, The Three-Headed Monster, actorName: s a
+
+fid: IPS1, MoveName: Joe Versus the Volcano, actorName: Meg Ryan
+
+fid: IPS1, MoveName: Joe Versus the Volcano, actorName: Meg Ryan
+
+fid: IsM14, MoveName: A Soldier's Daughter Never Dies, actorName: s a
+
+fid: IsM14, MoveName: A Soldier's Daughter Never Dies, actorName: s a
+
+fid: ISn4, MoveName: Higher Learning, actorName: Jennifer Connelly
+
+fid: IsS15, MoveName: Sunshine, actorName: Ralph Fiennes
+
+fid: IsS15, MoveName: Sunshine, actorName: Ralph Fiennes
+
+fid: ISt33, MoveName: The Great Escape, actorName: David McCallum
+
+fid: ISy22, MoveName: Passion Fish, actorName: s a
+
+fid: ISy22, MoveName: Passion Fish, actorName: s a
+
+fid: ISy22, MoveName: Passion Fish, actorName: s a
+
+fid: ISy22, MoveName: Passion Fish, actorName: s a
+
+fid: ISy22, MoveName: Passion Fish, actorName: s a
+
+fid: ISz10, MoveName: Woyzeck, actorName: s a
+
+fid: IvN10, MoveName: After the End of the World, actorName: s a
+
+fid: IvR19, MoveName: Dave, actorName: Kevin Kline
+
+fid: IvR23, MoveName: Father's Day, actorName: s a
+
+fid: IvR23, MoveName: Father's Day, actorName: s a
+
+fid: IWa30, MoveName: Hairspray, actorName: s a
+
+fid: IWa40, MoveName: Serial Mom, actorName: s a
+
+fid: IWa40, MoveName: Serial Mom, actorName: s a
+
+fid: IWa40, MoveName: Serial Mom, actorName: Mink Stole
+
+fid: IWk5, MoveName: The Net, actorName: s a
+
+fid: IWk5, MoveName: The Net, actorName: s a
+
+fid: IWk5, MoveName: The Net, actorName: s a
+
+fid: IWo40, MoveName: Face/Off, actorName: John Travolta
+
+fid: IWo40, MoveName: Face/Off, actorName: Nicholas Cage
+
+fid: JA35, MoveName: The Mouse that Roared, actorName: Peter Sellers
+
+fid: JA35, MoveName: The Mouse that Roared, actorName: Peter Sellers
+
+fid: JA35, MoveName: The Mouse that Roared, actorName: Peter Sellers
+
+fid: JA35, MoveName: The Mouse that Roared, actorName: Peter Sellers
+
+fid: JA35, MoveName: The Mouse that Roared, actorName: Peter Sellers
+
+fid: JA35, MoveName: The Mouse that Roared, actorName: Peter Sellers
+
+fid: JBH30, MoveName: Boiling Point, actorName: s a
+
+fid: JBt24, MoveName: I'm Allright Jack, actorName: Ian Carmichael
+
+fid: JBt24, MoveName: I'm Allright Jack, actorName: John LeMesurier
+
+fid: JBt38, MoveName: Soft Beds, Hard Battles, actorName: Peter Sellers
+
+fid: JBt38, MoveName: Soft Beds, Hard Battles, actorName: Peter Sellers
+
+fid: JC1, MoveName: Le Sang d'un Po\'ete, actorName: s a
+
+fid: JC6, MoveName: La Belle et la B\^ete, actorName: Jean Marais
+
+fid: JcC10, MoveName: L.A. Johns, actorName: Thomas Calabro
+
+fid: JD10, MoveName: Night and the City, actorName: Francis L. Sullivan
+
+fid: JD10, MoveName: Night and the City, actorName: Googie Withers
+
+fid: JDB12, MoveName: Speed Two, actorName: s a
+
+fid: JDB12, MoveName: Speed Two, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDe32, MoveName: The Birds, actorName: s a
+
+fid: JDr10, MoveName: A Kiss Before Dying, actorName: Sean Young
+
+fid: JeY35, MoveName: The seven faces of Dr.Loa, actorName: Tony Randall
+
+fid: JeY35, MoveName: The seven faces of Dr.Loa, actorName: Tony Randall
+
+fid: JeY35, MoveName: The seven faces of Dr.Loa, actorName: Tony Randall
+
+fid: JeY35, MoveName: The seven faces of Dr.Loa, actorName: Tony Randall
+
+fid: JeY35, MoveName: The seven faces of Dr.Loa, actorName: Tony Randall
+
+fid: JeY35, MoveName: The seven faces of Dr.Loa, actorName: Tony Randall
+
+fid: JfB10, MoveName: Rear Window, actorName: s a
+
+fid: JfB10, MoveName: Rear Window, actorName: s a
+
+fid: JfB10, MoveName: Rear Window, actorName: s a
+
+fid: JfB10, MoveName: Rear Window, actorName: s a
+
+fid: JFW5, MoveName: Die Laughing, actorName: Robby Benson
+
+fid: JFW5, MoveName: Die Laughing, actorName: Linda Grovenor
+
+fid: JFW5, MoveName: Die Laughing, actorName: Charles Durning
+
+fid: JGo10, MoveName: Man Friday, actorName: Peter Ellis
+
+fid: JGs10, MoveName: When Time Stood Still, actorName: s a
+
+fid: JGs10, MoveName: When Time Stood Still, actorName: s a
+
+fid: JI5, MoveName: A Taxing Woman's Return, actorName: s a
+
+fid: JiA9, MoveName: When Twins are Interchanged, actorName: Bette Midler
+
+fid: JiA9, MoveName: When Twins are Interchanged, actorName: Lily Tomlin
+
+fid: JIv42, MoveName: The Remains of the Day, actorName: Anthony Hopkins
+
+fid: JIv42, MoveName: The Remains of the Day, actorName: Emma Thompson
+
+fid: JIv42, MoveName: The Remains of the Day, actorName: s a
+
+fid: JIv42, MoveName: The Remains of the Day, actorName: s a
+
+fid: JIv51, MoveName: The Golden Bowl, actorName: Jaremy Northam
+
+fid: JIv51, MoveName: The Golden Bowl, actorName: Jaremy Northam
+
+fid: JIv51, MoveName: The Golden Bowl, actorName: Jaremy Northam
+
+fid: JIv51, MoveName: The Golden Bowl, actorName: Jaremy Northam
+
+fid: JnA20, MoveName: The Lover, actorName: s a
+
+fid: JJo10, MoveName: October Sky, actorName: s a
+
+fid: JJo10, MoveName: October Sky, actorName: Elya Baskin
+
+fid: JJo10, MoveName: October Sky, actorName: s a
+
+fid: JKp35, MoveName: Brokedown Palace, actorName: s a
+
+fid: JLa10, MoveName: Live Nude Girls, actorName: s a
+
+fid: JLa10, MoveName: Live Nude Girls, actorName: s a
+
+fid: JLa10, MoveName: Live Nude Girls, actorName: s a
+
+fid: JLa10, MoveName: Live Nude Girls, actorName: s a
+
+fid: JlC16, MoveName: Fargo, actorName: s a
+
+fid: JLG8, MoveName: Les Caribiniers, actorName: s a
+
+fid: JLM20, MoveName: Sleuth, actorName: Laurence Olivier
+
+fid: JLM20, MoveName: Sleuth, actorName: Michael Caine
+
+fid: JLr10, MoveName: Vampyres, Daughters of Dracula, actorName: s a
+
+fid: JLr10, MoveName: Vampyres, Daughters of Dracula, actorName: s a
+
+fid: JLT11, MoveName: Tiger Bay, actorName: sa
+
+fid: JLT39, MoveName: Messenger of Death, actorName: Charles Bronson
+
+fid: JMn5, MoveName: A lost life, actorName: Winona Ryder
+
+fid: JN19, MoveName: Titanic, actorName: s a
+
+fid: JnL12, MoveName: My Cousin Vinny, actorName: Austin Pendleton
+
+fid: JnL13, MoveName: The Distinguished Gentleman, actorName: s a
+
+fid: JNm25, MoveName: Dangerous Crossing, actorName: s a
+
+fid: JNm61, MoveName: Death of A Cop, actorName: sa
+
+fid: JNm61, MoveName: Death of A Cop, actorName: sa
+
+fid: JNm61, MoveName: Death of A Cop, actorName: sa
+
+fid: JnCN10, MoveName: Autumn in New York, actorName: sa
+
+fid: JNs111, MoveName: Bull in a China Shop, actorName: Ellen Corby
+
+fid: JNs111, MoveName: Bull in a China Shop, actorName: Ida Moore
+
+fid: JoG2, MoveName: Octopussy, actorName: Roger Moore
+
+fid: JoG2, MoveName: Octopussy, actorName: Lois Maxwell
+
+fid: JoG2, MoveName: Octopussy, actorName: Desmond Llewellyn
+
+fid: JoP42, MoveName: Starring the Defense, actorName: s a
+
+fid: JoP42, MoveName: Starring the Defense, actorName: s a
+
+fid: JoP42, MoveName: Starring the Defense, actorName: s a
+
+fid: JoP50, MoveName: Mysterious Island of Beautiful Women, actorName: s a
+
+fid: JoP50, MoveName: Mysterious Island of Beautiful Women, actorName: s a
+
+fid: JPM5, MoveName: Les Enfants Terribles, actorName: Renee Cosima
+
+fid: JPt10, MoveName: A Fine Mess, actorName: s a
+
+fid: JPt10, MoveName: A Fine Mess, actorName: s a
+
+fid: JPt10, MoveName: A Fine Mess, actorName: s a
+
+fid: JPt10, MoveName: A Fine Mess, actorName: s a
+
+fid: JqB18, MoveName: Rendevouz de Julliet, actorName: s a
+
+fid: JqB18, MoveName: Rendevouz de Julliet, actorName: s a
+
+fid: JqB18, MoveName: Rendevouz de Julliet, actorName: s a
+
+fid: JqD28, MoveName: Trois Places Pour la 26, actorName: s a
+
+fid: JqD28, MoveName: Trois Places Pour la 26, actorName: s a
+
+fid: JqF2, MoveName: T\^etes de Femmes, Femmes de T\^ete, actorName: s a
+
+fid: JqF2, MoveName: T\^etes de Femmes, Femmes de T\^ete, actorName: s a
+
+fid: JR70, MoveName: La regle du jeu, actorName: Roland Toutain
+
+fid: JrB10, MoveName: The Wizards of Loneliness, actorName: s a
+
+fid: JrB10, MoveName: The Wizards of Loneliness, actorName: s a
+
+fid: JrB10, MoveName: The Wizards of Loneliness, actorName: s a
+
+fid: JrB10, MoveName: The Wizards of Loneliness, actorName: s a
+
+fid: JrB10, MoveName: The Wizards of Loneliness, actorName: s a
+
+fid: JrB10, MoveName: The Wizards of Loneliness, actorName: s a
+
+fid: JrS10, MoveName: The Vengeance of Fu Manchu, actorName: Douglas Wilmer
+
+fid: JS1, MoveName: Cocoanuts, actorName: Margaret Dumont
+
+fid: JS1, MoveName: Cocoanuts, actorName: Mary Eaton
+
+fid: JS1, MoveName: Cocoanuts, actorName: Oscar Shaw
+
+fid: JsF20, MoveName: Spies, Lies, and Naked Thighs, actorName: s a
+
+fid: JsF20, MoveName: Spies, Lies, and Naked Thighs, actorName: s a
+
+fid: JSz3, MoveName: Jaws 2, actorName: s a
+
+fid: JSz15, MoveName: Jaws, the Revenge, actorName: s a
+
+fid: JSz15, MoveName: Jaws, the Revenge, actorName: s a
+
+fid: JSz15, MoveName: Jaws, the Revenge, actorName: s a
+
+fid: JSz15, MoveName: Jaws, the Revenge, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JtF3, MoveName: Star Trek: The Insurrection, actorName: s a
+
+fid: JuA104, MoveName: The Night the World Ended, actorName: Harold J. Stone
+
+fid: JuB104, MoveName: Touch\'e, actorName: s a
+
+fid: JVm10, MoveName: Stalingrad, actorName: s a
+
+fid: JVm10, MoveName: Stalingrad, actorName: s a
+
+fid: JVm10, MoveName: Stalingrad, actorName: s a
+
+fid: JW9, MoveName: The Bride of Frankenstein, actorName: Elsa Lanchester
+
+fid: JWy10, MoveName: The Haunting of Morella, actorName: Nicole Eggert
+
+fid: JyR2, MoveName: Austin Powers, International Man of Mystery, actorName: Mike Meyers
+
+fid: JyR4, MoveName: Austin Powers, The Spy Who Shagged Me, actorName: Mike Meyers
+
+fid: JyR4, MoveName: Austin Powers, The Spy Who Shagged Me, actorName: Mike Meyers
+
+fid: JZu10, MoveName: Ghost, actorName: Vincent Schiavelli
+
+fid: KaS20, MoveName: The Island, actorName: s a
+
+fid: KBr3, MoveName: Dead Again, actorName: Kenneth Branagh
+
+fid: KBr3, MoveName: Dead Again, actorName: Emma Thompson
+
+fid: KBr12, MoveName: Peter's Friends, actorName: Hugh Laurie
+
+fid: KBr14, MoveName: Much Ado About Nothing, actorName: s a
+
+fid: KBr18, MoveName: Hamlet, actorName: Brian Blessed
+
+fid: KFu10, MoveName: Black Lizard, actorName: Kikko Marsuoka
+
+fid: KFu10, MoveName: Black Lizard, actorName: Jun Asami
+
+fid: KHu13, MoveName: The Trials of Oscar Wilde, actorName: s a
+
+fid: KHu13, MoveName: The Trials of Oscar Wilde, actorName: s a
+
+fid: KLo55, MoveName: Carla's Song, actorName: s a
+
+fid: KMz75, MoveName: Sansho the Bailiff, actorName: s a
+
+fid: KMz75, MoveName: Sansho the Bailiff, actorName: s a
+
+fid: KMz75, MoveName: Sansho the Bailiff, actorName: s a
+
+fid: KrK35, MoveName: Le Double Vie de Veronique, actorName: Irene Jacob
+
+fid: KRu9, MoveName: Lisztomania, actorName: Paul Nicholas
+
+fid: KRu22, MoveName: The Lair of the White Worm, actorName: s a
+
+fid: KRz40, MoveName: Sweet Dreams, actorName: Jessica Lange
+
+fid: KvR10, MoveName: 20 Bucks, actorName: s a
+
+fid: LB9, MoveName: El grand cavalcodos, actorName: s a
+
+fid: LB9, MoveName: El grand cavalcodos, actorName: s a
+
+fid: LBx6, MoveName: Apres la vie, actorName: Dominque Blanc
+
+fid: LcP15, MoveName: L'Enfant de Paris, actorName: s a
+
+fid: LcP15, MoveName: L'Enfant de Paris, actorName: s a
+
+fid: LeG12, MoveName: Mexican Spitfire, actorName: Leon Errol
+
+fid: LeJ10, MoveName: Lady for a Night, actorName: s a
+
+fid: LeJ10, MoveName: Lady for a Night, actorName: s a
+
+fid: LeJ10, MoveName: Lady for a Night, actorName: s a
+
+fid: LeB10, MoveName: Bad Behaviour, actorName: s a
+
+fid: LeB10, MoveName: Bad Behaviour, actorName: s a
+
+fid: LeB10, MoveName: Bad Behaviour, actorName: Phil Daniels
+
+fid: LFZ1, MoveName: Rush, actorName: Max Perlich
+
+fid: LHe2, MoveName: Rose France, actorName: s a
+
+fid: LHK3, MoveName: Whatever Happened to Aunt Alice?, actorName: Geraldine Page
+
+fid: LHM10, MoveName: The Kid with the Broken Halo, actorName: s a
+
+fid: LM110, MoveName: Ocean's Eleven, actorName: s a
+
+fid: LM110, MoveName: Ocean's Eleven, actorName: s a
+
+fid: LM110, MoveName: Ocean's Eleven, actorName: s a
+
+fid: LM110, MoveName: Ocean's Eleven, actorName: s a
+
+fid: LM110, MoveName: Ocean's Eleven, actorName: s a
+
+fid: LMy3, MoveName: Together, actorName: sa
+
+fid: LoW12, MoveName: The Dance of Love, actorName: Lina Basquette
+
+fid: LoW14, MoveName: Shoes, actorName: Lina Basquette
+
+fid: LPi20, MoveName: Queenie, the Star of Calcutta, actorName: s a
+
+fid: LPi20, MoveName: Queenie, the Star of Calcutta, actorName: s a
+
+fid: LPi20, MoveName: Queenie, the Star of Calcutta, actorName: s a
+
+fid: LPi20, MoveName: Queenie, the Star of Calcutta, actorName: s a
+
+fid: LPi20, MoveName: Queenie, the Star of Calcutta, actorName: s a
+
+fid: LPo10, MoveName: Narayana, actorName: s a
+
+fid: LPo10, MoveName: Narayana, actorName: s a
+
+fid: LRF20, MoveName: Tropic Zone, actorName: s a
+
+fid: LSh1, MoveName: Charlie Chan at the Wax Museum, actorName: s a
+
+fid: LSh1, MoveName: Charlie Chan at the Wax Museum, actorName: s a
+
+fid: LSh1, MoveName: Charlie Chan at the Wax Museum, actorName: s a
+
+fid: LSh1, MoveName: Charlie Chan at the Wax Museum, actorName: s a
+
+fid: LuV1, MoveName: Ossessione, actorName: s a
+
+fid: LuV40, MoveName: Boccaccio 70, actorName: s a
+
+fid: LuV40, MoveName: Boccaccio 70, actorName: s a
+
+fid: LwS130, MoveName: Charlie Chan in Paris, actorName: s a
+
+fid: LwS130, MoveName: Charlie Chan in Paris, actorName: s a
+
+fid: LwT10, MoveName: Second Verdict, actorName: s a
+
+fid: MaB1, MoveName: Black Sunday, actorName: Barbara Steele
+
+fid: MAu10, MoveName: The Story of O, actorName: sa
+
+fid: MAu10, MoveName: The Story of O, actorName: sa
+
+fid: MAu10, MoveName: The Story of O, actorName: sa
+
+fid: MB5, MoveName: Silent Movie, actorName: Paul Newman
+
+fid: MBe1, MoveName: Fists in the Pocket, actorName: s a
+
+fid: MBe2, MoveName: China is Near, actorName: s a
+
+fid: MBe2, MoveName: China is Near, actorName: s a
+
+fid: MBg10, MoveName: Camila, actorName: s a
+
+fid: MBi10, MoveName: Indian Summer, actorName: Elizabeth Perkins
+
+fid: MBr4, MoveName: Midnight Run, actorName: John Ashton
+
+fid: MC9, MoveName: La Marie du Port, actorName: Claude Romain
+
+fid: MCh2, MoveName: Stranger's Kiss, actorName: s a
+
+fid: MCh2, MoveName: Stranger's Kiss, actorName: s a
+
+fid: MCJ12, MoveName: Doc Hollywood, actorName: s a
+
+fid: MCJ12, MoveName: Doc Hollywood, actorName: Bridget Fonda
+
+fid: MCJ16, MoveName: Rob Roy, actorName: sa
+
+fid: MCJ16, MoveName: Rob Roy, actorName: sa
+
+fid: MCs10, MoveName: Love Everlasting, actorName: s a
+
+fid: MCy5, MoveName: Electra, actorName: s a
+
+fid: MCy5, MoveName: Electra, actorName: s a
+
+fid: MCy5, MoveName: Electra, actorName: s a
+
+fid: MCy11, MoveName: Iphigenia, actorName: s a
+
+fid: MCy11, MoveName: Iphigenia, actorName: s a
+
+fid: MCy11, MoveName: Iphigenia, actorName: s a
+
+fid: MdO10, MoveName: Douro, Fana Fluvial, actorName: s a
+
+fid: MdO81, MoveName: Francisca, actorName: s a
+
+fid: MdO81, MoveName: Francisca, actorName: s a
+
+fid: MdO85, MoveName: Sapato de Setim, actorName: s a
+
+fid: MdO87, MoveName: O Meu Caso, actorName: s a
+
+fid: MdV5, MoveName: Le paltoquet, actorName: s a
+
+fid: MdV5, MoveName: Le paltoquet, actorName: s a
+
+fid: MdV5, MoveName: Le paltoquet, actorName: s a
+
+fid: MdV5, MoveName: Le paltoquet, actorName: s a
+
+fid: MdV5, MoveName: Le paltoquet, actorName: s a
+
+fid: MDw10, MoveName: Mina Tannenbaum, actorName: s a
+
+fid: MeG51, MoveName: Diamonds, actorName: s a
+
+fid: MiM13, MoveName: Malraux, Tu m'etonnes!, actorName: sa
+
+fid: MF5, MoveName: One Flew over the Cuckoo's Nest, actorName: Will Sampson
+
+fid: MF5, MoveName: One Flew over the Cuckoo's Nest, actorName: Sydney Lassick
+
+fid: MF5, MoveName: One Flew over the Cuckoo's Nest, actorName: Brad Dourif
+
+fid: MF7, MoveName: Ragtime, actorName: James Olson
+
+fid: MFi22, MoveName: The Loss of Sexual Innocence, actorName: Saffron Burrows
+
+fid: MFr29, MoveName: A Touch of Class, actorName: Paul Sorvino
+
+fid: MGA14, MoveName: Half of Heaven, actorName: s a
+
+fid: MGA14, MoveName: Half of Heaven, actorName: s a
+
+fid: MGe12, MoveName: Thirty-Day Princess, actorName: Sylvia Sidney
+
+fid: MiA18, MoveName: The Shoes of the Fisherman, actorName: s a
+
+fid: MiH15, MoveName: Restoration, actorName: s a
+
+fid: MiJ12, MoveName: Clean Slate, actorName: Michael Gambon
+
+fid: StK15, MoveName: The Shining, actorName: s a
+
+fid: MkR10, MoveName: Murder Ordained, actorName: s a
+
+fid: MKy15, MoveName: Pride - Unmei no Toki, actorName: s a
+
+fid: MKy15, MoveName: Pride - Unmei no Toki, actorName: s a
+
+fid: ML18, MoveName: The Lady is Willing, actorName: Marlene Dietrich
+
+fid: MLa10, MoveName: Pet Sematary, actorName: s a
+
+fid: MLR4, MoveName: Little Caesar, actorName: Sidney Blackmer
+
+fid: MLR14, MoveName: Gold Diggers of 1933, actorName: Dick Powell
+
+fid: MLR18, MoveName: Anthony Adverse, actorName: Henry ONeill
+
+fid: MLR50, MoveName: The Devil at Four o'Clock, actorName: s a
+
+fid: MLR50, MoveName: The Devil at Four o'Clock, actorName: s a
+
+fid: MLR50, MoveName: The Devil at Four o'Clock, actorName: s a
+
+fid: MLR50, MoveName: The Devil at Four o'Clock, actorName: s a
+
+fid: MLR50, MoveName: The Devil at Four o'Clock, actorName: s a
+
+fid: MM10, MoveName: Thief, actorName: Willie Nelson
+
+fid: MM25, MoveName: The Manhunter, actorName: Brian Cox
+
+fid: MmL12, MoveName: Deep Impact, actorName: Ron Eldridge
+
+fid: MmL12, MoveName: Deep Impact, actorName: Bruce Weitz
+
+fid: MMz10, MoveName: The Fall Guy, actorName: s a
+
+fid: MMz10, MoveName: The Fall Guy, actorName: s a
+
+fid: MMz10, MoveName: The Fall Guy, actorName: s a
+
+fid: MMz10, MoveName: The Fall Guy, actorName: s a
+
+fid: MN20, MoveName: Postcards from the Edge, actorName: Rob Reiner
+
+fid: MN20, MoveName: Postcards from the Edge, actorName: Simon Callow
+
+fid: MNv10, MoveName: Danzon, actorName: s a
+
+fid: MOp12, MoveName: Werther, actorName: s a
+
+fid: MoT1, MoveName: Verleitung, Die Grausame Frau, actorName: s a
+
+fid: MoT1, MoveName: Verleitung, Die Grausame Frau, actorName: s a
+
+fid: MoT12, MoveName: My Father is Coming, actorName: s a
+
+fid: MoT12, MoveName: My Father is Coming, actorName: s a
+
+fid: MP12, MoveName: A Matter of Life and Death, actorName: David Niven
+
+fid: MR30, MoveName: Nuts, actorName: Robert Webber
+
+fid: MRs21, MoveName: Peyton Place, actorName: s a
+
+fid: MRs21, MoveName: Peyton Place, actorName: s a
+
+fid: MRs21, MoveName: Peyton Place, actorName: s a
+
+fid: MRs21, MoveName: Peyton Place, actorName: s a
+
+fid: MRs21, MoveName: Peyton Place, actorName: s a
+
+fid: MRs21, MoveName: Peyton Place, actorName: s a
+
+fid: MRh10, MoveName: Das Merkwuerdige Verhalten geschlechtsreifer Grossstaedter zur Paarungszeit, actorName: s a
+
+fid: MRh10, MoveName: Das Merkwuerdige Verhalten geschlechtsreifer Grossstaedter zur Paarungszeit, actorName: s a
+
+fid: MSf10, MoveName: La Cabalgata del Circo, actorName: Orestes Caviglia
+
+fid: MSz10, MoveName: Which Way is Up?, actorName: Richard Pryor
+
+fid: MSz10, MoveName: Which Way is Up?, actorName: Richard Pryor
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC12, MoveName: GoldenEye, actorName: s a
+
+fid: MtC15, MoveName: The Mask of Zorro, actorName: Catherine ZetaJones
+
+fid: MwB10, MoveName: Cremaster 5, actorName: Matthew Barney
+
+fid: MwB10, MoveName: Cremaster 5, actorName: Matthew Barney
+
+fid: MWe10, MoveName: Katzgraben, actorName: s a
+
+fid: MWz10, MoveName: Killer Condom, actorName: s a
+
+fid: MxA10, MoveName: Love Butcher, actorName: Eric Stern
+
+fid: MyS10, MoveName: Shall We Dance, actorName: s a
+
+fid: MzN4, MoveName: Rataplan, actorName: s a
+
+fid: MzN10, MoveName: The Icycle Thief, actorName: Maurizio Nichetti
+
+fid: MzN10, MoveName: The Icycle Thief, actorName: s a
+
+fid: NBa10, MoveName: Unmade Beds, actorName: s a
+
+fid: NBa10, MoveName: Unmade Beds, actorName: s a
+
+fid: NBa10, MoveName: Unmade Beds, actorName: s a
+
+fid: NcM10, MoveName: What Women Want, actorName: sa
+
+fid: NeJ14, MoveName: Mona Lisa, actorName: s a
+
+fid: NeJ14, MoveName: Mona Lisa, actorName: s a
+
+fid: NeJ29, MoveName: The End of the Affair, actorName: s a
+
+fid: NiP10, MoveName: The Wrong Trousers, actorName: none
+
+fid: NiP10, MoveName: The Wrong Trousers, actorName: none
+
+fid: NJ30, MoveName: Other People's Money, actorName: s a
+
+fid: NJu12, MoveName: The Seventh Voyage of Sinbad, actorName: s a
+
+fid: NJu12, MoveName: The Seventh Voyage of Sinbad, actorName: s a
+
+fid: NJu12, MoveName: The Seventh Voyage of Sinbad, actorName: s a
+
+fid: NJu12, MoveName: The Seventh Voyage of Sinbad, actorName: s a
+
+fid: NJu12, MoveName: The Seventh Voyage of Sinbad, actorName: s a
+
+fid: NKo25, MoveName: 1922, actorName: s a
+
+fid: NKp22, MoveName: Charles et Lucie, actorName: s a
+
+fid: NKp40, MoveName: Plaisir D'Amour, actorName: s a
+
+fid: NKp40, MoveName: Plaisir D'Amour, actorName: s a
+
+fid: NKp40, MoveName: Plaisir D'Amour, actorName: s a
+
+fid: NKp40, MoveName: Plaisir D'Amour, actorName: s a
+
+fid: NLl114, MoveName: The Jar, actorName: Pat Buttram
+
+fid: NLl114, MoveName: The Jar, actorName: Pat Buttram
+
+fid: NML26, MoveName: The Paleface, actorName: Bob Hope
+
+fid: NMv8, MoveName: Close to Eden, actorName: s a
+
+fid: NNo1, MoveName: River of Unrest, actorName: John Loder
+
+fid: NoE8, MoveName: You've got Mail, actorName: s a
+
+fid: NoE8, MoveName: You've got Mail, actorName: s a
+
+fid: NoE8, MoveName: You've got Mail, actorName: s a
+
+fid: NoE8, MoveName: You've got Mail, actorName: s a
+
+fid: NoE8, MoveName: You've got Mail, actorName: s a
+
+fid: NoE8, MoveName: You've got Mail, actorName: s a
+
+fid: Nos12, MoveName: Shinjuku Dorobo Nikki, actorName: s a
+
+fid: Nos12, MoveName: Shinjuku Dorobo Nikki, actorName: s a
+
+fid: NPk10, MoveName: Thanos and Despina, actorName: s a
+
+fid: NT31, MoveName: The Phantom President, actorName: George M. Cohan
+
+fid: NT128, MoveName: Girls! Girls! Girls!, actorName: s a
+
+fid: NuJ4, MoveName: The Man in The Gray Flannel Suit, actorName: Sandy Descher
+
+fid: NuJ4, MoveName: The Man in The Gray Flannel Suit, actorName: Mickey Maga
+
+fid: OlA14, MoveName: Irma Vep, actorName: s a
+
+fid: OlS18, MoveName: JFK, actorName: s a
+
+fid: OlS23, MoveName: Nixon, actorName: sa
+
+fid: OlS23, MoveName: Nixon, actorName: sa
+
+fid: OP18, MoveName: Where the Sidewalk Ends, actorName: s a
+
+fid: OP30, MoveName: Anatomy of a Murder, actorName: Eve Arden
+
+fid: OP30, MoveName: Anatomy of a Murder, actorName: Brooks West
+
+fid: OPa2, MoveName: An Ideal Husband, actorName: s a
+
+fid: PaH114, MoveName: Cell 227, actorName: James Westerfield
+
+fid: PAl12, MoveName: Tie Me Up, Tie Me Down, actorName: s a
+
+fid: PAl16, MoveName: Kika, actorName: s a
+
+fid: PaS10, MoveName: The Black Train, actorName: s a
+
+fid: PaS10, MoveName: The Black Train, actorName: s a
+
+fid: PaS10, MoveName: The Black Train, actorName: s a
+
+fid: PBa12, MoveName: Shelf Life, actorName: Jim Turner
+
+fid: PBo11, MoveName: They All Laughed, actorName: Blaine Novak
+
+fid: PeL10, MoveName: Chicken Run, actorName: sa
+
+fid: PeL10, MoveName: Chicken Run, actorName: sa
+
+fid: PeL10, MoveName: Chicken Run, actorName: sa
+
+fid: PeL10, MoveName: Chicken Run, actorName: sa
+
+fid: PeL10, MoveName: Chicken Run, actorName: sa
+
+fid: PeM20, MoveName: Through the Eyes of a Killer, actorName: s a
+
+fid: PeM20, MoveName: Through the Eyes of a Killer, actorName: s a
+
+fid: PGr16, MoveName: Prospero's Books, actorName: s a
+
+fid: PGr16, MoveName: Prospero's Books, actorName: s a
+
+fid: PGr20, MoveName: The Pillowbook, actorName: s a
+
+fid: PGr20, MoveName: The Pillowbook, actorName: s a
+
+fid: PJH10, MoveName: Muriel's Wedding, actorName: s a
+
+fid: PK22, MoveName: Rising Sun, actorName: s a
+
+fid: PlB2, MoveName: Marlowe, actorName: s a
+
+fid: PlB2, MoveName: Marlowe, actorName: s a
+
+fid: PlB2, MoveName: Marlowe, actorName: s a
+
+fid: PlL1, MoveName: Waxworks, actorName: Werner Krauss
+
+fid: PlL2, MoveName: The Cat and the Canary, actorName: Gertrude Astor
+
+fid: PlT50, MoveName: Good Morning, Babylon, actorName: s a
+
+fid: PlT50, MoveName: Good Morning, Babylon, actorName: s a
+
+fid: PlT50, MoveName: Good Morning, Babylon, actorName: s a
+
+fid: PlT50, MoveName: Good Morning, Babylon, actorName: s a
+
+fid: PlT60, MoveName: Fiorile, actorName: Michael Vartan
+
+fid: PlT60, MoveName: Fiorile, actorName: Galatea Ranzi
+
+fid: PlT60, MoveName: Fiorile, actorName: Claudio Bigali
+
+fid: PlT60, MoveName: Fiorile, actorName: Michael Vartan
+
+fid: PM8, MoveName: The Tempest, actorName: Paul Mazursky
+
+fid: PMe20, MoveName: Zorro, the Gay Blade, actorName: George Hamilton
+
+fid: PMe32, MoveName: Let Him Have It, actorName: s a
+
+fid: PMe32, MoveName: Let Him Have It, actorName: s a
+
+fid: PMo12, MoveName: Flesh, actorName: s a
+
+fid: PMo15, MoveName: Heat, actorName: s a
+
+fid: PMo15, MoveName: Heat, actorName: s a
+
+fid: PMo15, MoveName: Heat, actorName: s a
+
+fid: PMz10, MoveName: Saint-Cyr, actorName: s a
+
+fid: POC29, MoveName: Sweet November, actorName: sa
+
+fid: POC29, MoveName: Sweet November, actorName: sa
+
+fid: PSe10, MoveName: Naked Gun 33 1/3: The Final Insult, actorName: s a
+
+fid: PTV10, MoveName: Fear, actorName: s a
+
+fid: PTV10, MoveName: Fear, actorName: s a
+
+fid: PUs5, MoveName: Billy Budd, actorName: David McCallum
+
+fid: PW1, MoveName: The Student of Prag, actorName: Henrik Galeen
+
+fid: PWr16, MoveName: Fearless, actorName: Rosie Perez
+
+fid: PY11, MoveName: Breaking Away, actorName: Paul Dooley
+
+fid: PY34, MoveName: Nine Months, actorName: s a
+
+fid: PY34, MoveName: Nine Months, actorName: s a
+
+fid: Qta6, MoveName: Jackie Brown, actorName: Samuel L. Jackson
+
+fid: RA5, MoveName: Gandhi, actorName: s a
+
+fid: RA22, MoveName: Grey Owl, actorName: s a
+
+fid: RA22, MoveName: Grey Owl, actorName: s a
+
+fid: RaK10, MoveName: Big Top Pee-wee, actorName: s a
+
+fid: RAl93, MoveName: The Player, actorName: Richard E. Grant
+
+fid: RAl93, MoveName: The Player, actorName: Tim Robbins
+
+fid: RAl93, MoveName: The Player, actorName: Peter Gallagher
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RAl106, MoveName: Gosford Park, actorName: sa
+
+fid: RaR12, MoveName: Shattered Image, actorName: William Baldwin
+
+fid: RaW59, MoveName: The Roaring Twenties, actorName: Jeffrey Lynn
+
+fid: RbR14, MoveName: A Few Good Men, actorName: s a
+
+fid: RbR22, MoveName: The Story of Us, actorName: s a
+
+fid: RBu10, MoveName: Hot Lead and Cold Feet, actorName: Jim Dale
+
+fid: RBu10, MoveName: Hot Lead and Cold Feet, actorName: Jim Dale
+
+fid: RcB14, MoveName: Elmer Gantry, actorName: Arthur Kennedy
+
+fid: RcF20, MoveName: Theodora, Slave Express, actorName: Gianne Maria Canale
+
+fid: RcF20, MoveName: Theodora, Slave Express, actorName: Gianne Maria Canale
+
+fid: RCo34, MoveName: Tales of Terror, actorName: Vincent Price
+
+fid: RCo34, MoveName: Tales of Terror, actorName: Vincent Price
+
+fid: RCo34, MoveName: Tales of Terror, actorName: Debra Paget
+
+fid: RCo38, MoveName: The Haunted Palace, actorName: Vincent Price
+
+fid: RCu10, MoveName: Frankenstein's Daughter, actorName: s a
+
+fid: RD5, MoveName: Superman, actorName: s a
+
+fid: RD5, MoveName: Superman, actorName: s a
+
+fid: RDo36, MoveName: Dante's Peak, actorName: s a
+
+fid: RDo40, MoveName: Thirteen Days, actorName: Bruce Greenwood
+
+fid: RDo40, MoveName: Thirteen Days, actorName: sa
+
+fid: RDo40, MoveName: Thirteen Days, actorName: sa
+
+fid: RDo40, MoveName: Thirteen Days, actorName: sa
+
+fid: RDo40, MoveName: Thirteen Days, actorName: sa
+
+fid: ReH22, MoveName: Deep Blue Sea, actorName: sa
+
+fid: RFi10, MoveName: The Clonus Horror, actorName: s a
+
+fid: RgA10, MoveName: The Lion King, actorName: s a
+
+fid: RGu10, MoveName: Fabula de la Bella Palomera, actorName: s a
+
+fid: RGu15, MoveName: Er\'endira, actorName: s a
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Alec Guiness
+
+fid: RHa4, MoveName: Kind Hearts and Coronets, actorName: Miles Malleson
+
+fid: RHg10, MoveName: Evening Star, actorName: sa
+
+fid: RHg10, MoveName: Evening Star, actorName: sa
+
+fid: RHo20, MoveName: Parenthood, actorName: s a
+
+fid: RHo20, MoveName: Parenthood, actorName: s a
+
+fid: RHo20, MoveName: Parenthood, actorName: s a
+
+fid: RHo20, MoveName: Parenthood, actorName: s a
+
+fid: RHo20, MoveName: Parenthood, actorName: s a
+
+fid: RHv5, MoveName: Critters, actorName: s a
+
+fid: RiB21, MoveName: Mermaids, actorName: s a
+
+fid: RiB28, MoveName: Mrs.~Winterbourne, actorName: Brendan Fraser
+
+fid: RiB28, MoveName: Mrs.~Winterbourne, actorName: s a
+
+fid: RiB28, MoveName: Mrs.~Winterbourne, actorName: s a
+
+fid: RiF21, MoveName: Crack in the Mirror, actorName: Orson Welles
+
+fid: RiF21, MoveName: Crack in the Mirror, actorName: Juliette Greco
+
+fid: RiF28, MoveName: Tora! Tora! Tora!, actorName: s a
+
+fid: RiF28, MoveName: Tora! Tora! Tora!, actorName: s a
+
+fid: RiF28, MoveName: Tora! Tora! Tora!, actorName: s a
+
+fid: RiF28, MoveName: Tora! Tora! Tora!, actorName: s a
+
+fid: RiF39, MoveName: Crossed Swords, actorName: Mark Lester
+
+fid: RkB10, MoveName: Genghis Blues, actorName: s a
+
+fid: RKi10, MoveName: The Midnight Man, actorName: s a
+
+fid: RkK15, MoveName: Blast from the Past, actorName: s a
+
+fid: RkK15, MoveName: Blast from the Past, actorName: s a
+
+fid: RlE5, MoveName: Eye of the Storm, actorName: s a
+
+fid: RLl10, MoveName: Slacker, actorName: s a
+
+fid: RLl15, MoveName: Before Sunrise, actorName: s a
+
+fid: RLu10, MoveName: Legally Blonde, actorName: sa
+
+fid: RLu10, MoveName: Legally Blonde, actorName: sa
+
+fid: RLu10, MoveName: Legally Blonde, actorName: sa
+
+fid: RM14, MoveName: Rings on her Fingers, actorName: Laird Cregar
+
+fid: RMc10, MoveName: Night Eyes II, actorName: s a
+
+fid: RMe12, MoveName: The Cat and the Canary, actorName: Michael Callan
+
+fid: RMt10, MoveName: Notting Hill, actorName: s a
+
+fid: RMw10, MoveName: Overexposed, actorName: s a
+
+fid: RMw10, MoveName: Overexposed, actorName: s a
+
+fid: RMw10, MoveName: Overexposed, actorName: s a
+
+fid: RnC10, MoveName: Mortal Fear, actorName: s a
+
+fid: RnC10, MoveName: Mortal Fear, actorName: s a
+
+fid: RnC10, MoveName: Mortal Fear, actorName: s a
+
+fid: RoA25, MoveName: Hush Hush, Sweet Charlotte, actorName: Cecil Kellaway
+
+fid: RoA32, MoveName: The Legend of Lylah Clare, actorName: Kim Novak
+
+fid: RoS53, MoveName: And so Died Riabouchinska, actorName: s a
+
+fid: RoS112, MoveName: The Shaggy DA, actorName: s a
+
+fid: RoS112, MoveName: The Shaggy DA, actorName: s a
+
+fid: RoS112, MoveName: The Shaggy DA, actorName: s a
+
+fid: RRo1, MoveName: Open City, actorName: s a
+
+fid: RS26, MoveName: White Squall, actorName: Jill Larson
+
+fid: RSc10, MoveName: Crime + Punsihment in Suburbia, actorName: Ellen Baekin
+
+fid: RSi18, MoveName: Cobra Woman, actorName: Maria Montez
+
+fid: RSi25, MoveName: The Spiral Staircase, actorName: Kent Smith
+
+fid: RSi40, MoveName: Criss Cross, actorName: Burt Lancaster
+
+fid: RSi41, MoveName: The Spiral Staircase, actorName: Dorothy McGuire
+
+fid: RSi45, MoveName: The Crimson Pirate, actorName: Burt Lancaster
+
+fid: RSp20, MoveName: and the Band Played On, actorName: s a
+
+fid: RSp20, MoveName: and the Band Played On, actorName: s a
+
+fid: RSp20, MoveName: and the Band Played On, actorName: s a
+
+fid: RSp20, MoveName: and the Band Played On, actorName: s a
+
+fid: RSp20, MoveName: and the Band Played On, actorName: s a
+
+fid: RSp24, MoveName: Tomorrow Never Dies, actorName: s a
+
+fid: RSt321, MoveName: The End of Indian Summer, actorName: s a
+
+fid: RSt323, MoveName: I Killed the Count, actorName: s a
+
+fid: RSt323, MoveName: I Killed the Count, actorName: s a
+
+fid: RSt323, MoveName: I Killed the Count, actorName: s a
+
+fid: RSt324, MoveName: The Hands of Mr.~Ottermole, actorName: s a
+
+fid: RSt324, MoveName: The Hands of Mr.~Ottermole, actorName: s a
+
+fid: RSt336, MoveName: Design for Loving, actorName: Norman Lloyd
+
+fid: RSt336, MoveName: Design for Loving, actorName: Barbara Baxley
+
+fid: RT10, MoveName: Personal Best, actorName: Mariel Hemingway
+
+fid: RT10, MoveName: Personal Best, actorName: Patrice Donnelly
+
+fid: RT10, MoveName: Personal Best, actorName: Scott Glenn
+
+fid: RT10, MoveName: Personal Best, actorName: Kenny Moore
+
+fid: RtB2, MoveName: L'Anges du Peche, actorName: s a
+
+fid: RtB11, MoveName: Quatre Nuits d'un Reveur, actorName: s a
+
+fid: RTh20, MoveName: The Song of the Thin Man, actorName: William Powell
+
+fid: RTh20, MoveName: The Song of the Thin Man, actorName: Myrna Loy
+
+fid: RTh20, MoveName: The Song of the Thin Man, actorName: Asta
+
+fid: RTh35, MoveName: The Prisoner of Zenda, actorName: Stewart Granger
+
+fid: RtY15, MoveName: Fierce Creatures, actorName: Kevin Kline
+
+fid: RTr10, MoveName: Go Fish, actorName: s a
+
+fid: RTr10, MoveName: Go Fish, actorName: s a
+
+fid: RTr10, MoveName: Go Fish, actorName: s a
+
+fid: RTr10, MoveName: Go Fish, actorName: s a
+
+fid: RW30, MoveName: The Hands of Orlac, actorName: Conrad Veidt
+
+fid: RWc10, MoveName: The Man in the Iron Mask, actorName: Leonardo DiCaprio
+
+fid: RWg16, MoveName: East-West, actorName: s a
+
+fid: RWN32, MoveName: The House of Fear, actorName: Basil Rathbone
+
+fid: RWN32, MoveName: The House of Fear, actorName: Nigel Bruce
+
+fid: RWN32, MoveName: The House of Fear, actorName: Dennis Hoey
+
+fid: RWN32, MoveName: The House of Fear, actorName: Mary Gordon
+
+fid: RZe1, MoveName: Used Cars, actorName: Jack Warden
+
+fid: RZe12, MoveName: Back to the Future Part II, actorName: Michael J. Fox
+
+fid: RZe12, MoveName: Back to the Future Part II, actorName: Thomas F. Wilson
+
+fid: RZe14, MoveName: Back to the Future Part III, actorName: Michael J. Fox
+
+fid: S1, MoveName: The Salvation Hunters, actorName: s a
+
+fid: S1, MoveName: The Salvation Hunters, actorName: s a
+
+fid: ScW13, MoveName: Where the Heart Is, actorName: s a
+
+fid: SE25, MoveName: Ivan the Terrible, part I, actorName: Nikolai Cheraskov
+
+fid: SeP2, MoveName: The Crossing Guard, actorName: s a
+
+fid: Sfg2, MoveName: Lost in Translation, actorName: s a
+
+fid: SG33, MoveName: Les Perles de la couronne, actorName: Sacha Guitry
+
+fid: SG33, MoveName: Les Perles de la couronne, actorName: Sacha Guitry
+
+fid: SG33, MoveName: Les Perles de la couronne, actorName: Sacha Guitry
+
+fid: SG37, MoveName: Champes-Elyse\'es, actorName: Sacha Guitry
+
+fid: SG37, MoveName: Champes-Elyse\'es, actorName: Sacha Guitry
+
+fid: SG69, MoveName: Les Trois Font la Paire, actorName: Michel Simon
+
+fid: SG69, MoveName: Les Trois Font la Paire, actorName: s a
+
+fid: SG69, MoveName: Les Trois Font la Paire, actorName: s a
+
+fid: ShI52, MoveName: Pigs and Battleships, actorName: s a
+
+fid: ShI52, MoveName: Pigs and Battleships, actorName: s a
+
+fid: ShM5, MoveName: The Submersion of Japan, actorName: s a
+
+fid: ShM15, MoveName: Tidal Wave, actorName: s a
+
+fid: SHp10, MoveName: Blown Away, actorName: Tommy Lee Jones
+
+fid: ShT10, MoveName: Tetsuo, the Iron Man, actorName: s a
+
+fid: SiA10, MoveName: The Minotaur, actorName: Rosanna Schiaffino
+
+fid: SiW13, MoveName: The Phantom, actorName: John Tenney
+
+fid: SiW14, MoveName: Free Willy III: The Rescue, actorName: s a
+
+fid: SKe10, MoveName: Vegas Vacation, actorName: s a
+
+fid: SKe10, MoveName: Vegas Vacation, actorName: s a
+
+fid: SKw30, MoveName: Red Rose White Rose, actorName: s a
+
+fid: SL19, MoveName: The Anderson Tapes, actorName: s a
+
+fid: SL19, MoveName: The Anderson Tapes, actorName: s a
+
+fid: SL20, MoveName: Serpico, actorName: Jack Kehoe
+
+fid: SLJ5, MoveName: Jungle Fever, actorName: s a
+
+fid: SLJ5, MoveName: Jungle Fever, actorName: s a
+
+fid: SLJ5, MoveName: Jungle Fever, actorName: s a
+
+fid: SLJ5, MoveName: Jungle Fever, actorName: s a
+
+fid: SLJ11, MoveName: He Got Game, actorName: s a
+
+fid: SMi21, MoveName: Lake Placid, actorName: s a
+
+fid: SOS10, MoveName: Sparkle, actorName: s a
+
+fid: SOS10, MoveName: Sparkle, actorName: s a
+
+fid: SP31, MoveName: The Slender Thread, actorName: s a
+
+fid: SP31, MoveName: The Slender Thread, actorName: s a
+
+fid: SP31, MoveName: The Slender Thread, actorName: s a
+
+fid: SP61, MoveName: Out of Africa, actorName: Malick Bowes
+
+fid: SpJ13, MoveName: Adaptation, actorName: Nicolas Cage
+
+fid: SPo8, MoveName: Hanky Panky, actorName: Gene Wilder
+
+fid: SR36, MoveName: Mahangar, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRa1, MoveName: Under the Rainbow, actorName: s a
+
+fid: SRi5, MoveName: The Evil Dead, actorName: s a
+
+fid: SRo1, MoveName: Dead Weight, actorName: Don Gordon
+
+fid: SRo4, MoveName: Escape to Sonoita, actorName: s a
+
+fid: SRo4, MoveName: Escape to Sonoita, actorName: s a
+
+fid: SS19, MoveName: Indiana Jones and the Holy Grail, actorName: s a
+
+fid: SS19, MoveName: Indiana Jones and the Holy Grail, actorName: s a
+
+fid: SS19, MoveName: Indiana Jones and the Holy Grail, actorName: s a
+
+fid: SS19, MoveName: Indiana Jones and the Holy Grail, actorName: s a
+
+fid: SS19, MoveName: Indiana Jones and the Holy Grail, actorName: s a
+
+fid: SS24, MoveName: Jurassic Park, actorName: s a
+
+fid: SSb12, MoveName: Erin Brockovich, actorName: s a
+
+fid: SSb12, MoveName: Erin Brockovich, actorName: s a
+
+fid: StD37, MoveName: Please Don't eat the Daisies, actorName: Doris Day
+
+fid: StD37, MoveName: Please Don't eat the Daisies, actorName: s a
+
+fid: StD37, MoveName: Please Don't eat the Daisies, actorName: s a
+
+fid: StD37, MoveName: Please Don't eat the Daisies, actorName: s a
+
+fid: StD37, MoveName: Please Don't eat the Daisies, actorName: s a
+
+fid: StD37, MoveName: Please Don't eat the Daisies, actorName: s a
+
+fid: StF17, MoveName: The Van, actorName: s a
+
+fid: StH18, MoveName: Tulsa, actorName: Chill Wills
+
+fid: StK7, MoveName: Dr.~Strangelove; Or How I learned to Stop Worrying and Love the Bomb, actorName: Peter Sellers
+
+fid: StK7, MoveName: Dr.~Strangelove; Or How I learned to Stop Worrying and Love the Bomb, actorName: Peter Sellers
+
+fid: StK21, MoveName: Eyes Wide Shut, actorName: s a
+
+fid: StK21, MoveName: Eyes Wide Shut, actorName: s a
+
+fid: StK21, MoveName: Eyes Wide Shut, actorName: s a
+
+fid: StK21, MoveName: Eyes Wide Shut, actorName: s a
+
+fid: StR10, MoveName: The Ex-Mrs.~Bradford, actorName: s a
+
+fid: StR10, MoveName: The Ex-Mrs.~Bradford, actorName: s a
+
+fid: StS13, MoveName: Ocean's Eleven, actorName: sa
+
+fid: StS13, MoveName: Ocean's Eleven, actorName: sa
+
+fid: StS13, MoveName: Ocean's Eleven, actorName: sa
+
+fid: StS13, MoveName: Ocean's Eleven, actorName: sa
+
+fid: STu10, MoveName: The Impostors, actorName: Stanley Tucci
+
+fid: SuA10, MoveName: The Hour of the Star, actorName: s a
+
+fid: SuA10, MoveName: The Hour of the Star, actorName: s a
+
+fid: SuS12, MoveName: Desperately Seeking Susan, actorName: Rosanna Arquette
+
+fid: SuS16, MoveName: Making Mr.~Right, actorName: John Malkovich
+
+fid: SvB12, MoveName: George of the Jungle, actorName: s a
+
+fid: SWi6, MoveName: Of One Blood, actorName: Spencer Williams
+
+fid: SWi7, MoveName: Go Down Death, actorName: Spencer Williams
+
+fid: SWi7, MoveName: Go Down Death, actorName: Myra D. Hemmings
+
+fid: SWi9, MoveName: Girl in Room 20, actorName: Spencer Williams
+
+fid: SWi9, MoveName: Girl in Room 20, actorName: Myra D. Hemmings
+
+fid: SWi10, MoveName: Dirty Gertie from Harlem, U.S.A., actorName: Spencer Williams
+
+fid: SWi11, MoveName: Juke Joint, actorName: Spencer Williams
+
+fid: SWi12, MoveName: BealeStreet Mama, actorName: Spencer Williams
+
+fid: SwS10, MoveName: Fast Food, actorName: s a
+
+fid: SwS10, MoveName: Fast Food, actorName: s a
+
+fid: Sys2, MoveName: Rocky III, actorName: Sylvester Stallone
+
+fid: Sys2, MoveName: Rocky III, actorName: Burt Young
+
+fid: Sys2, MoveName: Rocky III, actorName: Talia Shire
+
+fid: Sys2, MoveName: Rocky III, actorName: Carl Weathers
+
+fid: TAn12, MoveName: Topio stin omichli, actorName: s a
+
+fid: TAn12, MoveName: Topio stin omichli, actorName: s a
+
+fid: Tan21, MoveName: Mia eoniotita ke mia mera, actorName: s a
+
+fid: TB60, MoveName: Freaks, actorName: s a
+
+fid: TB60, MoveName: Freaks, actorName: s a
+
+fid: TBi10, MoveName: Star Trap, actorName: s a
+
+fid: TBi10, MoveName: Star Trap, actorName: s a
+
+fid: TBs50, MoveName: Scandal, actorName: s a
+
+fid: TBs50, MoveName: Scandal, actorName: s a
+
+fid: TBs50, MoveName: Scandal, actorName: s a
+
+fid: TFi12, MoveName: The Mummy, actorName: Yvonne Furneaux
+
+fid: TGi2, MoveName: Jabberwocky, actorName: Michael Palin
+
+fid: TGi6, MoveName: The Adventures of Baron Munchhausen, actorName: Valentina Cortesa
+
+fid: TGi6, MoveName: The Adventures of Baron Munchhausen, actorName: Charles McKeown
+
+fid: TGi6, MoveName: The Adventures of Baron Munchhausen, actorName: Winston Dennis
+
+fid: THk14, MoveName: That Thing You Do!, actorName: sa
+
+fid: THk16, MoveName: From the Earth to the Moon, actorName: s a
+
+fid: THk16, MoveName: From the Earth to the Moon, actorName: s a
+
+fid: THk16, MoveName: From the Earth to the Moon, actorName: s a
+
+fid: ThS4, MoveName: So I Married an Axe Murderer, actorName: Mike Myers
+
+fid: TiB5, MoveName: Beetlejuice, actorName: Sylvia Sidney
+
+fid: TiB6, MoveName: Batman, actorName: Billy Dee Williams
+
+fid: TKo22, MoveName: Uncommon Valor, actorName: Reb Brown
+
+fid: TLW5, MoveName: Holy Matrimony, actorName: s a
+
+fid: TMk10, MoveName: The Price of Love, actorName: s a
+
+fid: ToS21, MoveName: Crimson Tide, actorName: s a
+
+fid: ToS21, MoveName: Crimson Tide, actorName: s a
+
+fid: TRb16, MoveName: Dead Man Walking, actorName: s a
+
+fid: TRb16, MoveName: Dead Man Walking, actorName: s a
+
+fid: TRb16, MoveName: Dead Man Walking, actorName: s a
+
+fid: TRb19, MoveName: Cradle will Rock, actorName: Susan Sarandon
+
+fid: TRb19, MoveName: Cradle will Rock, actorName: s a
+
+fid: TRs32, MoveName: The Phantom of the Opera, actorName: Teri Polo
+
+fid: TSt1, MoveName: Rosenkrantz and Guildenstern are Dead, actorName: s a
+
+fid: TSt1, MoveName: Rosenkrantz and Guildenstern are Dead, actorName: Richard Dreyfuss
+
+fid: TSy10, MoveName: Liar Liar, actorName: s a
+
+fid: TSy10, MoveName: Liar Liar, actorName: s a
+
+fid: TSy10, MoveName: Liar Liar, actorName: s a
+
+fid: TTy10, MoveName: Lola Rennt, actorName: s a
+
+fid: TVb10, MoveName: Festen, actorName: s a
+
+fid: TWh20, MoveName: The Murder Man, actorName: William Collier~sr
+
+fid: TZz10, MoveName: The Blue Kite, actorName: s a
+
+fid: UlO25, MoveName: Joanne D'Arc of Mongolia, actorName: s a
+
+fid: Upr2, MoveName: My Son the Fanatic, actorName: s a
+
+fid: VdS2, MoveName: I Bambini ci Guardino, actorName: s a
+
+fid: VdS2, MoveName: I Bambini ci Guardino, actorName: s a
+
+fid: VdS2, MoveName: I Bambini ci Guardino, actorName: s a
+
+fid: VKo13, MoveName: Herr Zwilling und Frau Zuckermann, actorName: s a
+
+fid: VM11, MoveName: The Bad and the Beautiful, actorName: Barry Sullivan
+
+fid: VNu15, MoveName: Ulee's Gold, actorName: s a
+
+fid: VNu15, MoveName: Ulee's Gold, actorName: s a
+
+fid: VSh27, MoveName: The Damned Don't Cry, actorName: s a
+
+fid: VSh27, MoveName: The Damned Don't Cry, actorName: s a
+
+fid: VyK15, MoveName: A Friend of the Deceased, actorName: s a
+
+fid: W25, MoveName: The Boob, actorName: s a
+
+fid: WA3, MoveName: Everything You Always Wanted to Know About Sex and Were Afraid to Ask, actorName: Woody Allen
+
+fid: WA3, MoveName: Everything You Always Wanted to Know About Sex and Were Afraid to Ask, actorName: Woody Allen
+
+fid: WA17, MoveName: Crimes and Misdemeanors, actorName: Sam Waterston
+
+fid: WAr40, MoveName: Beach Party, actorName: Vincent Price
+
+fid: WAr46, MoveName: Bikini Beach, actorName: Frankie Avalon
+
+fid: WCr5, MoveName: The Hills Have Eyes, actorName: s a
+
+fid: WCr5, MoveName: The Hills Have Eyes, actorName: s a
+
+fid: WCr5, MoveName: The Hills Have Eyes, actorName: s a
+
+fid: WCr5, MoveName: The Hills Have Eyes, actorName: sr
+
+fid: WCr22, MoveName: Deadly Friend, actorName: s a
+
+fid: WFr14, MoveName: Off Season, actorName: sa
+
+fid: WFr70, MoveName: The Guardian, actorName: s a
+
+fid: WFr70, MoveName: The Guardian, actorName: s a
+
+fid: WFr70, MoveName: The Guardian, actorName: s a
+
+fid: WHl10, MoveName: 48 Hrs., actorName: s a
+
+fid: WHl10, MoveName: 48 Hrs., actorName: s a
+
+fid: Whu29, MoveName: Kidnapped, actorName: s a
+
+fid: WiC55, MoveName: Homicidal, actorName: Jean Arless
+
+fid: WLa41, MoveName: There's no Business like Show Business, actorName: Marilyn Monroe
+
+fid: WlD24, MoveName: A Midsummernight's Dream, actorName: Victor Jory
+
+fid: WLW15, MoveName: The Asphy, actorName: s a
+
+fid: WR40, MoveName: Cimarron, actorName: George E. Stone
+
+fid: WS35, MoveName: Die Dreigroschenoper, actorName: Hildegard Knef
+
+fid: WvD35, MoveName: Wyoming, actorName: Tim McCoy
+
+fid: WvD35, MoveName: Wyoming, actorName: William Fairbanks
+
+fid: WvD35, MoveName: Wyoming, actorName: Chief Big Tree
+
+fid: xCh10, MoveName: The Emperor and the Assissin, actorName: s a
+
+fid: xSa10, MoveName: Central Station, actorName: s a
+
+fid: xSt10, MoveName: My Stepmother is an Alien, actorName: s a
+
+fid: xSt10, MoveName: My Stepmother is an Alien, actorName: s a
+
+fid: xSt10, MoveName: My Stepmother is an Alien, actorName: s a
+
+fid: YMZ24, MoveName: The Story of Qiu Ju, actorName: s a
+
+fid: YOz15, MoveName: Woman of Tokyo, actorName: s a
+
+fid: YOz15, MoveName: Woman of Tokyo, actorName: s a
+
+fid: YOz15, MoveName: Woman of Tokyo, actorName: s a
+
+fid: YOz16, MoveName: Passing Fancy, actorName: s a
+
+fid: YOz16, MoveName: Passing Fancy, actorName: s a
+
+fid: YOz20, MoveName: a Story of Floating Weeds, actorName: s a
+
+fid: YOz75, MoveName: Floating Weeds, actorName: s a
+
+fid: YZh16, MoveName: Shower, actorName: s a
+
+fid: Z0406, MoveName: Asphalt Jungle, actorName: Marilyn Monroe
+
+fid: Z0418, MoveName: Niagra, actorName: Marilyn Monroe
+
+fid: Z4250, MoveName: Tarzan the Tiger, actorName: Frank Merrill
+
+fid: Z6510, MoveName: The Human Duplicators, actorName: s a
+
+fid: Z6650, MoveName: Promise Her Anything, actorName: s a
+
+fid: Z6650, MoveName: Promise Her Anything, actorName: s a
+
+fid: Z6650, MoveName: Promise Her Anything, actorName: s a
+
+fid: Z6650, MoveName: Promise Her Anything, actorName: s a
+
+fid: Z6650, MoveName: Promise Her Anything, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8610, MoveName: I'll Take Manhattan, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z8910, MoveName: Meet the Applegates, actorName: s a
+
+fid: Z9220, MoveName: Shining Through, actorName: s a
+
+fid: Z9220, MoveName: Shining Through, actorName: s a
+
+fid: Z9250, MoveName: In the Line of Duty: Siege at Marion, actorName: s a
+
+fid: Z9250, MoveName: In the Line of Duty: Siege at Marion, actorName: s a
+
+fid: Z9250, MoveName: In the Line of Duty: Siege at Marion, actorName: s a
+
+fid: Z9250, MoveName: In the Line of Duty: Siege at Marion, actorName: s a
+
+fid: Z9250, MoveName: In the Line of Duty: Siege at Marion, actorName: s a
+
+fid: Z9250, MoveName: In the Line of Duty: Siege at Marion, actorName: s a
+
+fid: Z9270, MoveName: The Rating Game, actorName: s a
+
+fid: Z9270, MoveName: The Rating Game, actorName: s a
+
+fid: Z9270, MoveName: The Rating Game, actorName: s a
+
+fid: Z9340, MoveName: The Man With Three Wives, actorName: s a
+
+fid: Z9340, MoveName: The Man With Three Wives, actorName: s a
+
+fid: Z9340, MoveName: The Man With Three Wives, actorName: s a
+
+fid: Z9691, MoveName: The Truth About Cats and Dogs, actorName: s a
+
+fid: Z9691, MoveName: The Truth About Cats and Dogs, actorName: s a
+
+fid: Z9691, MoveName: The Truth About Cats and Dogs, actorName: s a
+
+fid: Z9691, MoveName: The Truth About Cats and Dogs, actorName: s a
+
+fid: Z9783, MoveName: Lois and Clark, actorName: s a
+
+fid: Z9840, MoveName: Major League, Back to the Minors, actorName: Eric Bruskotter
+
+fid: Z9840, MoveName: Major League, Back to the Minors, actorName: s a
+
+fid: Z9850, MoveName: The Perfect Crime, actorName: s a
+
+fid: Z9895, MoveName: One True Thing, actorName: s a
+

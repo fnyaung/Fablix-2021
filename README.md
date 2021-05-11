@@ -4,6 +4,10 @@ This project displays a list of movies that contains information about a specifi
 ### Proj2 Demo Video URL: 
 https://youtu.be/l1MuWtVrGTc
 
+### Proj3 Inconsistencies and Duplicates:
+- Inconsistencies of MainXML, CastXML, and ActorsXML are all stored within `inconsistencies.txt`
+- Duplicates within the XMLs are stored within `Duplicates.txt`
+
 ### Substring matching Design:
 User searches for:
 - Star: Abc%
@@ -21,6 +25,10 @@ User searches for:
     - Hyejin Kim and Faustina Nyaung both worked on MovieListPage, Confirmation, Checkout, Browse, Login.
     - Hyejin Kim worked on Search
     - Faustina Nyaung worked on Payment
+
+- Project 3:
+    - Hyejin Kim worked on task 1 to 6.
+    - Faustina Nyaung worked on task 7
 
 ### To run this project:
 1. Clone this repository using `git clone https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-11.git`

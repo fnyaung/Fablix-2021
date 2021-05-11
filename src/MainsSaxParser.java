@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
 import java.util.*;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,13 +26,14 @@ public class MainsSaxParser extends DefaultHandler{
     private DirectorFilms tempDirectorFilms;
     private Film tempFilm;
     private String curr_fID;
+    private Boolean isValidTempVal;
 
     private int countMovies = 0;
     FileWriter myWriter; // write results to MainOutput.txt
 
     public MainsSaxParser() {
-        directorFilms = new HashMap<>(); // for every <movies>
-        inconsistencies = new ArrayList<>();
+        directorFilms = new HashMap<String, List<DirectorFilms>>(); // for every <movies>
+        inconsistencies = new ArrayList<String>();
     }
 
     public void runMainSAX(){
@@ -119,12 +122,30 @@ public class MainsSaxParser extends DefaultHandler{
     // get characters within the tag
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        tempVal = new String(ch, start, length);
+        isValidTempVal = true;
+        if(!isISO(new String(ch, start, length))){
+            // if tempVal is not valid
+            isValidTempVal = false;
+        }else{
+            tempVal = new String(ch, start, length);
+        }
+
+    }
+
+    // check if tempVal is valid string
+    private boolean isISO(String str){
+        CharsetEncoder isoEncoder = Charset.forName("ISO-8859-1").newEncoder();
+        return isoEncoder.canEncode(str);
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException
     {
+        Boolean isValidTempVal = true;
+        if(!isISO(tempVal)){
+            // if tempVal is not valid
+            isValidTempVal = false;
+        }
         if(qName.equalsIgnoreCase("dirid")){
             try{
                 curr_dirID = tempVal;
@@ -140,6 +161,7 @@ public class MainsSaxParser extends DefaultHandler{
                 // director ID existed before. Just append the <directorfilms>
                 directorFilms.get(curr_dirID).add(tempDirectorFilms);
 //                directorFilms.add(tempDirectorFilms);
+
             }catch(Exception e){
                 System.out.println("Error in adding tempDirectorFilms to directorFilms - tempVal: " + tempVal);
             }
@@ -152,7 +174,12 @@ public class MainsSaxParser extends DefaultHandler{
             }
         } else if(qName.equalsIgnoreCase("dirname")){
             try{
-                tempDirectorFilms.setDirectorName(tempVal);
+                if(isValidTempVal){
+                    tempDirectorFilms.setDirectorName(tempVal);
+                }else{
+                    tempDirectorFilms.setDirectorName(null);
+                    inconsistencies.add("<dirname> : " + tempVal);
+                }
             }catch(Exception e){
 //                System.out.println("Error in setting Director Name - tempVal: " + tempVal);
                 tempDirectorFilms.setDirectorName(null);
@@ -160,8 +187,13 @@ public class MainsSaxParser extends DefaultHandler{
             }
         } else if(qName.equalsIgnoreCase("fid")){
             try{
-                curr_fID = tempVal;
-                tempFilm.setfId(tempVal);
+                if(isValidTempVal){
+                    curr_fID = tempVal;
+                    tempFilm.setfId(tempVal);
+                }else{
+                    tempFilm.setfId(null);
+                    inconsistencies.add("<fid> : " + tempVal);
+                }
             }catch(Exception e){
 //                System.out.println("Error in putting in setting fID - tempVal: " + tempVal);
                 tempFilm.setfId(null);
@@ -169,7 +201,12 @@ public class MainsSaxParser extends DefaultHandler{
             }
         } else if(qName.equalsIgnoreCase("t")){
             try{
-                tempFilm.setfTitle(tempVal);
+                if(isValidTempVal){
+                    tempFilm.setfTitle(tempVal);
+                }else{
+                    tempFilm.setfTitle(null);
+                    inconsistencies.add("<t> : " + tempVal);
+                }
             }catch(Exception e){
 //                System.out.println("Error in putting in setting fTitle - tempVal: " + tempVal);
                 tempFilm.setfTitle(null);
@@ -177,7 +214,12 @@ public class MainsSaxParser extends DefaultHandler{
             }
         } else if(qName.equalsIgnoreCase("year")){
             try{
-                tempFilm.setfYear(Integer.parseInt(tempVal));
+                if(isValidTempVal){
+                    tempFilm.setfYear(Integer.parseInt(tempVal));
+                }else{
+                    tempFilm.setfYear(null);
+                    inconsistencies.add("<year> : " + tempVal);
+                }
             }catch(Exception e){
 //                System.out.println("Error in putting in setting fYear - tempVal: " + tempVal);
                 tempFilm.setfYear(null);
@@ -186,7 +228,13 @@ public class MainsSaxParser extends DefaultHandler{
             }
         } else if(qName.equalsIgnoreCase("cat")){
             try{
-                tempFilm.setGenreName(tempVal);
+                if(isValidTempVal){
+                    tempFilm.setGenreName(tempVal);
+                }else{
+                    tempFilm.setGenreName(null);
+                    inconsistencies.add("<cat> : " + tempVal);
+                }
+
             }catch(Exception e){
 //                System.out.println("Error in putting in setting fYear - tempVal: " + tempVal);
                 tempFilm.setGenreName(null);

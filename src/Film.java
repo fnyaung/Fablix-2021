@@ -14,7 +14,7 @@ public class Film{
     private HashSet<Actor> actors; // actor names (prevent duplicates)
 
     public Film(){
-        actors = new HashSet<>();
+        actors = new HashSet<Actor>();
     }
 
     public Film(String fId, String fTitle, Integer fYear, String genreName){
@@ -23,7 +23,7 @@ public class Film{
         this.fYear = fYear;
         this.genreName = genreName;
         this.genreID = -1; // uninitialized genreID. Must set genreID in the future
-        actors = new HashSet<>();
+        actors = new HashSet<Actor>();
     }
 
     // Helper functions: Get Movie's information

@@ -14,6 +14,7 @@ import java.io.FileWriter;
 public class CastSAXParser extends DefaultHandler{
     // key: dirID ; Value: DirectorFilms obj
     HashMap<String, List<DirectorFilms>> directorFilms; // contains parsed data from XML
+    HashMap<String, Integer> actors;
     List<String> inconsistencies; // contains inconsistencies from XML
     List<String> duplicates;
 
@@ -32,7 +33,8 @@ public class CastSAXParser extends DefaultHandler{
 
     FileWriter myWriter; // write results to CastOutput.txt
 
-    public CastSAXParser(HashMap<String, List<DirectorFilms>> directorFilms){
+    public CastSAXParser(HashMap<String, List<DirectorFilms>> directorFilms, HashMap<String, Integer> actors){
+        this.actors = actors;
         this.directorFilms = directorFilms;
         inconsistencies = new ArrayList<String>();
         duplicates = new ArrayList<String>();
@@ -48,6 +50,9 @@ public class CastSAXParser extends DefaultHandler{
     }
     public List<String> getInconsistencies(){
         return inconsistencies;
+    }
+    public List<String> getDuplicates(){
+        return duplicates;
     }
 
     // SAX Parser
@@ -199,6 +204,9 @@ public class CastSAXParser extends DefaultHandler{
         } else if(qName.equalsIgnoreCase("a")){
             try{
                 tempActor.setaName(tempVal);
+//                System.out.println("Birthday: "  + actors.get(tempVal));
+                tempActor.setBirthYear(actors.get(tempVal));
+
 //                System.out.println(">> 1) tempActor.name: " + tempActor.getaName());
                 // if we have a duplicate actor
                 if(tempFilm.getActors().contains(tempActor)){

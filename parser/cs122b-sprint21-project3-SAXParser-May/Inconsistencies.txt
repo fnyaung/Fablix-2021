@@ -1,0 +1,139 @@
+Inconsistencies in mains243.xml: 
+<year> : 19yy
+<year> : 19yy
+<year> : 199x
+<year> : 199x
+<year> : 199x
+<year> : 199x
+<year> : 196x
+<year> : 2001 
+<year> : 19yy
+<year> : 19yy
+<year> : 19yy
+<year> : 199x
+<year> : 199x
+<year> : 19yy
+<year> : 19yy
+<year> : 19yy
+<year> : 1997 
+<year> : 19yy
+Inconsistencies in Cast124.xml: 
+<dirid> : AAd
+<dirid> : ACf
+<dirid> : AHa
+<dirid> : Amo
+<dirid> : AtB
+<dirid> : BBl
+<dirid> : BBw
+<dirid> : BHt
+<dirid> : BJq
+<dirid> : BRB
+<dirid> : Windust
+<dirid> : BuE
+<dirid> : C4
+<dirid> : ChR
+<dirid> : CuB
+<dirid> : DaV
+<dirid> : DdV
+<dirid> : DiS
+<dirid> : DM
+<dirid> : Dpo
+<dirid> : DS
+<dirid> : DVs
+<dirid> : GeH
+<dirid> : GLa
+<dirid> : H-TV
+<dirid> : HJ
+<dirid> : IPq
+<dirid> : IS
+<dirid> : JBa
+<dirid> : JBt
+<dirid> : JeB
+<dirid> : JFW
+<dirid> : JFW
+<dirid> : JoG
+<dirid> : JoL
+<dirid> : KFu
+<dirid> : LaK
+<dirid> : LCo
+<dirid> : LDc
+<dirid> : LHh
+<dirid> : MKb
+<dirid> : MPl
+<dirid> : MrN
+<dirid> : MWid
+<dirid> : NaM
+<dirid> : RHr
+<dirid> : RNB
+<dirid> : RSt
+<dirid> : RVD
+<dirid> : th
+<dirid> : SiH
+<dirid> : SmW
+<dirid> : SWi
+<dirid> : Sys
+<dirid> : TFi
+<dirid> : TGt
+<dirid> : TiG
+<dirid> : Upr
+<dirid> : WKH
+<dirid> : WKH
+<dirid> : xDt
+<dirid> : DSz
+<dirid> : Yal
+<dirid> : YMi
+<dirid> : Z09
+<dirid> : Zxx
+Inconsistencies in actor63.xml: 
+<dob>: n.a.
+<dob>: 195x
+<dob>: 1963+
+<dob>: *
+<dob>: n.a.
+<dob>:  1927
+<dob>: 196x
+<dob>: n.a.
+<dob>: dob
+<dob>: 19bb
+<dob>: 1915+
+<dob>: dob
+<dob>: n.a.
+<dob>:  
+<dob>:  
+<dob>: *
+<dob>: *
+<dob>: n.a.
+<dob>: [1]1905
+<dob>: dob
+<dob>: 19bb
+<dob>: n.a.
+<dob>: n.a.
+<dob>: n.a.
+<dob>: 19bb
+<dob>: n.a.
+<dob>: n.a.
+<dob>: 19bb
+<dob>: 19bb
+<dob>: 18bb
+<dob>: ~1945
+<dob>: n.a.
+<dob>: dob
+<dob>: n.a.
+<dob>: 19bb
+<dob>: *
+<dob>: *
+<dob>: n.a.
+<dob>: *
+<dob>: *
+<dob>: 19bb
+<dob>: ~1992
+<dob>: 19bb
+<dob>: 19bb
+<dob>: 19bb
+<dob>: n.a.
+<dob>: n.a.
+<dob>: 19bb
+<dob>: dob
+<dob>: n.a.
+<dob>: n.a.
+<dob>: *

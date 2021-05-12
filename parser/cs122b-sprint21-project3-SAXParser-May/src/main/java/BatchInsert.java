@@ -301,7 +301,6 @@ public class BatchInsert {
         movie_statement.close();
         wy_statement.close();
         woy_statement.close();
-        rs.close();
         conn.close();
 
 

@@ -102,3 +102,4 @@ for(mid in moviesale_dict) {
 }
 rowHTML += '<p>total price: $' + total_price + '</p>'
 confirm_listBodyElement.append(rowHTML);
+

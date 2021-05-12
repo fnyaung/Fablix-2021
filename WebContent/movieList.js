@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
- function getParameterByName(target) {
+function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -184,7 +184,8 @@ function handleSingleMovieResult(resultData) {
 
         // console.log(starID_list[0]);
 
-        for (let i = 0; i < Math.min(20, 3); i++) {
+        // for (let i = 0; i < Math.min(20, 3); i++) {
+        for (let i = 0; i <starID_list.length; i++) {
             rowHTML +=
                 "<li>" +
                 // Add a link to single-star.html with id passed with GET url parameter

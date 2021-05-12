@@ -84,7 +84,7 @@ public class BatchInsert {
         String loginUser = "mytestuser";
         String loginPasswd = "My6$Password";
 //        String loginUrl = "jdbc:mysql://localhost:3306/moviedbex";
-        String loginUrl = "jdbc:mysql://localhost:3306/moviedb_example";
+        String loginUrl = "jdbc:mysql://localhost:3306/moviedb";
 
         Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
         Connection conn = DriverManager.getConnection(loginUrl, loginUser, loginPasswd);

@@ -14,6 +14,7 @@ import java.io.FileWriter;
 public class CastSAXParser extends DefaultHandler{
     // key: dirID ; Value: DirectorFilms obj
     HashMap<String, List<DirectorFilms>> directorFilms; // contains parsed data from XML
+    HashMap<String, Integer> actors;
     List<String> inconsistencies; // contains inconsistencies from XML
     List<String> duplicates;
 
@@ -32,10 +33,11 @@ public class CastSAXParser extends DefaultHandler{
 
     FileWriter myWriter; // write results to CastOutput.txt
 
-    public CastSAXParser(HashMap<String, List<DirectorFilms>> directorFilms){
+    public CastSAXParser(HashMap<String, List<DirectorFilms>> directorFilms, HashMap<String, Integer> actors){
+        this.actors = actors;
         this.directorFilms = directorFilms;
-        inconsistencies = new ArrayList<>();
-        duplicates = new ArrayList<>();
+        inconsistencies = new ArrayList<String>();
+        duplicates = new ArrayList<String>();
     }
 
     public void runCastSAX(){
@@ -48,6 +50,9 @@ public class CastSAXParser extends DefaultHandler{
     }
     public List<String> getInconsistencies(){
         return inconsistencies;
+    }
+    public List<String> getDuplicates(){
+        return duplicates;
     }
 
     // SAX Parser
@@ -133,28 +138,60 @@ public class CastSAXParser extends DefaultHandler{
         if(qName.equalsIgnoreCase("dirid")){
             try{
                 curr_dirID = tempVal;
-                System.out.println("__1__");
-                System.out.println("__1__ directorFilms.get(curr_dirID) = " + directorFilms.get(curr_dirID));
+//                System.out.println("__1__");
+//                System.out.println("__1__ directorFilms.get(curr_dirID) = " + directorFilms.get(curr_dirID));
                 tempDFList = directorFilms.get(curr_dirID);
-                System.out.println("__2__curr_dirID: " + curr_dirID);
-                System.out.println("__3__tempDFList" + tempDFList.toString());
+//                System.out.println("__2__curr_dirID: " + curr_dirID);
+                if(tempDFList == null){
+                    inconsistencies.add("<dirid> : " + curr_dirID);
+                }
+//                System.out.println("__2__curr_dirID: " + curr_dirID);
+//                System.out.println("__3__tempDFList" + tempDFList);
             }catch(Exception e){
                 System.out.println("Error in retrieving dirID - tempVal: " + tempVal);
             }
         } else if(qName.equalsIgnoreCase("f")){
             try{
                 curr_fID = tempVal;
-                System.out.println("curr_fID = " + curr_fID);
-                System.out.println("++++1+++ tempDFList= " + tempDFList);
-                for(DirectorFilms df : tempDFList){
-                    System.out.println("++++2+++ df.getfilmHash()" + df.getfilmHash());
-                    if(df.getfilmHash().containsKey(curr_fID)){
-                        System.out.println("We found the corresponding filmHash");
-                        tempFilm =  df.getfilmHash().get(curr_fID);
-                        System.out.println("--- tempfilm: " + tempFilm);
-                        break;
+//                System.out.println("curr_fID = " + curr_fID);
+//                System.out.println("++++1+++ tempDFList= " + tempDFList);
+
+                // if the director ID has mismatch data
+                if(tempDFList == null){
+                    Iterator df = directorFilms.entrySet().iterator();
+                    Boolean foundFilm = false;
+                    while(df.hasNext() && !foundFilm){
+                        Map.Entry mapElement = (Map.Entry) df.next();
+                        String currKeyDirID = (String) mapElement.getKey();
+                        List<DirectorFilms> curr_df = (List<DirectorFilms>) mapElement.getValue();
+                        Iterator<DirectorFilms> cdf = curr_df.iterator();
+                        while(cdf.hasNext() && !foundFilm){
+                            HashMap<String, Film> filmhash = cdf.next().getfilmHash();
+                            if(filmhash.containsKey(curr_fID)){
+                                tempFilm = filmhash.get(curr_fID);
+                                foundFilm = true;
+                            }
+                        }
+                    }
+//                    System.out.println("+-+-Resulting tempFilm: " + tempFilm);
+                }else{
+                    // we have the correct director ID
+                    for(DirectorFilms df : tempDFList){
+//                        System.out.println("++++2+++ df.getfilmHash()" + df.getfilmHash());
+                        if(df.getfilmHash().containsKey(curr_fID)){
+//                            System.out.println("We found the corresponding filmHash");
+                            tempFilm =  df.getfilmHash().get(curr_fID);
+//                            System.out.println("--- tempfilm: " + tempFilm);
+                            break;
+                        }
                     }
                 }
+
+                if(tempFilm == null){
+//                    System.out.println("!!!!!!!!!!!!!!!!!!! tempfilm is still null!!");
+                    inconsistencies.add("<f> (tempFilm is still null): "  + tempVal + "\n");
+                }
+
             }catch(Exception e){
                 System.out.println("Error in retrieving film id <f> - tempVal: " + tempVal);
             }
@@ -167,6 +204,9 @@ public class CastSAXParser extends DefaultHandler{
         } else if(qName.equalsIgnoreCase("a")){
             try{
                 tempActor.setaName(tempVal);
+//                System.out.println("Birthday: "  + actors.get(tempVal));
+                tempActor.setBirthYear(actors.get(tempVal));
+
 //                System.out.println(">> 1) tempActor.name: " + tempActor.getaName());
                 // if we have a duplicate actor
                 if(tempFilm.getActors().contains(tempActor)){

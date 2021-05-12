@@ -7,7 +7,7 @@ public class DirectorFilms {
     private String directorName; // director name <dirname>
 
     public DirectorFilms(){
-        films = new HashMap<>();
+        films = new HashMap<String, Film>();
 //        films = new ArrayList<Film>();
     }
 

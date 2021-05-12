@@ -297,6 +297,12 @@ public class BatchInsert {
         final long endTime = System.currentTimeMillis();
 
         System.out.println("Total execution time: " + (endTime - startTime)/60000);
+        
+        movie_statement.close();
+        wy_statement.close();
+        woy_statement.close();
+        rs.close();
+        conn.close();
 
 
     }

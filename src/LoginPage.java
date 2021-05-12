@@ -139,9 +139,9 @@ public class LoginPage extends HttpServlet {
                 response.setStatus(200);
 
                 // Closing after opening
-                rs.close();
-                statement.close();
-                dbcon.close();
+                // rs.close();
+                // statement.close();
+                // dbcon.close();
 
             } catch (Exception e) {
                 System.out.println("Error 1");

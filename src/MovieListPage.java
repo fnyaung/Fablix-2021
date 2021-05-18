@@ -87,10 +87,9 @@ public class MovieListPage extends HttpServlet {
                         "(select s.name, s.id, sm.movieId as movieId from stars s, stars_in_movies sm where s.id=sm.starId GROUP BY sm.starID ORDER BY count(sm.movieID) DESC, s.name ASC) as star,  " +
                         "movies as m, genres_in_movies as gm, genres as g " +
                         "where " +
-                        "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id " +
+                        "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id and MATCH(title) AGAINST(? IN BOOLEAN MODE)" +
                         "group by m.id " +
                         "having  (starsName like ? or starsName like ?)  " +
-                        "and (title like ? or title like ?)  " +
                         "and (director like ?) " +
                         "and (year like ?)  " +
                         "and (genresName like ? or ?)  " +
@@ -181,18 +180,18 @@ public class MovieListPage extends HttpServlet {
             // star title year genre director genre
             System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
             if (!title.equals("*")){
-                statement.setString(1, "%" + star + "%");
-                statement.setString(2, "%," + star + "%");
-                statement.setString(3, "%" + title + "%");
-                statement.setString(4, title + "%");
-                statement.setString(5, "%" + director + "%");
-                statement.setString(6, "%" + year + "%");
-                statement.setString(7, "%" + genre + "%");
-                statement.setString(8, "%," + genre + "%");
+                title = parseFullText(title);
+                statement.setString(1, title);
+                statement.setString(2, "%" + star + "%");
+                statement.setString(3, "%," + star + "%");
+                statement.setString(4, "%" + director + "%");
+                statement.setString(5, "%" + year + "%");
+                statement.setString(6, "%" + genre + "%");
+                statement.setString(7, "%," + genre + "%");
 
                 // page
-                statement.setInt(9, cur_page_int);
-                statement.setInt(10, page_limit_int);
+                statement.setInt(8, cur_page_int);
+                statement.setInt(9, page_limit_int);
             }else{
                 statement.setInt(1, cur_page_int);
                 statement.setInt(2, page_limit_int);
@@ -266,5 +265,18 @@ public class MovieListPage extends HttpServlet {
             out.close();
         }
 
+    }
+
+    public static String parseFullText(String text) {
+        String[] text_split = text.split("\\s+");
+        String result = "";
+        for(String word : text_split) {
+            result += "+";
+            result += word;
+            result += "*";
+            result += " ";
+        }
+        result.trim(); // remove trailing space at end
+        return result;
     }
 }

@@ -1,10 +1,11 @@
 use moviedb;
- CREATE TABLE IF NOT EXISTS movies (
+CREATE TABLE IF NOT EXISTS movies (
     id varchar(10) NOT NULL,
-    title varchar(100) NOT NULL,
+    title TEXT NOT NULL,
     year INTEGER NOT NULL,
     director varchar(100) NOT NULL,
-    PRIMARY KEY (id)    
+    PRIMARY KEY (id),
+    FULLTEXT(title)
 );
 
 CREATE TABLE IF NOT EXISTS stars (
@@ -63,7 +64,6 @@ CREATE TABLE IF NOT EXISTS sales (
     saleDate date NOT NULL,
     PRIMARY KEY (id)
 );
-
 
 
 CREATE TABLE IF NOT EXISTS sales (

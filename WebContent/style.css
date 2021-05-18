@@ -4,8 +4,8 @@ body{
     font-family: Helvetica, sans-serif ;
     margin: 0px;
     padding: 40px;
-    background: rgb(27,167,181);
-    background: linear-gradient(90deg, rgba(27,167,181,1) 13%, rgba(222,181,28,1) 100%);
+    background: rgb(131, 185, 191);
+    /*background: linear-gradient(90deg, rgba(27,167,181,1) 13%, rgba(222,181,28,1) 100%);*/
 }
 
 .container{
@@ -105,4 +105,22 @@ form.search {
 }
 
 
+.auto-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+.autocomplete-searchbox {
+    height: 30px;
+    width: 200px;
+}

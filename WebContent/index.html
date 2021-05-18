@@ -11,10 +11,7 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <!--    <link rel="stylesheet" type="text/css" href="style.css">-->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
 </head>
 
@@ -38,8 +35,22 @@
                 <a href='browse.html'>Browse</a>
             </div>
         </div>
-
         <div class="right-side">
+
+
+
+            <div class="nav-link-wrapper">
+                    <div class="auto-container">
+                        <input type="text" name="hero" id="autocomplete"
+                               class="autocomplete-searchbox form-control"
+                               placeholder="Search by movie title.."/>
+                    </div>
+<!--                <form class="topsearch" style="border: none;font-size: 17px;padding: inherit; ">-->
+<!--                    <input type="text" id="autocomplete" placeholder="Search by movie title.." name="title" style=" border: none; ">-->
+<!--                    <button type="submit"><i class="fa fa-search"></i></button>-->
+<!--                </form>-->
+            </div>
+
             <div class="nav-link-wrapper">
                 <!--                need update-->
                 <a href='checkOut.html'>CheckOut</a>
@@ -47,6 +58,7 @@
         </div>
 
     </div>
+
 
     <!--        search option on the body-->
     <div class="search-wrapper">
@@ -93,15 +105,18 @@
 
 
 
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootastrap.min.js"></script>-->
-<!--<script>-->
-<!--    // console.log("hello");-->
-<!--</script>-->
-<!--load our own JS file-->
-<!--<script src="index.js">-->
-<!--</script>-->
+<!-- Using jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- include jquery autocomplete JS  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+
+<script src="index.js">
+</script>
 </body>
 
 </html>

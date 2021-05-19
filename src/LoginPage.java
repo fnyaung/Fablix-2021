@@ -39,6 +39,8 @@ public class LoginPage extends HttpServlet {
         // check where it's coming from
         String userAgent = request.getHeader("User-Agent");
 
+        System.out.println("\tUser-Agent" + userAgent);
+
 
         // Retrieve parameter id from url request.
         String username = request.getParameter("username");
@@ -46,6 +48,7 @@ public class LoginPage extends HttpServlet {
         String location = request.getParameter("location");
 
         if (!userAgent.contains("Android")){
+            System.out.println("Not Android");
             //
 
             // get recaptcha
@@ -55,13 +58,13 @@ public class LoginPage extends HttpServlet {
 
             // Verify reCAPTCHA
             try {
-                System.out.println("!!!");
+//                System.out.println("!!!");
                 RecaptchaVerifyUtils.verify(gRecaptchaResponse);
 
 
-                System.out.println("username: " + username);
-                System.out.println("password: " + password);
-                System.out.println("location: " + location);
+//                System.out.println("username: " + username);
+//                System.out.println("password: " + password);
+//                System.out.println("location: " + location);
 
 
 //            JsonObject responseJsonObject = new JsonObject();
@@ -73,12 +76,12 @@ public class LoginPage extends HttpServlet {
 
                     if(location.equals("customer")){
                         // user
-                        System.out.println("Customer");
+//                        System.out.println("Customer");
                         query = "SELECT * FROM customers where email = ? ";
                     }
                     else{
                         // staff
-                        System.out.println("Employee");
+//                        System.out.println("Employee");
                         query = "SELECT * FROM employees where email = ? ";
                     }
 
@@ -89,19 +92,19 @@ public class LoginPage extends HttpServlet {
 
                     ResultSet rs = statement.executeQuery();
 
-                    System.out.println("statement");
-                    System.out.println(statement);
+//                    System.out.println("statement");
+//                    System.out.println(statement);
 //            /*
                     if(rs.next()) { // there is a result
-                        System.out.println("rs.next()");
+//                        System.out.println("rs.next()");
 
                         String encryptedPassword = rs.getString("password");
                         boolean success = new StrongPasswordEncryptor().checkPassword(password, encryptedPassword);
 
-                        System.out.println("Password success? : " + success);
+//                        System.out.println("Password success? : " + success);
 
                         if (success){
-                            System.out.println("Inside the if statement : getting user into the session");
+//                            System.out.println("Inside the if statement : getting user into the session");
 
                             // set this user into the session
                             User user = new User(username);
@@ -109,7 +112,7 @@ public class LoginPage extends HttpServlet {
 
                             if(location.equals("customer")){
                                 // set user with its corresponding ID
-                                System.out.println(rs.getInt("id"));
+//                                System.out.println(rs.getInt("id"));
                                 user.setUserID(rs.getInt("id"));
                             }
 
@@ -120,10 +123,10 @@ public class LoginPage extends HttpServlet {
                             responseJsonObject.addProperty("usertype", location);
                             responseJsonObject.addProperty("message", "success");
 
-                            System.out.println(responseJsonObject);
+//                            System.out.println(responseJsonObject);
                         }
                         else{
-                            System.out.println("Inside the else statement : getting user into the session");
+//                            System.out.println("Inside the else statement : getting user into the session");
                             responseJsonObject.addProperty("status", "fail");
                             if(!success) {
                                 responseJsonObject.addProperty("message", "incorrect password");
@@ -177,23 +180,17 @@ public class LoginPage extends HttpServlet {
         }
         else
         {
+            System.out.println("Android");
+
             JsonObject responseJsonObject = new JsonObject();
 
             try {
                 String query;
                 Connection dbcon = dataSource.getConnection();
-//            query = "SELECT * FROM customers where email = ? ";
 
-                if(location.equals("customer")){
-                    // user
-                    System.out.println("Customer");
-                    query = "SELECT * FROM customers where email = ? ";
-                }
-                else{
-                    // staff
-                    System.out.println("Employee");
-                    query = "SELECT * FROM employees where email = ? ";
-                }
+
+                query = "SELECT * FROM customers where email = ? ";
+
 
                 // Declare our statement
                 PreparedStatement statement = dbcon.prepareStatement(query);
@@ -202,46 +199,32 @@ public class LoginPage extends HttpServlet {
 
                 ResultSet rs = statement.executeQuery();
 
-                System.out.println("statement");
-                System.out.println(statement);
-//            /*
                 if(rs.next()) { // there is a result
-                    System.out.println("rs.next()");
 
                     String encryptedPassword = rs.getString("password");
                     boolean success = new StrongPasswordEncryptor().checkPassword(password, encryptedPassword);
 
-                    System.out.println("Password success? : " + success);
-
                     if (success){
-                        System.out.println("Inside the if statement : getting user into the session");
+//                        System.out.println("Inside the if statement : getting user into the session");
                         // set this user into the session
                         User user = new User(username);
                         request.getSession().setAttribute("user", user);
-
-                        if(location.equals("customer")){
-                            // set user with its corresponding ID
-                            System.out.println(rs.getInt("id"));
-                            user.setUserID(rs.getInt("id"));
-                        }
+                        user.setUserID(rs.getInt("id"));
 
                         // set the user with its user type
-//                    user.setUserType(location);
                         responseJsonObject.addProperty("status", "success");
-                        responseJsonObject.addProperty("usertype", location);
                         responseJsonObject.addProperty("message", "success");
-                        System.out.println(responseJsonObject);
                     }
                     else{
-                        System.out.println("Inside the else statement : getting user into the session");
+//                        System.out.println("Inside the else statement : getting user into the session");
                         responseJsonObject.addProperty("status", "fail");
                         if(!success) {
                             responseJsonObject.addProperty("message", "incorrect password");
                         }
                     }
 
-
                 } else { // there is no result
+                    System.out.println("Login Fail");
                     // Login fail
                     responseJsonObject.addProperty("status", "fail");
 
@@ -250,7 +233,6 @@ public class LoginPage extends HttpServlet {
                     if (!rs.next()) {
                         responseJsonObject.addProperty("message", "user " + username + " doesn't exist");
                     }
-
                 }
                 response.getWriter().write(responseJsonObject.toString());
                 response.setStatus(200);

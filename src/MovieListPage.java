@@ -87,8 +87,11 @@ public class MovieListPage extends HttpServlet {
                         "(select s.name, s.id, sm.movieId as movieId from stars s, stars_in_movies sm where s.id=sm.starId GROUP BY sm.starID ORDER BY count(sm.movieID) DESC, s.name ASC) as star,  " +
                         "movies as m, genres_in_movies as gm, genres as g " +
                         "where " +
-                        "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id and MATCH(title) AGAINST(? IN BOOLEAN MODE)" +
-                        "group by m.id " +
+                        "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id ";
+                    if(title.length() != 0){
+                        query += "and MATCH(title) AGAINST(? IN BOOLEAN MODE)";
+                    }
+                query += " group by m.id " +
                         "having  (starsName like ? or starsName like ?)  " +
                         "and (director like ?) " +
                         "and (year like ?)  " +
@@ -180,18 +183,32 @@ public class MovieListPage extends HttpServlet {
             // star title year genre director genre
             System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
             if (!title.equals("*")){
-                title = parseFullText(title);
-                statement.setString(1, title);
-                statement.setString(2, "%" + star + "%");
-                statement.setString(3, "%," + star + "%");
-                statement.setString(4, "%" + director + "%");
-                statement.setString(5, "%" + year + "%");
-                statement.setString(6, "%" + genre + "%");
-                statement.setString(7, "%," + genre + "%");
+                if(title.length() != 0){
+                    title = parseFullText(title);
+                    statement.setString(1, title);
+                    statement.setString(2, "%" + star + "%");
+                    statement.setString(3, "%," + star + "%");
+                    statement.setString(4, "%" + director + "%");
+                    statement.setString(5, "%" + year + "%");
+                    statement.setString(6, "%" + genre + "%");
+                    statement.setString(7, "%," + genre + "%");
 
-                // page
-                statement.setInt(8, cur_page_int);
-                statement.setInt(9, page_limit_int);
+                    // page
+                    statement.setInt(8, cur_page_int);
+                    statement.setInt(9, page_limit_int);
+                }else{
+                    statement.setString(1, "%" + star + "%");
+                    statement.setString(2, "%," + star + "%");
+                    statement.setString(3, "%" + director + "%");
+                    statement.setString(4, "%" + year + "%");
+                    statement.setString(5, "%" + genre + "%");
+                    statement.setString(6, "%," + genre + "%");
+
+                    // page
+                    statement.setInt(7, cur_page_int);
+                    statement.setInt(8, page_limit_int);
+                }
+
             }else{
                 statement.setInt(1, cur_page_int);
                 statement.setInt(2, page_limit_int);

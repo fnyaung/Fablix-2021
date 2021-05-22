@@ -7,25 +7,17 @@ https://youtu.be/l1MuWtVrGTc
 ### Proj3 Demo Video URL: 
 https://youtu.be/8mXbeHGKnnU
 
+### Proj4 Demo Video URL: 
+
+
 ### Proj3 Inconsistencies and Duplicates:
 - Inconsistencies of MainXML, CastXML, and ActorsXML are all stored within `inconsistencies.txt`
 - Duplicates within the XMLs are stored within `Duplicates.txt`
 
-### Proj3 Time Optimization strategies vs naive approach:
-- Used HashSet to prevent duplicates in Actors/Movie pairs:
-    - Searching for actor duplicates would take O(1) since only Actor's ID is needed to search if an actor already existed in the HashSet.
-    - The naive way would have taken O(# actors in a movie) since we would have to search for the entire actors in the list to search for duplicates.
-- Used HashMap to connect Actors that played in the movie
-    - Lookup for movieID is O(1) when connecting Actors that played in the corresponding film.
-    - The naive way would have taken O(# films) to look up movieID if ArrayList was used.
-- In the end, there's only 1 dataset (stored in `CastOutput.txt`) after parsing all 3 XML files. There are no duplicate information, such as having two movie names again. As a result, when iterating through the entire dataset to insert into the database, we don't need to iterate 3 datasets. 
+### Proj4 design and the implementation of your fuzzy search:
+- Faustina Nyaung used the ed function and normalized the edit distance based on the string's length. I divided the string length by 3.5 to get the edit distance. She realized that 3.5 is a good value because that would mean that no typo is allowed until 4 character long word.
 
-### Substring matching Design:
-User searches for:
-- Star: Abc%
-- Title: %Abc%
-- Director: %Abc%
-- Year: %123% 
+
 
 ### Contributions to this project:
 - Project 1:
@@ -41,6 +33,11 @@ User searches for:
 - Project 3:
     - Hyejin Kim worked on task 1 to 6.
     - Faustina Nyaung worked on task 7
+
+- Project 4:
+    - Hyejin Kim and Faustina Nyaung both worked on Task 1
+    - Hyejin Kim worekd on Login and Movie List Page on android
+    - Faustina Nyaung worked on Extra Credit and Single Movie Page on android
 
 ### To run this project:
 1. Clone this repository using `git clone https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-11.git`

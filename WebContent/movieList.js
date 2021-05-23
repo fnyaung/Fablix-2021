@@ -7,7 +7,7 @@
  *      1. Use jQuery to talk to backend API to get the json data.
  *      2. Populate the data to correct html elements.
  */
-function getParameterByName(target) {
+ function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
     // Encode target parameter name to url encoding
@@ -83,7 +83,7 @@ function putItems(movie_id, movie_title){
 function handleSingleMovieResult(resultData) {
     console.log("handleMovieResult: populating movie table from resultData");
     console.log("no_of_page: " + resultData[0]["no_of_page"]);
-    console.log(window.location.href);
+    // console.log(window.location.href);
 
     var curr_URL = window.location.href;
     if (curr_URL.includes("sort=")) {
@@ -206,7 +206,11 @@ function handleSingleMovieResult(resultData) {
 
     let curr_url = window.location.href;
     let page_idx = (window.location.href).indexOf("page");
-    let page_url = curr_url.slice(63, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&sort=RD
+
+
+    let movie_idx = (window.location.href).indexOf("movieList");
+
+    let page_url = curr_url.slice(movie_idx, page_idx); // movieList.html?title=&year=2009&director=&star=&genre=&sort=RD
     let cur_page_no = curr_url.slice(page_idx + 5);
     let page_end_idx;
 

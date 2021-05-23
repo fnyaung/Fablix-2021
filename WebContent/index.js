@@ -107,8 +107,8 @@ function handleLookupAjaxSuccess(data, query, doneCallback) {
 
     cachedResult[query] = resultData; // save the data
 
-    console.log("Result data")
-    console.log(resultData)
+    // console.log("Result data")
+    // console.log(resultData)
 
     // parse the string into JSON
     // var jsonData = JSON.parse(resultData);

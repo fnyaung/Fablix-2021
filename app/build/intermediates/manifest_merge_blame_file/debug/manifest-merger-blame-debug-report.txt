@@ -1,0 +1,105 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.uci.ics.fabflixmobile"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="14"
+8-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml
+10    <!-- This line is needed to enable HTTP connection -->
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:6:5-29:19
+14        android:allowBackup="true"
+14-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:7:13-39
+15        android:debuggable="true"
+16        android:icon="@mipmap/ic_launcher"
+16-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:8:13-47
+17        android:label="@string/app_name"
+17-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:9:13-45
+18        android:supportsRtl="true"
+18-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:10:13-39
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme"
+20-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:12:13-44
+21        android:usesCleartextTraffic="true" >
+21-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:11:13-48
+22
+23        <!-- Need to define every activity in the AndroidManifest otherwise won't be visible -->
+24        <activity
+24-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:14:9-22:20
+25            android:name="edu.uci.ics.fabflixmobile.Login"
+25-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:15:17-38
+26            android:label="@string/app_name" >
+26-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:16:17-49
+27            <intent-filter>
+27-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:17:13-21:29
+28
+29                <!-- This line sets which activity to be the home page -->
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:19:17-68
+30-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:19:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:20:17-76
+32-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:20:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="edu.uci.ics.fabflixmobile.ListViewActivity" />
+35-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:23:9-63
+35-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:23:19-51
+36        <!-- By default Android supports only HTTPS connection. To enable HTTP, the below line is needed -->
+37        <uses-library
+37-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:25:9-87
+38            android:name="org.apache.http.legacy"
+38-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:25:23-60
+39            android:required="false" />
+39-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:25:61-85
+40
+41        <activity android:name="edu.uci.ics.fabflixmobile.SingleMovie" />
+41-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:26:9-58
+41-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:26:19-46
+42        <!-- By default Android supports only HTTPS connection. To enable HTTP, the below line is needed -->
+43        <uses-library
+43-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:25:9-87
+44            android:name="org.apache.http.legacy"
+44-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:25:23-60
+45            android:required="false" />
+45-->C:\Users\fnyau\OneDrive\Desktop\CS122B\project4_scratch\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\app\src\main\AndroidManifest.xml:25:61-85
+46
+47        <activity
+47-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\7b72a5a0c021d4af51a0c390cd84f2ce\transformed\play-services-base-15.0.1\AndroidManifest.xml:23:9-26:75
+48            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+48-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\7b72a5a0c021d4af51a0c390cd84f2ce\transformed\play-services-base-15.0.1\AndroidManifest.xml:24:13-79
+49            android:exported="false"
+49-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\7b72a5a0c021d4af51a0c390cd84f2ce\transformed\play-services-base-15.0.1\AndroidManifest.xml:25:13-37
+50            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+50-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\7b72a5a0c021d4af51a0c390cd84f2ce\transformed\play-services-base-15.0.1\AndroidManifest.xml:26:13-72
+51
+52        <meta-data
+52-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\63cae8969b6ce43bcf0af5aa1c0b5aef\transformed\play-services-basement-15.0.1\AndroidManifest.xml:23:9-25:69
+53            android:name="com.google.android.gms.version"
+53-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\63cae8969b6ce43bcf0af5aa1c0b5aef\transformed\play-services-basement-15.0.1\AndroidManifest.xml:24:13-58
+54            android:value="@integer/google_play_services_version" />
+54-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\fnyau\.gradle\caches\transforms-3\63cae8969b6ce43bcf0af5aa1c0b5aef\transformed\play-services-basement-15.0.1\AndroidManifest.xml:25:13-66
+55        <meta-data
+55-->[com.android.support:support-v4:26.1.0] C:\Users\fnyau\.gradle\caches\transforms-3\76b6fd0749ed3c32d8d4f9f57b4894c8\transformed\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
+56            android:name="android.support.VERSION"
+56-->[com.android.support:support-v4:26.1.0] C:\Users\fnyau\.gradle\caches\transforms-3\76b6fd0749ed3c32d8d4f9f57b4894c8\transformed\support-v4-26.1.0\AndroidManifest.xml:27:13-51
+57            android:value="26.1.0" />
+57-->[com.android.support:support-v4:26.1.0] C:\Users\fnyau\.gradle\caches\transforms-3\76b6fd0749ed3c32d8d4f9f57b4894c8\transformed\support-v4-26.1.0\AndroidManifest.xml:28:13-35
+58        <meta-data
+58-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\fnyau\.gradle\caches\transforms-3\641b865e8d89cd37c9d5a9208c677c36\transformed\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
+59            android:name="android.arch.lifecycle.VERSION"
+59-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\fnyau\.gradle\caches\transforms-3\641b865e8d89cd37c9d5a9208c677c36\transformed\runtime-1.0.0\AndroidManifest.xml:26:13-58
+60            android:value="27.0.0-SNAPSHOT" />
+60-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\fnyau\.gradle\caches\transforms-3\641b865e8d89cd37c9d5a9208c677c36\transformed\runtime-1.0.0\AndroidManifest.xml:27:13-44
+61    </application>
+62
+63</manifest>

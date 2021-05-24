@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\layout_movie.xml.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\layout\\movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\layout_search.xml.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\layout\\search.xml"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\layout_login.xml.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\layout\\login.xml"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\layout_row.xml.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\layout\\row.xml"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\res\\merged\\debug\\layout_listview.xml.flat",
+        "source": "C:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\src\\main\\res\\layout\\listview.xml"
+    }
+]

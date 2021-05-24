@@ -1,0 +1,22 @@
+edu/uci/ics/fabflixmobile/BuildConfig.java
+ edu.uci.ics.fabflixmobile.BuildConfig
+edu/uci/ics/fabflixmobile/NetworkManager.java
+ edu.uci.ics.fabflixmobile.NetworkManager
+edu/uci/ics/fabflixmobile/MovieListViewAdapter.java
+ edu.uci.ics.fabflixmobile.MovieListViewAdapter
+edu/uci/ics/fabflixmobile/Movie.java
+ edu.uci.ics.fabflixmobile.Movie
+edu/uci/ics/fabflixmobile/NukeSSLCerts.java
+ edu.uci.ics.fabflixmobile.NukeSSLCerts
+ edu.uci.ics.fabflixmobile.NukeSSLCerts$1
+edu/uci/ics/fabflixmobile/SingleMovie.java
+ edu.uci.ics.fabflixmobile.SingleMovie
+edu/uci/ics/fabflixmobile/Login.java
+ edu.uci.ics.fabflixmobile.Login
+ edu.uci.ics.fabflixmobile.Login$1
+edu/uci/ics/fabflixmobile/ListViewActivity.java
+ edu.uci.ics.fabflixmobile.ListViewActivity
+ edu.uci.ics.fabflixmobile.ListViewActivity$1
+ edu.uci.ics.fabflixmobile.ListViewActivity$2
+ edu.uci.ics.fabflixmobile.ListViewActivity$3
+ edu.uci.ics.fabflixmobile.ListViewActivity$4

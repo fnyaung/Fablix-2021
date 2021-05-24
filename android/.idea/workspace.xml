@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6633e20a-bd26-4e9b-a273-19d052020e16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CastOutput.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Duplicates.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/_dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/_dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/addMovie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/addMovie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/addStar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/addStar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/browse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/browse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/checkOut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/checkOut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/confirmation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/confirmation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/login_backup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/metadata.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/metadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/movieList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/movieList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/payment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/payment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/singleMovie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/singleMovie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/singleStar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/singleStar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/staffLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/staffLogin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebContent/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/NukeSSLCerts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/SingleMovie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/movie.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../createtable.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../inconsistencies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Actor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/ActorSAXParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/AddMovie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/AddStar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Browse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/CastSAXParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/DirectorFilms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Film.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/LoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/MainsSaxParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Metadata.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/MovieListPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/RecaptchaConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/RecaptchaVerifyUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SingleMoviePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SingleStarPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stored-procedure.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1sy7kNlBpXx5PUnLkTuj3E3yfcN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6633e20a-bd26-4e9b-a273-19d052020e16" name="Default Changelist" comment="" />
+      <created>1621833117438</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621833117438</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1231" y="171" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621833234433">
+      <screen x="-1920" y="-37" width="1920" height="1055" />
+    </state>
+    <state x="-1231" y="171" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.-37.1920.1055/0.25.1440.875@-1920.-37.1920.1055" timestamp="1621833234433" />
+  </component>
+</project>

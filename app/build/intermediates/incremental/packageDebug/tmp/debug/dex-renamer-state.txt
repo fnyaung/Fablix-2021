@@ -1,4 +1,0 @@
-#Sun May 23 00:13:09 PDT 2021
-base.0=C\:\\Users\\fnyau\\OneDrive\\Desktop\\CS122B\\project4_scratch\\cs122b-spring21-project4-android-prenext_moviedescrip_fefactor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

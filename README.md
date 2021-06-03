@@ -11,23 +11,28 @@
         - Hyejin Kim worked on Task 1 and 2
         - Faustina Nyaung worked on Task 3 and 4
 
-
 - # Connection Pooling
     - #### Include the filename/path of all code/configuration files in GitHub of using JDBC Connection Pooling.
         - cs122b-spring21-team-11/website/src/Browse.java
         
     
     - #### Explain how Connection Pooling is utilized in the Fabflix code.
-    
+        - The servlets gets a cached connection from the JDBC connection pool. If all connections are being used, then new connections are created. Otherwise, pre-exisiting connections would be used. 
+        - When the servlets are done using the connection, the connection would go back into the connection pool to be used again.
+        - As a result of reusing pre-existing connections, the time it takes to create and free connections are reduced.
+        - we defined our connection pooling in `context.xml` and used prepared statement for user queries. 
     - #### Explain how Connection Pooling works with two backend SQL.
+        - Used two connection pools, masterdb and moviedb.
+        - If the servlet is writing/reading to the db, it would get a cached connection from masterdb, which connects to the master instance sql database. 
+        - If the servlet is only reading to the db, it would get a cached connection from the localhost, which connects to the slave instance sql database. 
     
 
 - # Master/Slave
     - #### Include the filename/path of all code/configuration files in GitHub of routing queries to Master/Slave SQL.
 
     - #### How read/write requests were routed to Master/Slave SQL?
+       - Fablix uses masterdb for write/read requests. However, if the servlet is only reading, then the servlet would get connection from the localhost connection pool (either using master or slave). 
     
-
 - # JMeter TS/TJ Time Logs
     - #### Instructions of how to use the `log_processing.*` script to process the JMeter logs.
 

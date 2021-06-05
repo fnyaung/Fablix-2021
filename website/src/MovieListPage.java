@@ -276,7 +276,7 @@ public class MovieListPage extends HttpServlet {
             long TJelapsedTime = (TJendTime - TJstartTime)/1000000;
 
             // String file_path = "/Users/hyejinkim/Desktop/logfile.txt";
-           String file_path = "/home/ubuntu/proj4_logfile.txt";
+           String file_path = "/home/ubuntu/proj5_logfile.txt";
 
 
             try(FileWriter fw = new FileWriter(file_path, true);

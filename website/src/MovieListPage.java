@@ -62,7 +62,7 @@ public class MovieListPage extends HttpServlet {
         String limit = request.getParameter("limit");
 
 
-        System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort + " " + limit);
+//        System.out.println(">>>> Parameter: " + title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page + " " + sort + " " + limit);
 
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
@@ -72,12 +72,12 @@ public class MovieListPage extends HttpServlet {
 
             Connection conn = dataSource.getConnection();
             String query = "";
-            System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//            System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 //            System.out.println(title);
 //            System.out.println(title.equals("*"));
 
             if (!title.equals("*")){
-                System.out.println("!! normal query");
+//                System.out.println("!! normal query");
                 query = "select " +
                         "m.id, " +
                         "m.year, " +
@@ -106,7 +106,7 @@ public class MovieListPage extends HttpServlet {
                         "limit ?, ? ";
             }
             else{
-                System.out.println("!! * * query ");
+//                System.out.println("!! * * query ");
                 query = "select " +
                         "m.id, m.year, " +
                         "m.title, " +
@@ -176,9 +176,9 @@ public class MovieListPage extends HttpServlet {
             // set the next page to + limit
             int cur_page_int =  Integer.parseInt(cur_page) - 1;
             page_limit_int = cur_page_int + Integer.parseInt(limit);
-            System.out.println("~~~~~~~~~~~~~");
-            System.out.println(cur_page_int);
-            System.out.println(page_limit_int);
+//            System.out.println("~~~~~~~~~~~~~");
+//            System.out.println(cur_page_int);
+//            System.out.println(page_limit_int);
 
 //            int page_limit_int = 0;
 //            // set the next page to + 20
@@ -187,7 +187,7 @@ public class MovieListPage extends HttpServlet {
 
             //            star title director year
             // star title year genre director genre
-            System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
+//            System.out.println(title + " " + year + " " + director + " " +star + " "+ genre +" " + cur_page_int + " " + page_limit_int);
             if (!title.equals("*")){
                 if(title.length() != 0){
                     title = parseFullText(title);
@@ -223,19 +223,19 @@ public class MovieListPage extends HttpServlet {
             // perform the query
             // return the result relation as rs.
 
-            System.out.println(statement);
+//            System.out.println(statement);
 
             ResultSet rs = statement.executeQuery();
             long TJendTime = System.nanoTime();
 
 
-            System.out.println("2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            System.out.println("title: "+ title);
-            System.out.println("year: "+year);
-            System.out.println("director: "+director);
-            System.out.println("star: "+star);
-            System.out.println("genre: "+genre);
-            System.out.println("3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//            System.out.println("2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//            System.out.println("title: "+ title);
+//            System.out.println("year: "+year);
+//            System.out.println("director: "+director);
+//            System.out.println("star: "+star);
+//            System.out.println("genre: "+genre);
+//            System.out.println("3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             JsonArray jsonArray = new JsonArray();
 
@@ -272,36 +272,20 @@ public class MovieListPage extends HttpServlet {
             long TSelapsedTime = (TSendTime - TSstartTime)/1000000;
             long TJelapsedTime = (TJendTime - TJstartTime)/1000000;
 
-            try {
-                // Change the path
-               String file_path = "/home/ubuntu/logfile.txt";
-                // String file_path = "/Users/hyejinkim/Desktop/logfile.txt";
-                File myObj = new File(file_path);
+//            String file_path = "/Users/hyejinkim/Desktop/logfile.txt";
+            String file_path = "/home/ubuntu/logfile.txt";
 
-                if (myObj.createNewFile()) {
-                    FileWriter myWriter = new FileWriter(file_path);
-                    myWriter.write(TSelapsedTime + "," + TJelapsedTime);
-                    myWriter.close();
 
-                } else {
-                    System.out.println("File already exists.");
-                }
-
-                try {
-                    FileWriter myWriter = new FileWriter("filename.txt");
-                    myWriter.write("Files in Java might be tricky, but it is fun enough!");
-                    myWriter.close();
-                    System.out.println("Successfully wrote to the file.");
-                } catch (IOException e) {
-                    System.out.println("An error occurred.");
-                    e.printStackTrace();
-                }
-
+            try(FileWriter fw = new FileWriter(file_path, true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter pw = new PrintWriter(bw))
+            {
+                pw.write(TSelapsedTime + "," + TJelapsedTime + "\n");
+                System.out.println(TSelapsedTime + "," + TJelapsedTime);
             } catch (IOException e) {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
-
 
 
             rs.close();

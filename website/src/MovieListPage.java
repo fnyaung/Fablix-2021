@@ -15,6 +15,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileWriter;
 
 import java.io.*;
 
@@ -44,6 +47,7 @@ public class MovieListPage extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         response.setContentType("application/json"); // Response mime type
+        long TSstartTime = System.nanoTime();
 
         // retrieve title, year, director, and star from url request
         String title = request.getParameter("title");
@@ -64,6 +68,8 @@ public class MovieListPage extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try {
+            long TJstartTime = System.nanoTime();
+
             Connection conn = dataSource.getConnection();
             String query = "";
             System.out.println("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -88,9 +94,9 @@ public class MovieListPage extends HttpServlet {
                         "movies as m, genres_in_movies as gm, genres as g " +
                         "where " +
                         "star.movieId = m.id and g.Id = gm.genreId and m.id = gm.movieId and rim.movieId=m.id ";
-                    if(title.length() != 0){
-                        query += "and MATCH(title) AGAINST(? IN BOOLEAN MODE)";
-                    }
+                if(title.length() != 0){
+                    query += "and MATCH(title) AGAINST(? IN BOOLEAN MODE)";
+                }
                 query += " group by m.id " +
                         "having  (starsName like ? or starsName like ?)  " +
                         "and (director like ?) " +
@@ -220,6 +226,7 @@ public class MovieListPage extends HttpServlet {
             System.out.println(statement);
 
             ResultSet rs = statement.executeQuery();
+            long TJendTime = System.nanoTime();
 
 
             System.out.println("2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -260,6 +267,43 @@ public class MovieListPage extends HttpServlet {
                 jsonObject.addProperty("no_of_page", no_of_page);
                 jsonArray.add(jsonObject);
             }
+
+            long TSendTime = System.nanoTime();
+            long TSelapsedTime = (TSendTime - TSstartTime)/1000000;
+            long TJelapsedTime = (TJendTime - TJstartTime)/1000000;
+
+            try {
+                // Change the path
+               String file_path = "/home/ubuntu/logfile.txt";
+                // String file_path = "/Users/hyejinkim/Desktop/logfile.txt";
+                File myObj = new File(file_path);
+
+                if (myObj.createNewFile()) {
+                    FileWriter myWriter = new FileWriter(file_path);
+                    myWriter.write(TSelapsedTime + "," + TJelapsedTime);
+                    myWriter.close();
+
+                } else {
+                    System.out.println("File already exists.");
+                }
+
+                try {
+                    FileWriter myWriter = new FileWriter("filename.txt");
+                    myWriter.write("Files in Java might be tricky, but it is fun enough!");
+                    myWriter.close();
+                    System.out.println("Successfully wrote to the file.");
+                } catch (IOException e) {
+                    System.out.println("An error occurred.");
+                    e.printStackTrace();
+                }
+
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+
+
+
             rs.close();
             statement.close();
             conn.close();

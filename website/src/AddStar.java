@@ -138,8 +138,10 @@ public class AddStar extends HttpServlet {
 
                 jsonArray.add(jsonObject);
             }
+            
             rs.close();
             statement.close();
+            insert_statement.close();
             conn.close();
 
             // write JSON string to output

@@ -20,6 +20,9 @@ import java.io.File;
 import java.io.FileWriter;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 
 @WebServlet(name = "MovieListPage", urlPatterns = "/api/movie-list")
@@ -272,16 +275,32 @@ public class MovieListPage extends HttpServlet {
             long TSelapsedTime = (TSendTime - TSstartTime)/1000000;
             long TJelapsedTime = (TJendTime - TJstartTime)/1000000;
 
-//            String file_path = "/Users/hyejinkim/Desktop/logfile.txt";
-            String file_path = "/home/ubuntu/logfile.txt";
+            String file_path = "/Users/hyejinkim/Desktop/logfile.txt";
+//            String file_path = "/home/ubuntu/logfile.txt";
 
 
             try(FileWriter fw = new FileWriter(file_path, true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 PrintWriter pw = new PrintWriter(bw))
             {
+                File myObj = new File(file_path);
+                Scanner myReader = new Scanner(myObj);
+                String last_line = null;
+                while (myReader.hasNextLine()) {
+                    String data = myReader.nextLine();
+                    last_line = data;
+                }
+
+                if (last_line != null) {
+                    System.out.println("If the string is not null");
+                    List<String> strList = Arrays.asList(last_line.split(","));
+                    TSelapsedTime += Long.parseLong(strList.get(0));
+                    TJelapsedTime += Long.parseLong(strList.get(1));
+                }
+
                 pw.write(TSelapsedTime + "," + TJelapsedTime + "\n");
                 System.out.println(TSelapsedTime + "," + TJelapsedTime);
+
             } catch (IOException e) {
                 System.out.println("An error occurred.");
                 e.printStackTrace();

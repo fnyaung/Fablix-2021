@@ -48,8 +48,9 @@
 
 | **Scaled Version Test Plan**                   | **Graph Results Screenshot** | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
 |------------------------------------------------|------------------------------|----------------------------|-------------------------------------|---------------------------|--------------|
-| Case 1: HTTP/1 thread                          | proj5_image/2_single_case1.png   | ??                         | ??                                  | ??                        | ??           |
-| Case 2: HTTP/10 threads                        | proj5_image/2_single_case2.png   | ??                         | ??                                  | ??                        | ??           |
+| Case 1: HTTP/1 thread                          | proj5_image/2_single_case1.png   | 397                         | 317.257759                     | 316.950038                | This case 1 was done with the load balancer. Our group found that there is little bit of a difference compare to the single instance. Also there is bit more difference between TS and TJ compare to the connection pooling.           |
+| Case 2: HTTP/10 threads                        | proj5_image/2_single_case2.png   | 493                         | 406.833523                     | 406.528696                | This case 2 was done with the load balancer. Our group found that there much difference in the TS and TJ time compare to the single instance. We could see that the load balancing as well as the connection pooling is working well as it fastened the query time. 
+           |
 | Case 3: HTTP/10 threads/No connection pooling  | proj5_image/2_single_case3.png   | ??                         | ??                                  | ??                        | ??           |
 
 ## CS 122B Project 2 Group 11

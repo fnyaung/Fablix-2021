@@ -1,5 +1,5 @@
-# path_file = "/home/ubuntu/logfile.txt"
-path_file = "logfile.txt"
+path_file = "/home/ubuntu/filename.txt"
+# path_file = "logfile.txt"
 
 # Using readlines()
 file1 = open(path_file, 'r')

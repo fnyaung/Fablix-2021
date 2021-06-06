@@ -4,6 +4,7 @@
     - #### Names: Hyejin Kim and Faustina Nyaung
     
     - #### Project 5 Video Demo Link:
+   https://www.youtube.com/watch?v=c0XcQkXqnVw
 
     - #### Instruction of deployment:
         1. Clone this repository using `git clone https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-11.git`
@@ -13,8 +14,8 @@
         5. To run the example, follow the instructions on [canvas](https://canvas.eee.uci.edu/courses/36596/pages/intellij-idea-tomcat-configuration)
 
     - #### Collaborations and Work Distribution:
-        - Hyejin Kim worked on Task 1 and 2
-        - Faustina Nyaung worked on Task 3 and 4
+        - Hyejin Kim worked on Task 1 and 4
+        - Faustina Nyaung worked on Task 2 and 3 and 4
 
 - # Connection Pooling
     - #### Include the filename/path of all code/configuration files in GitHub of using JDBC Connection Pooling.
@@ -55,26 +56,28 @@
     
 - # JMeter TS/TJ Time Logs
     - #### Instructions of how to use the `log_processing.*` script to process the JMeter logs.
-        - the log_processing is located at the base directory. To use it, you have to change the first line of the file to your file path. And type python3 log_processing.py or just simple execute it. 
+        - The log_processing is located at the base directory. To use it, you have to change the first line of the file to your file path. And type python3 log_processing.py or just simple execute it. 
+        - Note : The log files for thisthe projec5 were saved in the porj5/logfiles.
         ```
         path_file = "/home/ubuntu/filename.txt"
         ```
 
 - # JMeter TS/TJ Time Measurement Report
-1881050,1880700
 | **Single-instance Version Test Plan**          | **Graph Results Screenshot** | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
 |------------------------------------------------|------------------------------|----------------------------|-------------------------------------|---------------------------|--------------|
-| Case 1: HTTP/1 thread                          | proj5_image/1_single_case1.png  | 379                        | 293.143073                          | 293.031416             | This case 1 was done with the connection pooling. Our group found that there is not much difference between the TS and TJ, the difference is 0.111657.            |
-| Case 2: HTTP/10 threads                        | proj5_image/1_single_case2.png   | 799                        | 712.518939                         |  712.386364            | This case 2 was done with the connection pooling. Our group noticed that our avery servelt time significantly increased from the 1 thread, (about 500ns), we found that the average has also incrased.           |
-| Case 3: HTTPS/10 threads                       | proj5_image/1_single_case3.png   | 824                         | 732.813636                        | 732.654167             | This case 3 was done with the connection pooling. Our group noticed that the result(TS and TJ) have incrase a little bit from the http. This is a bit interesting as we thoguht https will be faster.           |
-| Case 4: HTTP/10 threads/No connection pooling  | proj5_image/1_single_case4.png   | ??                         | fristcol/2640                      | fristcol/2640          | ??           |
+| Case 1: HTTP/1 thread                          | porj5/proj5_image/1_single_case1.png  | 379                        | 293.143073                          | 293.031416             | This case 1 was done with the connection pooling. Our group found that there is not much difference between the TS and TJ, the difference is 0.111657.            |
+| Case 2: HTTP/10 threads                        | porj5/proj5_image/1_single_case2.png   | 799                        | 712.518939                         |  712.386364            | This case 2 was done with the connection pooling. Our group noticed that our avery servelt time significantly increased from the 1 thread, (about 500ns), we found that the average has also incrased.           |
+| Case 3: HTTPS/10 threads                       | porj5/proj5_image/1_single_case3.png   | 824                         | 732.813636                        | 732.654167             | This case 3 was done with the connection pooling. Our group noticed that the result(TS and TJ) have incrase a little bit from the http. This is a bit interesting as we thoguht https will be faster.           |
+| Case 4: HTTP/10 threads/No connection pooling  | porj5/proj5_image/1_single_case4.png   | 842                         | 734.342045                      | 734.147727          | This case 4 was done without the connection pooling. Our group noticed that the result(TS and TJ) are similar to with connection pooling. The throguh output is bit higher than the rest of the cases.
+           |
 
 | **Scaled Version Test Plan**                   | **Graph Results Screenshot** | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
 |------------------------------------------------|------------------------------|----------------------------|-------------------------------------|---------------------------|--------------|
-| Case 1: HTTP/1 thread                          | proj5_image/2_single_case1.png   | 397                         | 317.257759                     | 316.950038                | This case 1 was done with the load balancer. Our group found that there is little bit of a difference compare to the single instance. Also there is bit more difference between TS and TJ compare to the connection pooling.           |
-| Case 2: HTTP/10 threads                        | proj5_image/2_single_case2.png   | 493                         | 406.833523                     | 406.528696                | This case 2 was done with the load balancer. Our group found that there much difference in the TS and TJ time compare to the single instance. We could see that the load balancing as well as the connection pooling is working well as it fastened the query time. 
+| Case 1: HTTP/1 thread                          | porj5/proj5_image/2_single_case1.png   | 397                         | 317.257759                     | 316.950038                | This case 1 was done with the load balancer. Our group found that there is little bit of a difference compare to the single instance. Also there is bit more difference between TS and TJ compare to the connection pooling.           |
+| Case 2: HTTP/10 threads                        | porj5/proj5_image/2_single_case2.png   | 493                         | 406.833523                     | 406.528696                | This case 2 was done with the load balancer. Our group found that there much difference in the TS and TJ time compare to the single instance. We could see that the load balancing as well as the connection pooling is working well as it fastened the query time. 
            |
-| Case 3: HTTP/10 threads/No connection pooling  | proj5_image/2_single_case3.png   | ??                         | ??                                  | ??                        | ??           |
+| Case 3: HTTP/10 threads/No connection pooling  | porj5/proj5_image/2_single_case3.png   | 508                         | 395.379167                     | 395.114394                        | This case 3 was done with the load balancer and without the connection pooling. Our group noticed that the result(TS and TJ) are similar to with connection pooling. The average query time is faster than single instance. 
+           |
 
 ## CS 122B Project 2 Group 11
 This project displays a list of movies that contains information about a specific movie or star.

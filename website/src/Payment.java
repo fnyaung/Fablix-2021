@@ -204,7 +204,7 @@ public class Payment extends HttpServlet{
     public void init(ServletConfig config){
         try{
             // change to masterdb
-            dataSource = (DataSource) new InitialContext().lookup("java:comp/env/jdbc/masterdb");
+            dataSource = (DataSource) new InitialContext().lookup("java:comp/env/jdbc/moviedb");
         }catch(NamingException e){
             e.printStackTrace();
         }

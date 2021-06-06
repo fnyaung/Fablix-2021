@@ -6,6 +6,11 @@
     - #### Project 5 Video Demo Link:
 
     - #### Instruction of deployment:
+        1. Clone this repository using `git clone https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-11.git`
+        2. Open IntelliJ -> Import Project -> Choose the project you just cloned (The root path must contain the pom.xml!) -> Choose Import project from external model -> choose Maven -> Click on Finish -> The IntelliJ will load automatically
+        3. For "Root Directory", right click "cs122b-spring21-team-11" -> Mark Directory as -> sources root
+        4. make sure you have the `moviedb` database in all 3 java files: `MovieListPage.java`, `SingleMoviePage.java`, `SingleStar.java` in the `src` folder.
+        5. To run the example, follow the instructions on [canvas](https://canvas.eee.uci.edu/courses/36596/pages/intellij-idea-tomcat-configuration)
 
     - #### Collaborations and Work Distribution:
         - Hyejin Kim worked on Task 1 and 2
@@ -14,13 +19,23 @@
 - # Connection Pooling
     - #### Include the filename/path of all code/configuration files in GitHub of using JDBC Connection Pooling.
         - cs122b-spring21-team-11/website/src/Browse.java
-        
+        - cs122b-spring21-team-11/website/src/AddMovie.java
+        - cs122b-spring21-team-11/website/src/AddStar.java
+        - cs122b-spring21-team-11/website/src/LoginFilter.java
+        - cs122b-spring21-team-11/website/src/LoginPage.java
+        - cs122b-spring21-team-11/website/src/Metadata.java
+        - cs122b-spring21-team-11/website/src/MovieListPage.java
+        - cs122b-spring21-team-11/website/src/Payment.java
+        - cs122b-spring21-team-11/website/src/SingleMoviePage.java
+        - cs122b-spring21-team-11/website/src/SingleStarPage.java
+
     
     - #### Explain how Connection Pooling is utilized in the Fabflix code.
         - The servlets gets a cached connection from the JDBC connection pool. If all connections are being used, then new connections are created. Otherwise, pre-exisiting connections would be used. 
         - When the servlets are done using the connection, the connection would go back into the connection pool to be used again.
         - As a result of reusing pre-existing connections, the time it takes to create and free connections are reduced.
         - we defined our connection pooling in `context.xml` and used prepared statement for user queries. 
+
     - #### Explain how Connection Pooling works with two backend SQL.
         - Used two connection pools, masterdb and moviedb.
         - If the servlet is writing/reading to the db, it would get a cached connection from masterdb, which connects to the master instance sql database. 
@@ -29,13 +44,21 @@
 
 - # Master/Slave
     - #### Include the filename/path of all code/configuration files in GitHub of routing queries to Master/Slave SQL.
+        - cs122b-spring21-team-11/website/src/AddMovie.java
+        - cs122b-spring21-team-11/website/src/AddStar.java
+        - cs122b-spring21-team-11/website/src/Payment.java
+        - cs122b-spring21-team-11/website/WebContent/META-INF/context.xml
+
 
     - #### How read/write requests were routed to Master/Slave SQL?
        - Fablix uses masterdb for write/read requests. However, if the servlet is only reading, then the servlet would get connection from the localhost connection pool (either using master or slave). 
     
 - # JMeter TS/TJ Time Logs
     - #### Instructions of how to use the `log_processing.*` script to process the JMeter logs.
-
+        - the log_processing is located at the base directory. To use it, you have to change the first line of the file to your file path. And type python3 log_processing.py or just simple execute it. 
+        ```
+        path_file = "/home/ubuntu/filename.txt"
+        ```
 
 - # JMeter TS/TJ Time Measurement Report
 1881050,1880700
